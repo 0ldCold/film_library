@@ -1,0 +1,44 @@
+{
+  "name": "film_library_frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prodmode": "next build && npx next start -p 3000",
+    "export": "next build && next export",
+    "prettier": "prettier --write .",
+    "types": "tsc --noEmit",
+    "check": "yarn run types && yarn run prettier && yarn run lint"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.8.4",
+    "i18next": "^23.7.6",
+    "next": "^14.0.3",
+    "next-redux-wrapper": "^8.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^13.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.1",
+    "@types/react": "^18.2.37",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "eslint": "^8.53.0",
+    "eslint-config-next": "^14.0.3",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-jest": "^27.6.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.1.0",
+    "prettier-eslint": "^16.1.2",
+    "sass": "^1.69.5",
+    "typescript": "^5.2.2"
+  },
+  "packageManager": "yarn@4.0.2"
+}

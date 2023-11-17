@@ -1,0 +1,27 @@
+{
+  "folders": [
+    {
+      "name": "ROOT",
+      "path": "../"
+    },
+    {
+      "name": "packages/backend",
+      "path": "../packages/backend"
+    },
+    {
+      "name": "packages/frontend",
+      "path": "../packages/frontend"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "node_modules/": true,
+      "packages/": true
+    },
+    "jest.autoEnable": false,
+    "jest.disabledWorkspaceFolders": ["ROOT"]
+  },
+  "extensions": {
+    "recommendations": ["dbaeumer.vscode-eslint", "orta.vscode-jest"]
+  }
+}
