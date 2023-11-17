@@ -19,7 +19,11 @@
       "packages/": true
     },
     "jest.autoEnable": false,
-    "jest.disabledWorkspaceFolders": ["ROOT"]
+    "jest.disabledWorkspaceFolders": [
+      "ROOT",
+      "packages/backend",
+      "packages/frontend"
+    ]
   },
   "extensions": {
     "recommendations": ["dbaeumer.vscode-eslint", "orta.vscode-jest"]
