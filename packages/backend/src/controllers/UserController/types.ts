@@ -1,6 +1,7 @@
-import { PaginationQuery } from "../../utils/pagination";
-import { ListSortQuery } from "../../utils/sort";
-import { ListFilterQuery } from "../../utils/filter";
+import { TPaginationQuery, PaginationQuery } from "src/utils/pagination";
+import { ListSortQuery } from "src/utils/sort";
+import { ListFilterQuery } from "src/utils/filter";
+
 
 export interface User {
   id: string;
@@ -17,7 +18,12 @@ export interface User {
   age: number;
 }
 
-export interface UsersListRequest extends PaginationQuery {
+
+
+export interface TUsersListRequest extends TPaginationQuery {
   sort?: ListSortQuery<User>;
   filter?: ListFilterQuery<User>;
+}
+export class UsersListRequest extends PaginationQuery {
+
 }

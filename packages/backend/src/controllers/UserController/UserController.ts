@@ -7,16 +7,16 @@ import {
   NotFoundError,
 } from "routing-controllers";
 import "reflect-metadata";
-import faker from "../../config/faker";
+import faker from "src/config/faker";
 import { User } from "./types";
 import {
-  PaginationQuery,
+  TPaginationQuery,
   PagitarionResponce,
   getPaginatedData,
-} from "../../utils/pagination";
-import { getSortedList } from "../../utils/sort";
-import { getFiltredList } from "../../utils/filter";
-import { UsersListRequest } from "./types";
+} from "src/utils/pagination";
+import { getSortedList } from "src/utils/sort";
+import { getFiltredList } from "src/utils/filter";
+import { TUsersListRequest } from "./types";
 
 const getUser = (): User => {
   const id = faker.string.uuid();
@@ -57,14 +57,10 @@ const getUsersList = (count: number): User[] => {
 
 const usersList = getUsersList(97);
 
-@JsonController()
+@JsonController("/users")
 export class UserController {
-  @Get("/users/:id")
-  getOne(@Param("id") id: string): User | undefined {
-    return usersList.find((item) => item.id === id);
-  }
-  @Post("/users")
-  getAll(@Body() query: UsersListRequest): PagitarionResponce<User> {
+  @Post("/")
+  getAll(@Body() query: TUsersListRequest): PagitarionResponce<User> {
     const filtredList = getFiltredList(usersList, query.filter);
     const sortedList = getSortedList(filtredList, query.sort);
     const paginatedList = getPaginatedData(sortedList, {
@@ -74,7 +70,13 @@ export class UserController {
 
     return paginatedList;
   }
-  @Post("/users/edit")
+
+  @Get("/:id")
+  getOne(@Param("id") id: string): User | undefined {
+    return usersList.find((item) => item.id === id);
+  }
+
+  @Post("/edit")
   editUser(@Body() query: User) {
     const findedUserIndex = usersList.findIndex((item) => item.id === query.id);
     if (findedUserIndex < 0) {

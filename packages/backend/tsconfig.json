@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "strictPropertyInitialization": false,
     "moduleResolution": "NodeNext",
     "module": "NodeNext",
     "target": "ESNext",
@@ -8,6 +9,11 @@
     "types": ["node", "jest"],
     "noEmit": false,
     "rootDir": "./",
+    "paths": {
+      "src/*": [
+        "./src/*"
+      ],
+    },
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "esModuleInterop": true,
