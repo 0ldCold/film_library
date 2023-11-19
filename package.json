@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start:back": "cd ./packages/ilusha-backend && yarn dev",
-    "start:front": "cd ./packages/ilusha-react && yarn dev",
+    "start:back": "cd ./packages/backend && yarn dev",
+    "start:front": "cd ./packages/frontend && yarn dev",
     "start": "yarn start:back && yarn start:front"
   },
   "author": "",
