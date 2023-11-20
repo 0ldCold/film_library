@@ -1,5 +1,5 @@
 import { TPaginationQuery, PaginationQuery } from "src/utils/pagination";
-import { ListSortQuery } from "src/utils/sort";
+import { ListSortQuery, SortVariant } from "src/utils/sort";
 import { ListFilterQuery } from "src/utils/filter";
 
 
@@ -18,7 +18,21 @@ export interface User {
   age: number;
 }
 
+class UsersListSortRequest implements Required<ListSortQuery<User>> {
 
+  id: SortVariant;
+  age: SortVariant;
+  sex: SortVariant;
+  city: SortVariant;
+  address: SortVariant;
+  country: SortVariant;
+  lastName: SortVariant;
+  middleName: SortVariant;
+  firstName: SortVariant;
+  postalCode: SortVariant;
+  phone: SortVariant;
+  email: SortVariant;
+}
 
 export interface TUsersListRequest extends TPaginationQuery {
   sort?: ListSortQuery<User>;
