@@ -1,0 +1,13 @@
+.imagesBackground {
+  background-image: url(./Background/BackgroundForTheSite.png);
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.contentWidget {
+  display: flex;
+}
+.userComments {
+  display: flex;
+  max-width: 500px;
+}

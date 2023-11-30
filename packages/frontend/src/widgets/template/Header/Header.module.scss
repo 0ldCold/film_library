@@ -1,0 +1,22 @@
+.wrapper {
+  background: black;
+  padding: 13px;
+}
+.logoText {
+  font-size: 33px;
+  text-align: left;
+  color: white;
+  font-family: "Roboto", "Arial", "sans-serif";
+}
+
+.informationSection {
+  display: flex;
+  flex-direction: column;
+
+  background-color: white;
+  max-width: 1200px;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
