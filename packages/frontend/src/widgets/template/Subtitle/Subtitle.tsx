@@ -1,7 +1,15 @@
 import { FC } from "react";
 import Styles from "./Subtitle.module.scss";
 
-const SubTitle: FC = () => {
+interface ContentType {
+  titleOfTheWork?: string;
+  typeOfWork?: string;
+  releaseDate?: string;
+  seriality?: string;
+  genre?: string;
+}
+
+const SubTitle: FC<ContentType> = () => {
   return (
     <div>
       <h2 className={Styles.contentName}>Наименование фильма</h2>
@@ -16,3 +24,4 @@ const SubTitle: FC = () => {
   );
 };
 export default SubTitle;
+
