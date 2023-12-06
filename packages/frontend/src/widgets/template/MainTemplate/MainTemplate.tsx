@@ -7,6 +7,7 @@ import PictureContent from "../../../entities/SubtitleContent/PictureContent";
 import UserСomments from "src/features/UserСomments/UserСomments";
 import ContentInformation from "src/entities/ContentInformation/ContentInformation";
 import FillingInInformation from "src/features/FillingInInformation/FillingInInformation";
+import ValueFillingInInformation from "src/features/FillingInInformation/ValueFillingInInformation/ValueFillingInInformation";
 
 interface MainTemplateProps {
   children?: ReactNode;
@@ -20,24 +21,41 @@ const MainTemplate: FC<MainTemplateProps> = ({ children }) => {
           <div className={Styles.contentWidget}>
             <PictureContent />
             <div>
-              <ContentInformation />
+              <ContentInformation label='ИНФОР' />
               <div>
-                <FillingInInformation type='Тип:' />
+                <FillingInInformation label='Тип:'>
+                  <ValueFillingInInformation />
+                </FillingInInformation>
               </div>
               <div>
-                <FillingInInformation episodes='Эпизоды:' />
+                <FillingInInformation label='Эпизоды:'>
+                  <ValueFillingInInformation />
+                </FillingInInformation>
               </div>
               <div>
-                <FillingInInformation nextEpisode='Следующий эпизод:' />
+                <FillingInInformation label='Следующий эпизод:'>
+                  <ValueFillingInInformation />
+                </FillingInInformation>
               </div>
               <div>
-                <FillingInInformation episodeDuration='Длительность эпизода:' />
+                <FillingInInformation label='Длительность эпизода:'>
+                  <ValueFillingInInformation />
+                </FillingInInformation>
               </div>
               <div>
-                <FillingInInformation status='Статус:' />
+                <FillingInInformation label='Статус:'>
+                  <ValueFillingInInformation />
+                </FillingInInformation>
               </div>
               <div>
-                <FillingInInformation genres='Жанры:' />
+                <FillingInInformation label='Жанры:'>
+                  <ValueFillingInInformation />
+                </FillingInInformation>
+              </div>
+              <div>
+                <FillingInInformation label='Рейтинг:'>
+                  <ValueFillingInInformation />
+                </FillingInInformation>
               </div>
             </div>
           </div>

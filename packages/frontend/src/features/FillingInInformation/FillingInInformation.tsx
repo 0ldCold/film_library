@@ -1,34 +1,16 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import Styles from "./FillingInInformation.module.scss";
 
 interface FillingInInformationProps {
-  type?: string;
-  episodes?: string;
-  nextEpisode?: string;
-  episodeDuration?: string;
-  status?: string;
-  genres?: string;
-  rating?: string;
+  label?: string;
+  children?: ReactNode;
 }
 
-const FillingInInformation: FC<FillingInInformationProps> = ({
-  type,
-  episodes,
-  nextEpisode,
-  episodeDuration,
-  status,
-  genres,
-  rating
-}) => {
+const FillingInInformation: FC<FillingInInformationProps> = ({ label, children }) => {
   return (
     <span className={Styles.informationBoxStyle}>
-      {type}
-      {episodes}
-      {nextEpisode}
-      {episodeDuration}
-      {status}
-      {rating}
-      {genres}
+      {label}
+      {children}
     </span>
   );
 };
