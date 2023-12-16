@@ -1,22 +1,7 @@
 .contentName {
+  display: flex;
+  flex-direction: column-reverse;
   font-size: 30px;
   text-align: left;
-}
-.breadcrumbs {
-  display: flex;
-  font-size: 13px;
-  padding: 5px;
-}
-
-.informationSection {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-
-  background-color: white;
-  max-width: 1200px;
-
-  margin-left: auto;
-  margin-right: auto;
-  padding: 15px;
+  margin-bottom: 15px;
 }

@@ -1,27 +1,19 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import Styles from "./Subtitle.module.scss";
 
-interface ContentType {
+interface SubTitleProps {
   titleOfTheWork?: string;
-  typeOfWork?: string;
-  releaseDate?: string;
-  seriality?: string;
-  genre?: string;
+  children?: ReactNode;
 }
 
-const SubTitle: FC<ContentType> = () => {
+const SubTitle: FC<SubTitleProps> = ({ children, titleOfTheWork }) => {
   return (
-    <div>
-      <h2 className={Styles.contentName}>Наименование фильма</h2>
-      <span className={Styles.breadcrumbs}>
-        Аниме<span>/</span>
-        <span>
-          Сериалы <span>/</span>
-          <span>Фильмы</span>
-        </span>
-      </span>
-    </div>
+    <header>
+      <h1 className={Styles.contentName}>
+        {children}
+        {titleOfTheWork}
+      </h1>
+    </header>
   );
 };
 export default SubTitle;
-
