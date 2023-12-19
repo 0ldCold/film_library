@@ -2,7 +2,7 @@ import { FC, ReactNode } from "react";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import SectionWrap from "src/entities/SectionWrap/SectionWrap";
-import MainSection from "src/entities/MainSection/MainSection";
+//import MainSection from "src/entities/MainSection/MainSection";
 import PageContent from "src/entities/PageContent/PageContent";
 import ContentBlock from "src/entities/PageContent/ContentBlock/ContentBlock";
 import BlockAboutContent from "src/entities/PageContent/ContentBlock/BlockAboutContent/BlockAboutContent";
@@ -38,91 +38,89 @@ const MainTemplate: FC<MainTemplateProps> = ({ children }) => {
     <div className={Styles.imagesBackground}>
       <Header />
       <SectionWrap>
-        <MainSection>
-          <Subtitle titleOfTheWork='Наименование Фильма'>
-            <div className={Styles.contentWidget}>
-              <Breadcrumbs title='Аниме /' />
-              <Breadcrumbs title='Сериалы /' />
-              <Breadcrumbs title='2023 года' />
-            </div>
-          </Subtitle>
-          <PageContent>
-            <ContentBlock>
-              <BlockAboutContent>
-                <div className={Styles.wrapperPictureContent}>
-                  <PictureContent />
-                  <UserСomments />
-                </div>
-                <WrapperBlockWidget>
-                  <BlockInfoLeft>
-                    <ContentInformation label='Информация' />
-                    <EntryInfo>
-                      <Line>
-                        <LineContainer>
-                          <FillingInInformation label='Тип:' />
-                          <ValueFillingInInformation value='TV Сериал' />
-                        </LineContainer>
-                      </Line>
-                      <Line>
-                        <LineContainer>
-                          <FillingInInformation label='Эпизоды:' />
-                          <ValueFillingInInformation value='21 / 23' />
-                        </LineContainer>
-                      </Line>
-                      <Line>
-                        <LineContainer>
-                          <FillingInInformation label='Следующий эпизод:' />
-                          <ValueFillingInInformation value='21 дек' />
-                        </LineContainer>
-                      </Line>
-                      <Line>
-                        <LineContainer>
-                          <FillingInInformation label='Длительность эпизода:' />
-                          <ValueFillingInInformation value='23 мин' />
-                        </LineContainer>
-                      </Line>
-                      <Line>
-                        <LineContainer>
-                          <FillingInInformation label='Статус:' />
-                          <ValueFillingInInformation value=' Выходит' />
-                        </LineContainer>
-                      </Line>
-                      <Line>
-                        <LineContainer>
-                          <FillingInInformation label='Рейтинг:' />
-                          <ValueFillingInInformation value='R-17' />
-                        </LineContainer>
-                      </Line>
-                      <AdditionalInfo>
-                        <LineContainer>
-                          <FillingInInformation label='У аниме:' />
-                          <ValueFillingInInformation value='Отзывы/Комментарии' />
-                        </LineContainer>
-                      </AdditionalInfo>
-                    </EntryInfo>
-                  </BlockInfoLeft>
-                  <BlockInfoRight>
-                    <RatingAggregator>
-                      <ContentInformation label='Рейтинг' />
-                      <Scores>
-                        <Rating>
-                          <Container>Звезды</Container>
-                          <TextСontainer>
-                            10 <Praise>отлично</Praise>
-                          </TextСontainer>
-                        </Rating>
-                      </Scores>
-                    </RatingAggregator>
-                    <BlockStudio>
-                      <ContentInformation label='Студия' />
-                      <StudioLogo>Картинка с логотипом</StudioLogo>
-                    </BlockStudio>
-                  </BlockInfoRight>
-                </WrapperBlockWidget>
-              </BlockAboutContent>
-            </ContentBlock>
-          </PageContent>
-        </MainSection>
+        <Subtitle titleOfTheWork='Наименование Фильма'>
+          <div className={Styles.contentWidget}>
+            <Breadcrumbs title='Аниме /' />
+            <Breadcrumbs title='Сериалы /' />
+            <Breadcrumbs title='2023 года' />
+          </div>
+        </Subtitle>
+        <PageContent>
+          <ContentBlock>
+            <BlockAboutContent>
+              <div className={Styles.wrapperPictureContent}>
+                <PictureContent />
+                <UserСomments />
+              </div>
+              <WrapperBlockWidget>
+                <BlockInfoLeft>
+                  <ContentInformation label='Информация' />
+                  <EntryInfo>
+                    <Line>
+                      <LineContainer>
+                        <FillingInInformation label='Тип:' />
+                        <ValueFillingInInformation value='TV Сериал' />
+                      </LineContainer>
+                    </Line>
+                    <Line>
+                      <LineContainer>
+                        <FillingInInformation label='Эпизоды:' />
+                        <ValueFillingInInformation value='21 / 23' />
+                      </LineContainer>
+                    </Line>
+                    <Line>
+                      <LineContainer>
+                        <FillingInInformation label='Следующий эпизод:' />
+                        <ValueFillingInInformation value='21 дек' />
+                      </LineContainer>
+                    </Line>
+                    <Line>
+                      <LineContainer>
+                        <FillingInInformation label='Длительность эпизода:' />
+                        <ValueFillingInInformation value='23 мин' />
+                      </LineContainer>
+                    </Line>
+                    <Line>
+                      <LineContainer>
+                        <FillingInInformation label='Статус:' />
+                        <ValueFillingInInformation value=' Выходит' />
+                      </LineContainer>
+                    </Line>
+                    <Line>
+                      <LineContainer>
+                        <FillingInInformation label='Рейтинг:' />
+                        <ValueFillingInInformation value='R-17' />
+                      </LineContainer>
+                    </Line>
+                    <AdditionalInfo>
+                      <LineContainer>
+                        <FillingInInformation label='У аниме:' />
+                        <ValueFillingInInformation value='Отзывы/Комментарии' />
+                      </LineContainer>
+                    </AdditionalInfo>
+                  </EntryInfo>
+                </BlockInfoLeft>
+                <BlockInfoRight>
+                  <RatingAggregator>
+                    <ContentInformation label='Рейтинг' />
+                    <Scores>
+                      <Rating>
+                        <Container>Звезды</Container>
+                        <TextСontainer>
+                          10 <Praise>отлично</Praise>
+                        </TextСontainer>
+                      </Rating>
+                    </Scores>
+                  </RatingAggregator>
+                  <BlockStudio>
+                    <ContentInformation label='Студия' />
+                    <StudioLogo>Картинка с логотипом</StudioLogo>
+                  </BlockStudio>
+                </BlockInfoRight>
+              </WrapperBlockWidget>
+            </BlockAboutContent>
+          </ContentBlock>
+        </PageContent>
       </SectionWrap>
       <Footer />
       <main>{children} </main>
