@@ -1,4 +1,11 @@
 {
   "lang": "ru",
-  "test": "Сила Сибири"
+  "test": "Сила Сибири",
+  "film": {
+    "statusesList": {
+      "announcement": "анонс",
+      "ongoing": "онгоинг",
+      "release": "вышло"
+    }
+  }
 }
