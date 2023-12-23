@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import i18n from "../i18n/config";
+import i18n from "./config";
 import { I18nextProvider } from "react-i18next";
 
 export const getTranslation = (code: string): string => {
