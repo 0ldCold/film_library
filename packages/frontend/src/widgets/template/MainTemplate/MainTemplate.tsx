@@ -2,7 +2,6 @@ import { FC, ReactNode } from "react";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import SectionWrap from "src/entities/SectionWrap/SectionWrap";
-//import MainSection from "src/entities/MainSection/MainSection";
 import PageContent from "src/entities/PageContent/PageContent";
 import ContentBlock from "src/entities/PageContent/ContentBlock/ContentBlock";
 import BlockAboutContent from "src/entities/PageContent/ContentBlock/BlockAboutContent/BlockAboutContent";
@@ -11,19 +10,10 @@ import Subtitle from "../Subtitle/Subtitle";
 import Breadcrumbs from "../Subtitle/Breadcrumbs/Breadcrumbs";
 import PictureContent from "../../../entities/SubtitleContent/WrapperPicture/PictureContent/PictureContent";
 import UserСomments from "src/features/UserСomments/UserСomments";
-import ContentInformation from "src/entities/ContentInformation/ContentInformation";
 import WrapperBlockWidget from "src/entities/WrapperBlockWidget/WrapperBlockWidget";
-import BlockInfoRight from "src/entities/WrapperBlockWidget/BlockInfoRight/BlockInfoRight";
-import RatingAggregator from "src/entities/WrapperBlockWidget/BlockInfoRight/RatingAggregator/RatingAggregator";
-import Scores from "src/entities/WrapperBlockWidget/BlockInfoRight/RatingAggregator/Scores/Scores";
-import Rating from "src/entities/WrapperBlockWidget/BlockInfoRight/RatingAggregator/Scores/Rating/Rating";
-import Container from "src/entities/WrapperBlockWidget/BlockInfoRight/RatingAggregator/Scores/Rating/Container/Container";
-import TextСontainer from "src/entities/WrapperBlockWidget/BlockInfoRight/RatingAggregator/Scores/Rating/TextСontainer/TextСontainer";
-import Praise from "src/entities/WrapperBlockWidget/BlockInfoRight/RatingAggregator/Scores/Rating/TextСontainer/Praise/Praise";
-import BlockStudio from "src/entities/WrapperBlockWidget/BlockInfoRight/BlockStudio/BlockStudio";
-import StudioLogo from "src/entities/WrapperBlockWidget/BlockInfoRight/BlockStudio/StudioLogo/StudioLogo";
 import InfoModule from "src/widgets/film/InfoModule/InfoModule";
 import { infoModuleMock } from "src/widgets/template/MainTemplate/mock";
+import RatingModule from "src/widgets/film/RatingModule/RatingModule";
 
 interface MainTemplateProps {
   children?: ReactNode;
@@ -49,23 +39,7 @@ const MainTemplate: FC<MainTemplateProps> = ({ children }) => {
               </div>
               <WrapperBlockWidget>
                 <InfoModule data={infoModuleMock} />
-                <BlockInfoRight>
-                  <RatingAggregator>
-                    <ContentInformation label='Рейтинг' />
-                    <Scores>
-                      <Rating>
-                        <Container>Звезды</Container>
-                        <TextСontainer>
-                          10 <Praise>отлично</Praise>
-                        </TextСontainer>
-                      </Rating>
-                    </Scores>
-                  </RatingAggregator>
-                  <BlockStudio>
-                    <ContentInformation label='Студия' />
-                    <StudioLogo>Картинка с логотипом</StudioLogo>
-                  </BlockStudio>
-                </BlockInfoRight>
+                <RatingModule />
               </WrapperBlockWidget>
             </BlockAboutContent>
           </ContentBlock>
