@@ -1,15 +1,16 @@
 import { FC } from "react";
 import Styles from "./FilmStatusRating.module.scss";
+import { genLikesFromRate } from "./helper";
 
 interface FilmStatusRatingProps {
-  date?: string;
+  rate: number;
 }
 
-const FilmStatusRating: FC<FilmStatusRatingProps> = ({ date }) => {
+const FilmStatusRating: FC<FilmStatusRatingProps> = ({ rate }) => {
   return (
-    <div>
-      <span className={Styles.wrapperRating}>{date}</span>
-      <span className={Styles.wrapperGrade}>1</span>
+    <div className={Styles.wrapper}>
+      <span className={Styles.rating}>{rate}</span>
+      <span className={Styles.grade}>{genLikesFromRate(rate)}</span>
     </div>
   );
 };

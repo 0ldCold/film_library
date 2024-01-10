@@ -14,3 +14,4 @@ export const infoModuleMock: FilmInfo = {
   ageRating: "R-17",
   commentsCount: 27271
 };
+

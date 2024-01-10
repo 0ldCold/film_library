@@ -13,6 +13,7 @@ import UserСomments from "src/features/UserСomments/UserСomments";
 import WrapperBlockWidget from "src/entities/WrapperBlockWidget/WrapperBlockWidget";
 import InfoModule from "src/widgets/film/InfoModule/InfoModule";
 import { infoModuleMock } from "src/widgets/template/MainTemplate/mock";
+import { rateModuleMock } from "src/widgets/template/MainTemplate/Background/Ratemock";
 import RatingModule from "src/widgets/film/RatingModule/RatingModule";
 
 interface MainTemplateProps {
@@ -39,7 +40,7 @@ const MainTemplate: FC<MainTemplateProps> = ({ children }) => {
               </div>
               <WrapperBlockWidget>
                 <InfoModule data={infoModuleMock} />
-                <RatingModule />
+                <RatingModule rate={rateModuleMock} />
               </WrapperBlockWidget>
             </BlockAboutContent>
           </ContentBlock>

@@ -1,13 +1,14 @@
-.wrapperRating {
+.wrapper {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.rating {
   font-size: 30px;
   line-height: 30px;
   font-family: tahoma;
 }
-.wrapperGrade{
-    display: flex;
-    justify-content: center;
-    font-size: 10px;
-    line-height: 10px;
+.grade {
+  font-size: 10px;
+  line-height: 10px;
 }
