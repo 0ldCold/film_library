@@ -4,7 +4,7 @@ import Styles from "./UserСomments.module.scss";
 const UserСomments: FC = () => {
   return (
     <div className={Styles.iconsPictures}>
-      <span> Комментировать </span> <span>Написать отзыв</span>
+      <span> Коммент </span> <span>Написать</span>
     </div>
   );
 };

@@ -1,12 +1,12 @@
 import { FC, ReactNode } from "react";
 import Styles from "./Subtitle.module.scss";
 
-interface SubTitleProps {
+interface SubtitleProps {
   titleOfTheWork?: string;
   children?: ReactNode;
 }
 
-const SubTitle: FC<SubTitleProps> = ({ children, titleOfTheWork }) => {
+const Subtitle: FC<SubtitleProps> = ({ children, titleOfTheWork }) => {
   return (
     <header>
       <h1 className={Styles.contentName}>
@@ -16,4 +16,4 @@ const SubTitle: FC<SubTitleProps> = ({ children, titleOfTheWork }) => {
     </header>
   );
 };
-export default SubTitle;
+export default Subtitle;

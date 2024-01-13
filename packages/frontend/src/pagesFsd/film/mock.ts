@@ -15,3 +15,4 @@ export const infoModuleMock: FilmInfo = {
   commentsCount: 27271
 };
 
+export const rateModuleMock = 8.9;

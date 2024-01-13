@@ -1,0 +1,17 @@
+.studioWidget {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.filmCard {
+  display: flex;
+  gap: 35px;
+}
+
+.moduleColumns {
+  display: flex;
+  gap: 35px;
+  max-width: 100%;
+  width: 100%;
+}
