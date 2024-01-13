@@ -8,12 +8,10 @@ interface SubtitleProps {
 
 const Subtitle: FC<SubtitleProps> = ({ children, titleOfTheWork }) => {
   return (
-    <header>
-      <h1 className={Styles.contentName}>
-        {children}
-        {titleOfTheWork}
-      </h1>
-    </header>
+    <h1 className={Styles.contentName}>
+      {children}
+      {titleOfTheWork}
+    </h1>
   );
 };
 export default Subtitle;
