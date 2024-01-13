@@ -1,0 +1,22 @@
+.studioWidget {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.filmCard {
+  display: flex;
+  gap: 35px;
+  margin-top: 15px;
+}
+
+.moduleColumns {
+  display: flex;
+  gap: 35px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.title {
+  font-size: 30px;
+}
