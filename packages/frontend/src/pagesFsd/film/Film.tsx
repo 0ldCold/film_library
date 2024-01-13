@@ -10,6 +10,7 @@ import InfoModule from "src/widgets/film/InfoModule/InfoModule";
 import { infoModuleMock, rateModuleMock } from "src/pagesFsd/film/mock";
 import RatingModule from "src/widgets/film/RatingModule/RatingModule";
 import StudioModule from "src/widgets/film/StudioModule/StudioModule";
+import { filmBreadcrumbs } from "./constants";
 
 const Film: FC = () => {
   const router = useRouter();
@@ -22,11 +23,7 @@ const Film: FC = () => {
   return (
     <MainTemplate>
       <Subtitle titleOfTheWork='Наименование Фильма'>
-        <div className={Styles.contentWidget}>
-          <Breadcrumbs title='Аниме /' />
-          <Breadcrumbs title='Сериалы /' />
-          <Breadcrumbs title='2023 года' />
-        </div>
+        <Breadcrumbs data={filmBreadcrumbs} />
       </Subtitle>
       <div className={Styles.filmCard}>
         <div>

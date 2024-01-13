@@ -1,11 +1,12 @@
 import { FC } from "react";
 import Styles from "./breadcrumbs.module.scss";
+import { Breadcrumb } from "./types";
 
 interface BreadcrumbsProps {
-  title?: string;
+  data: Breadcrumb[];
 }
 
-const Breadcrumbs: FC<BreadcrumbsProps> = ({ title }) => {
-  return <span className={Styles.breadcrumbs}>{title}</span>;
+const Breadcrumbs: FC<BreadcrumbsProps> = ({ data }) => {
+  return <div className={Styles.breadcrumbs}>{data.map((item) => item.name).join(" / ")}</div>;
 };
 export default Breadcrumbs;
