@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { FC, useEffect } from "react";
 import MainTemplate from "src/widgets/template/MainTemplate/MainTemplate";
-import Subtitle from "src/entities/film/Subtitle/Subtitle";
 import Styles from "./Film.module.scss";
 import Breadcrumbs from "src/entities/film/Breadcrumbs/Breadcrumbs";
 import PictureContent from "src/entities/film/PictureContent/PictureContent";
@@ -22,9 +21,10 @@ const Film: FC = () => {
 
   return (
     <MainTemplate>
-      <Subtitle titleOfTheWork='Наименование Фильма'>
+      <div>
+        <h1 className={Styles.title}>Наименование Фильма</h1>
         <Breadcrumbs data={filmBreadcrumbs} />
-      </Subtitle>
+      </div>
       <div className={Styles.filmCard}>
         <div>
           <PictureContent />
