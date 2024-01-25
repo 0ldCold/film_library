@@ -6,10 +6,16 @@ import Breadcrumbs from "src/entities/film/Breadcrumbs/Breadcrumbs";
 import PictureContent from "src/entities/film/PictureContent/PictureContent";
 import UserСomments from "src/features/UserСomments/UserСomments";
 import InfoModule from "src/widgets/film/InfoModule/InfoModule";
-import { infoModuleMock, rateModuleMock } from "src/pagesFsd/film/mock";
+import {
+  AuthorModuleMock,
+  StudioLogoMock,
+  infoModuleMock,
+  rateModuleMock
+} from "src/shared/api/film/mock";
 import RatingModule from "src/widgets/film/RatingModule/RatingModule";
 import StudioModule from "src/widgets/film/StudioModule/StudioModule";
 import { filmBreadcrumbs } from "./constants";
+import AuthorModule from "src/widgets/film/AuthorModule/AuthorModule";
 
 const Film: FC = () => {
   const router = useRouter();
@@ -34,10 +40,11 @@ const Film: FC = () => {
           <InfoModule data={infoModuleMock} />
           <div className={Styles.studioWidget}>
             <RatingModule rate={rateModuleMock} />
-            <StudioModule />
+            <StudioModule logo={StudioLogoMock.logo} />
           </div>
         </div>
       </div>
+      <AuthorModule data={AuthorModuleMock} />
     </MainTemplate>
   );
 };
