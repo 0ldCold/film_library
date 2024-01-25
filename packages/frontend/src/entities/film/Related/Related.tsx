@@ -22,10 +22,7 @@ const Related: FC<RelatedProps> = ({ name, info, poster, story, publisher, studi
         <div className={Styles.row}>
           <div className={Styles.infoContainer}>
             {info?.map((item) => <div className={Styles.info}>{item}</div>)}
-            <div className={Styles.publisher}>
-              {publisher}
-              {studio}
-            </div>
+            <div className={Styles.publisher}>{publisher ?? studio}</div>
             <div className={Styles.story}>{story}</div>
           </div>
         </div>
