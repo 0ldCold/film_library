@@ -8,6 +8,7 @@ import UserСomments from "src/features/UserСomments/UserСomments";
 import InfoModule from "src/widgets/film/InfoModule/InfoModule";
 import {
   AuthorModuleMock,
+  RelatedModuleMock,
   StudioLogoMock,
   infoModuleMock,
   rateModuleMock
@@ -16,6 +17,7 @@ import RatingModule from "src/widgets/film/RatingModule/RatingModule";
 import StudioModule from "src/widgets/film/StudioModule/StudioModule";
 import { filmBreadcrumbs } from "./constants";
 import AuthorModule from "src/widgets/film/AuthorModule/AuthorModule";
+import RelatedModule from "src/widgets/film/RelatedModule/RelatedModule";
 
 const Film: FC = () => {
   const router = useRouter();
@@ -45,6 +47,7 @@ const Film: FC = () => {
         </div>
       </div>
       <AuthorModule data={AuthorModuleMock} />
+      <RelatedModule data={RelatedModuleMock} />
     </MainTemplate>
   );
 };

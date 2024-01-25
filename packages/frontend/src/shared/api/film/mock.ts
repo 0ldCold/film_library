@@ -4,8 +4,12 @@ import GegeAvatar from "./authorsPicture/AuthorsGege.webp";
 import SetaAvatar from "./authorsPicture/Seta.webp";
 import KacyhiroAvatar from "./authorsPicture/Kacyhiro.webp";
 import StudioMappa from "./studioPicture/studio.png";
-
 import { StudioImgProps } from "src/widgets/film/StudioModule/StudioModule";
+import { RelatedInfo } from "src/widgets/film/RelatedModule/types";
+import MagicBattleManga from "./relatedPicture/MagicBattleManga.webp";
+import MagicBattle from "./relatedPicture/MagicBattle.webp";
+import MagicBattle2Recaps from "./relatedPicture/MagicBattle2Recaps.webp";
+import MagicBattleDeadlyMigration from "./relatedPicture/MagicBattleDeadlyMigration.webp";
 
 export const infoModuleMock: FilmInfo = {
   type: "TV Сериал",
@@ -54,5 +58,33 @@ export const AuthorModuleMock: AuthorModuleInfo[] = [
     name: "Сёта Госёдзоно",
     role: ["Ключевая анимация", "Раскадровка", "Режиссёр", "Режиссёр эпизодов"],
     avatar: SetaAvatar.src
+  }
+];
+
+export const RelatedModuleMock: RelatedInfo[] = [
+  {
+    name: "Магическая битва",
+    info: ["Манга", " 2018 год"],
+    publisher: "Shounen Jump (Weekly)",
+    story: "Адаптация",
+    poster: MagicBattleManga.src
+  },
+  {
+    name: "Магическая битва",
+    info: ["TV Сериал", "2020 год"],
+    studio: "MAPPA",
+    story: "Предыстория",
+    poster: MagicBattle.src
+  },
+  {
+    name: "Магическая битва 2: Рекапы",
+    info: ["TV Спецвыпуск", "2023 год"],
+    studio: "MAPPA",
+    story: "Обобщение",
+    poster: MagicBattle2Recaps.src
+  },
+  {
+    name: "Магическая битва: Смертельная миграция",
+    poster: MagicBattleDeadlyMigration.src
   }
 ];
