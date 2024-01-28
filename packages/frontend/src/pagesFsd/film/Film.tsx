@@ -46,8 +46,12 @@ const Film: FC = () => {
           </div>
         </div>
       </div>
-      <AuthorModule data={AuthorModuleMock} />
-      <RelatedModule data={RelatedModuleMock} />
+
+      <div className={Styles.modules}>
+        <RelatedModule data={RelatedModuleMock} />
+
+        <AuthorModule data={AuthorModuleMock} />
+      </div>
     </MainTemplate>
   );
 };
