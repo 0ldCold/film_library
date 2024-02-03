@@ -10,13 +10,13 @@ interface StarProps {
 
 const Star: FC<StarProps> = ({ type }) => {
   if (type == "half") {
-    return <StarHalf size={30} color='#4c86c8' />;
+    return <StarHalf size={35} color='#4c86c8' />;
   }
   if (type == "empty") {
-    return <StarEmpty size={30} color='#4c86c8' />;
+    return <StarEmpty size={35} color='#4c86c8' />;
   }
   if (type == "filled") {
-    return <StarFilled size={30} color='#4c86c8' />;
+    return <StarFilled size={35} color='#4c86c8' />;
   }
   return type;
 };

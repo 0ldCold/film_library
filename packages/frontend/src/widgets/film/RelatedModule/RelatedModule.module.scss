@@ -1,0 +1,18 @@
+.related {
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    padding-top: 10px;
+    margin-bottom: 17px;
+    border-top: 1px dashed #ddd;
+
+    &:first-child {
+      padding-top: 0;
+      border-top: none;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,4 +1,11 @@
 {
   "lang": "en",
-  "test": "Power of Siberia"
+  "test": "Power of Siberia",
+  "film": {
+    "statusesList": {
+      "announcement": "announcement",
+      "ongoing": "ongoing",
+      "release": "release"
+    }
+  }
 }

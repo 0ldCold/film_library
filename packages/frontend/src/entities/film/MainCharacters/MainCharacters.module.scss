@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  cursor: pointer;
+  color: #176093;
+  font-family: sans-serif;
+  font-weight: bold;
+  white-space: normal;
+  font-size: 13px;
+  margin-top: 5px;
+  max-width: 97px;
+  line-height: 1.65;
+}
