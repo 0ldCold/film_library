@@ -7,16 +7,11 @@
   flex-direction: column;
 }
 
-.infoContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-left: 4px;
-}
 .row {
   margin-top: 9px;
   display: flex;
-  gap: 5px;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 .name {
   cursor: pointer;
@@ -24,12 +19,13 @@
   font-family: sans-serif;
   font-weight: bold;
 }
-.info {
+.signs {
+  display: flex;
   font-family: "Open Sans";
   font-size: 12px;
   color: #112233;
   border-bottom: 1px dashed #2b8acc;
-  padding-top: 4px;
+  align-items: center;
 }
 
 .publisher {
@@ -38,6 +34,7 @@
   border: 1px solid #e3e7ed;
   font-size: 12px;
   line-height: 1.4;
+  padding: 0 3px;
 }
 
 .story {
@@ -47,4 +44,5 @@
   border: 1px solid #637384;
   font-size: 12px;
   line-height: 1.4;
+  padding: 0 3px;
 }

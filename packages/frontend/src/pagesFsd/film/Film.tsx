@@ -4,10 +4,11 @@ import MainTemplate from "src/widgets/template/MainTemplate/MainTemplate";
 import Styles from "./Film.module.scss";
 import Breadcrumbs from "src/entities/film/Breadcrumbs/Breadcrumbs";
 import PictureContent from "src/entities/film/PictureContent/PictureContent";
-import UserСomments from "src/features/UserСomments/UserСomments";
+import UserСomments from "src/features/film/UserСomments/UserСomments";
 import InfoModule from "src/widgets/film/InfoModule/InfoModule";
 import {
   AuthorModuleMock,
+  MainCharactersModuleMock,
   RelatedModuleMock,
   StudioLogoMock,
   infoModuleMock,
@@ -18,15 +19,9 @@ import StudioModule from "src/widgets/film/StudioModule/StudioModule";
 import { filmBreadcrumbs } from "./constants";
 import AuthorModule from "src/widgets/film/AuthorModule/AuthorModule";
 import RelatedModule from "src/widgets/film/RelatedModule/RelatedModule";
+import MainCharactersModule from "src/widgets/film/MainCharactersModule/MainCharactersModule";
 
 const Film: FC = () => {
-  const router = useRouter();
-  const filmName = router.query.animation;
-
-  useEffect(() => {
-    console.log(filmName);
-  }, [filmName]);
-
   return (
     <MainTemplate>
       <div>
@@ -49,8 +44,10 @@ const Film: FC = () => {
 
       <div className={Styles.modules}>
         <RelatedModule data={RelatedModuleMock} />
-
         <AuthorModule data={AuthorModuleMock} />
+      </div>
+      <div className={Styles.modules}>
+        <MainCharactersModule data={MainCharactersModuleMock} />
       </div>
     </MainTemplate>
   );

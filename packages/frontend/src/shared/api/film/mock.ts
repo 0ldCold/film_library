@@ -10,6 +10,12 @@ import MagicBattleManga from "./relatedPicture/MagicBattleManga.webp";
 import MagicBattle from "./relatedPicture/MagicBattle.webp";
 import MagicBattle2Recaps from "./relatedPicture/MagicBattle2Recaps.webp";
 import MagicBattleDeadlyMigration from "./relatedPicture/MagicBattleDeadlyMigration.webp";
+import { MainCharactersModuleInfo } from "src/widgets/film/MainCharactersModule/types";
+import MegumiFushiguro from "./mainCharacterPicture/MegumiFushiguro.webp";
+import NobaraKugisaki from "./mainCharacterPicture/NobaraKugisaki.webp";
+import SatoroDrezo from "./mainCharacterPicture/SatoroDrezo.webp";
+import SugurGeto from "./mainCharacterPicture/SugurGeto.webp";
+import YujiItadori from "./mainCharacterPicture/YujiItadori.webp";
 
 export const infoModuleMock: FilmInfo = {
   type: "TV Сериал",
@@ -61,24 +67,31 @@ export const AuthorModuleMock: AuthorModuleInfo[] = [
   }
 ];
 
+const getDateFromYear = (year: number): Date => {
+  return new Date(year, 0, 1);
+};
+
 export const RelatedModuleMock: RelatedInfo[] = [
   {
     name: "Магическая битва",
-    info: ["Манга", " 2018 год"],
+    info: "Манга",
+    releaseDate: getDateFromYear(2018),
     publisher: "Shounen Jump (Weekly)",
     story: "Адаптация",
     poster: MagicBattleManga.src
   },
   {
     name: "Магическая битва",
-    info: ["TV Сериал", "2020 год"],
+    info: "TV Сериал",
+    releaseDate: getDateFromYear(2020),
     studio: "MAPPA",
     story: "Предыстория",
     poster: MagicBattle.src
   },
   {
     name: "Магическая битва 2: Рекапы",
-    info: ["TV Спецвыпуск", "2023 год"],
+    info: "TV Спецвыпуск",
+    releaseDate: getDateFromYear(2023),
     studio: "MAPPA",
     story: "Обобщение",
     poster: MagicBattle2Recaps.src
@@ -86,5 +99,28 @@ export const RelatedModuleMock: RelatedInfo[] = [
   {
     name: "Магическая битва: Смертельная миграция",
     poster: MagicBattleDeadlyMigration.src
+  }
+];
+
+export const MainCharactersModuleMock: MainCharactersModuleInfo[] = [
+  {
+    name: "Мэгуми Фусигуро",
+    poster: MegumiFushiguro.src
+  },
+  {
+    name: "Нобара Кугисаки",
+    poster: NobaraKugisaki.src
+  },
+  {
+    name: "Сатору Годзё",
+    poster: SatoroDrezo.src
+  },
+  {
+    name: "Сугуру Гэто",
+    poster: SugurGeto.src
+  },
+  {
+    name: "Юдзи Итадори",
+    poster: YujiItadori.src
   }
 ];

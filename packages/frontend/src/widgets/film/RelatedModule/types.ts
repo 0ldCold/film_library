@@ -1,6 +1,7 @@
 export interface RelatedInfo {
   name: string;
-  info?: string[];
+  info?: string;
+  releaseDate?: Date;
   story?: string;
   publisher?: string;
   studio?: string;

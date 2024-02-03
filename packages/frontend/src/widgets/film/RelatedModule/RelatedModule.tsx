@@ -14,10 +14,11 @@ const RelatedModule: FC<RelatedModuleProps> = ({ data }) => {
       <div className={Styles.related}>
         {data.map((info) => (
           <Related
-            key={info.name}
+            key={`${info.name} ${info.info}`}
             poster={info.poster}
             name={info.name}
             info={info.info}
+            releaseDate={info.releaseDate}
             publisher={info.publisher}
             studio={info.studio}
             story={info.story}

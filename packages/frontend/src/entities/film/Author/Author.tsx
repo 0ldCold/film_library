@@ -19,7 +19,9 @@ const Author: FC<AuthorProps> = ({ name, avatar, roles }) => {
           <div className={Styles.label}>{roles.length == 1 ? "Роль: " : "Роли: "}</div>
           <div className={Styles.rolesContainer}>
             {roles.map((item) => (
-              <div className={Styles.role}>{item}</div>
+              <div key={item} className={Styles.role}>
+                {item}
+              </div>
             ))}
           </div>
         </div>
