@@ -7,6 +7,7 @@ import PictureContent from "src/entities/film/PictureContent/PictureContent";
 import UserСomments from "src/features/film/UserСomments/UserСomments";
 import InfoModule from "src/widgets/film/InfoModule/InfoModule";
 import {
+  ActionListModuleMock,
   AuthorModuleMock,
   MainCharactersModuleMock,
   RelatedModuleMock,
@@ -20,6 +21,7 @@ import { filmBreadcrumbs } from "./constants";
 import AuthorModule from "src/widgets/film/AuthorModule/AuthorModule";
 import RelatedModule from "src/widgets/film/RelatedModule/RelatedModule";
 import MainCharactersModule from "src/widgets/film/MainCharactersModule/MainCharactersModule";
+import ActionListModule from "src/widgets/film/ActionListModule/ActionListModule";
 
 const Film: FC = () => {
   return (
@@ -32,6 +34,8 @@ const Film: FC = () => {
         <div>
           <PictureContent />
           <UserСomments />
+
+          <ActionListModule data={ActionListModuleMock} />
         </div>
         <div className={Styles.moduleColumns}>
           <InfoModule data={infoModuleMock} />

@@ -23,7 +23,8 @@
       "ROOT",
       "packages/backend",
       "packages/frontend"
-    ]
+    ],
+    "liveServer.settings.multiRootWorkspaceName": "packages/frontend"
   },
   "extensions": {
     "recommendations": ["dbaeumer.vscode-eslint", "orta.vscode-jest"]

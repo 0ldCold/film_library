@@ -1,0 +1,48 @@
+.row {
+  border-left: 5px solid transparent;
+  padding: 0 5px;
+}
+.button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.blue {
+  .row {
+    background: #daf1ff;
+    border-color: #bce6ff;
+    color: #176093;
+  }
+}
+.green {
+  .row {
+    background: #eef6dc;
+    border-color: #e0efc0;
+    color: #419541;
+  }
+}
+.red {
+  .row {
+    background: #fedddf;
+    border-color: #fec2c5;
+    color: #fc575e;
+  }
+}
+.gray {
+  .row {
+    background: #ebeef1;
+    border-color: #dbe0e6;
+    color: #7b8084;
+  }
+}
+
+.listItemText {
+  padding-left: 5px;
+  cursor: pointer;
+
+  &.removeFromList {
+    color: #ff4136;
+  }
+}

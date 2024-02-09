@@ -16,6 +16,7 @@ import NobaraKugisaki from "./mainCharacterPicture/NobaraKugisaki.webp";
 import SatoroDrezo from "./mainCharacterPicture/SatoroDrezo.webp";
 import SugurGeto from "./mainCharacterPicture/SugurGeto.webp";
 import YujiItadori from "./mainCharacterPicture/YujiItadori.webp";
+import { ActionListModuleInfo } from "src/widgets/film/ActionListModule/types";
 
 export const infoModuleMock: FilmInfo = {
   type: "TV Сериал",
@@ -124,3 +125,7 @@ export const MainCharactersModuleMock: MainCharactersModuleInfo[] = [
     poster: YujiItadori.src
   }
 ];
+
+export const ActionListModuleMock: ActionListModuleInfo = {
+  status: null
+};
