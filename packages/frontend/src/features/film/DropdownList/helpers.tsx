@@ -13,7 +13,6 @@ interface CurrentState {
   color: DropdownColor;
 }
 
-//TODO: Вставить значки
 
 export const getCurrentState = (FilmStatus: UserFilmsListType): CurrentState => {
   switch (FilmStatus) {
