@@ -1,12 +1,19 @@
 .row {
+  border: 1px solid transparent;
   border-left: 5px solid transparent;
+  border-top: none;
   padding: 0 5px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 30px;
 }
+
 .button {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 5px;
+  border-top: 1px solid transparent;
 }
 
 .blue {
@@ -40,9 +47,22 @@
 
 .listItemText {
   padding-left: 5px;
+  font-family: sans-serif;
   cursor: pointer;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 200;
+  &:hover {
+    text-decoration: underline;
+  }
 
   &.removeFromList {
     color: #ff4136;
   }
+}
+
+.icons {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }

@@ -6,7 +6,6 @@ import { getCurrentState } from "./helpers";
 import clsx from "clsx";
 import { USER_LISTS } from "./constants";
 
-
 interface DropdownListProps {
   view?: "large" | "small";
   value: UserFilmsListType;
@@ -24,19 +23,22 @@ const FilmStatusDropdown: FC<DropdownListProps> = ({ view = "large" }) => {
     setIsOpen(false);
   };
 
-  const { icon, color, name } = useMemo(() => getCurrentState(currentFilmStatus), [currentFilmStatus]);
+  const { icon, color, name } = useMemo(
+    () => getCurrentState(currentFilmStatus),
+    [currentFilmStatus]
+  );
 
   return (
     <div className={Styles[color]}>
       <div onClick={toggleDropdown} className={clsx(Styles.row, Styles.button)}>
-        <div>
+        <div className={Styles.icons}>
           {icon}
-          {name}
+          <span>{name}</span>
         </div>
         <ArrowIcon size={24} color='#9da2a8' />
       </div>
       {isOpen && (
-        <div>
+        <div className={Styles.itemsList}>
           {USER_LISTS.map(({ name, type }) =>
             currentFilmStatus === type ? null : (
               <div key={type ?? "null"} className={Styles.row} onClick={changeList(type)}>

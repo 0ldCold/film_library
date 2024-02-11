@@ -1,5 +1,11 @@
 import { ReactNode } from "react";
 import { DropdownColor, UserFilmsListType } from "./types";
+import PlusIcon from "src/shared/uikit/PlusIcon";
+import DoneIcon from "src/shared/uikit/DoneIcon";
+import CloseIcon from "src/shared/uikit/CloseIcon";
+import PlayIcon from "src/shared/uikit/PlayIcon";
+import PauseIcon from "src/shared/uikit/PauseIcon";
+import ReplayIcon from "src/shared/uikit/ReplayIcon";
 
 interface CurrentState {
   icon: ReactNode;
@@ -15,43 +21,43 @@ export const getCurrentState = (FilmStatus: UserFilmsListType): CurrentState => 
       return {
         color: "blue",
         name: "Добавить в список",
-        icon: <span>{`+ `}</span>
+        icon: <PlusIcon size={24} />
       };
     case "dropped":
       return {
         color: "red",
         name: "Брошено",
-        icon: <span>{`X `}</span>
+        icon: <CloseIcon size={24} />
       };
     case "watched":
       return {
         color: "green",
         name: "Просмотрено",
-        icon: <span>{`X `}</span>
+        icon: <DoneIcon size={24} />
       };
     case "paused":
       return {
         color: "gray",
         name: "Отложено",
-        icon: <span>{`X `}</span>
+        icon: <PauseIcon size={24} />
       };
     case "planned":
       return {
         color: "blue",
         name: "Запланировано",
-        icon: <span>{`+ `}</span>
+        icon: <PlusIcon size={24} />
       };
     case "watching":
       return {
         color: "blue",
         name: "Смотрю",
-        icon: <span>{`X `}</span>
+        icon: <PlayIcon size={26} />
       };
     case "reviewed":
       return {
         color: "blue",
         name: "Пересматриваю",
-        icon: <span>{`X `}</span>
+        icon: <ReplayIcon size={24} />
       };
   }
 };
