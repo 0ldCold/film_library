@@ -29,35 +29,33 @@ const FilmStatusDropdown: FC<DropdownListProps> = ({ view = "large" }) => {
   );
 
   return (
-    <div className={Styles[color]}>
+    <div className={clsx(Styles[color], Styles.select)}>
       <div onClick={toggleDropdown} className={clsx(Styles.row, Styles.button)}>
         <div className={Styles.icons}>
           {icon}
           <span>{name}</span>
         </div>
         <div className={Styles.icons}>
-          {!isOpen ? (
+          <div
+            className={clsx(Styles.icons, {
+              [Styles.turn]: isOpen
+            })}
+          >
             <ArrowIcon size={24} color='#9da2a8' />
-          ) : (
-            <div className={clsx(Styles.icons, Styles.turn)}>
-              <ArrowIcon size={24} color='#9da2a8' />
-            </div>
-          )}
+          </div>
         </div>
       </div>
-      {isOpen && (
-        <div className={Styles.itemsList}>
-          {USER_LISTS.map(({ name, type }) =>
-            currentFilmStatus === type ? null : (
-              <div key={type ?? "null"} className={clsx(Styles.row)} onClick={changeList(type)}>
-                <div className={clsx(Styles.listItemText, type === null && Styles.removeFromList)}>
-                  {name}
-                </div>
+      <div className={clsx(Styles.itemsList, isOpen && Styles.slideOutDown)}>
+        {USER_LISTS.map(({ name, type }) =>
+          currentFilmStatus === type ? null : (
+            <div key={type ?? "null"} className={clsx(Styles.row)} onClick={changeList(type)}>
+              <div className={clsx(Styles.listItemText, type === null && Styles.removeFromList)}>
+                {name}
               </div>
-            )
-          )}
-        </div>
-      )}
+            </div>
+          )
+        )}
+      </div>
     </div>
   );
 };
