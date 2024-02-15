@@ -35,13 +35,21 @@ const FilmStatusDropdown: FC<DropdownListProps> = ({ view = "large" }) => {
           {icon}
           <span>{name}</span>
         </div>
-        <ArrowIcon size={24} color='#9da2a8' />
+        <div className={Styles.icons}>
+          {!isOpen ? (
+            <ArrowIcon size={24} color='#9da2a8' />
+          ) : (
+            <div className={clsx(Styles.icons, Styles.turn)}>
+              <ArrowIcon size={24} color='#9da2a8' />
+            </div>
+          )}
+        </div>
       </div>
       {isOpen && (
         <div className={Styles.itemsList}>
           {USER_LISTS.map(({ name, type }) =>
             currentFilmStatus === type ? null : (
-              <div key={type ?? "null"} className={Styles.row} onClick={changeList(type)}>
+              <div key={type ?? "null"} className={clsx(Styles.row)} onClick={changeList(type)}>
                 <div className={clsx(Styles.listItemText, type === null && Styles.removeFromList)}>
                   {name}
                 </div>

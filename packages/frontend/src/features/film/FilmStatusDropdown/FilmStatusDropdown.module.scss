@@ -7,7 +7,7 @@
   font-weight: bold;
   line-height: 30px;
 }
-//TODO: Навесить стиль на стрелку и сделать плавным открывание
+//TODO: Cделать плавным открывание
 .button {
   display: flex;
   justify-content: space-between;
@@ -65,4 +65,35 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+}
+
+.slideOutDown {
+  animation-name: slideOutDown;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideOutDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    visibility: visible;
+
+    transform: translateY(100%);
+  }
+}
+
+.turn {
+  animation-name: turn;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+}
+@keyframes turn {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
 }

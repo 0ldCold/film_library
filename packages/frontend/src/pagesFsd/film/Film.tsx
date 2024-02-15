@@ -7,8 +7,8 @@ import PictureContent from "src/entities/film/PictureContent/PictureContent";
 import UserСomments from "src/features/film/UserСomments/UserСomments";
 import InfoModule from "src/widgets/film/InfoModule/InfoModule";
 import {
-  ActionListModuleMock,
   AuthorModuleMock,
+  FilmStatusDropdownModuleMock,
   MainCharactersModuleMock,
   RelatedModuleMock,
   StudioLogoMock,
@@ -21,7 +21,7 @@ import { filmBreadcrumbs } from "./constants";
 import AuthorModule from "src/widgets/film/AuthorModule/AuthorModule";
 import RelatedModule from "src/widgets/film/RelatedModule/RelatedModule";
 import MainCharactersModule from "src/widgets/film/MainCharactersModule/MainCharactersModule";
-import ActionListModule from "src/widgets/film/ActionListModule/ActionListModule";
+import FilmStatusDropdownModule from "src/widgets/film/FilmStatusDropdownModule/FilmStatusDropdownModule";
 
 const Film: FC = () => {
   return (
@@ -33,9 +33,10 @@ const Film: FC = () => {
       <div className={Styles.filmCard}>
         <div>
           <PictureContent />
-          <UserСomments />
-
-          <ActionListModule data={ActionListModuleMock} />
+          {/* <UserСomments /> */}
+          <div className={Styles.filmStatus}>
+            <FilmStatusDropdownModule data={FilmStatusDropdownModuleMock} />
+          </div>
         </div>
         <div className={Styles.moduleColumns}>
           <InfoModule data={infoModuleMock} />

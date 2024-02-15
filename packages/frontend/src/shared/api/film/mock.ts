@@ -16,7 +16,7 @@ import NobaraKugisaki from "./mainCharacterPicture/NobaraKugisaki.webp";
 import SatoroDrezo from "./mainCharacterPicture/SatoroDrezo.webp";
 import SugurGeto from "./mainCharacterPicture/SugurGeto.webp";
 import YujiItadori from "./mainCharacterPicture/YujiItadori.webp";
-import { ActionListModuleInfo } from "src/widgets/film/ActionListModule/types";
+import { FilmStatusDropdownModuleInfo } from "src/widgets/film/FilmStatusDropdownModule/types";
 
 export const infoModuleMock: FilmInfo = {
   type: "TV Сериал",
@@ -126,6 +126,6 @@ export const MainCharactersModuleMock: MainCharactersModuleInfo[] = [
   }
 ];
 
-export const ActionListModuleMock: ActionListModuleInfo = {
+export const FilmStatusDropdownModuleMock: FilmStatusDropdownModuleInfo = {
   status: null
 };
