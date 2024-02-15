@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { IconProps } from "./types";
 
-const CommentIcon: FC<IconProps> = ({ size, color = "inherit" }) => {
+const ReviewIcon: FC<IconProps> = ({ size, color = "inherit" }) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -12,8 +12,9 @@ const CommentIcon: FC<IconProps> = ({ size, color = "inherit" }) => {
       color={color}
     >
       <path d='M0 0h24v24H0V0z' fill='none' />
-      <path d='M15 4v7H5.17L4 12.17V4h11m1-2H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm5 4h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1z' />
+      <path d='M4 4h16v12H5.17L4 17.17V4m0-2c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2H4zm2 10h12v2H6v-2zm0-3h12v2H6V9zm0-3h12v2H6V6z' />
     </svg>
   );
 };
-export default CommentIcon;
+
+export default ReviewIcon;

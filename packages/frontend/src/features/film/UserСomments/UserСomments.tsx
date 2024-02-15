@@ -1,25 +1,19 @@
 import { FC } from "react";
 import Styles from "./UserСomments.module.scss";
-import CommentIcon from "src/shared/uikit/CommentIcon";
-import EmptyCommentIcon from "src/shared/uikit/EmptyCommentIcon";
 import FeatherIcons from "src/shared/uikit/FeatherIcons";
 import GearsIcon from "src/shared/uikit/GearsIcon";
+import StarIcons from "src/shared/uikit/StarIcons";
+import CommentIcon from "src/shared/uikit/CommentIcon";
+import ReviewIcon from "src/shared/uikit/ReviewIcon";
 
 const UserСomments: FC = () => {
   return (
     <div className={Styles.iconsPictures}>
-      <div>
-        <CommentIcon size={10} color='#444' />{" "}
-        <div>
-          <EmptyCommentIcon size={10} color='#444' />
-        </div>
-        <div>
-          <FeatherIcons size={10} color='#444' />
-        </div>
-        <div>
-          <GearsIcon size={10} color='#444' />
-        </div>
-      </div>
+      <CommentIcon size={20} color='#444' />
+      <ReviewIcon size={20} color='#444' />
+      <FeatherIcons size={20} color='#444' />
+      <GearsIcon size={20} color='#444' />
+      <StarIcons size={20} color='#444' />
     </div>
   );
 };

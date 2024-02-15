@@ -33,7 +33,7 @@ const Film: FC = () => {
       <div className={Styles.filmCard}>
         <div>
           <PictureContent />
-          {/* <UserСomments /> */}
+          <UserСomments />
           <div className={Styles.filmStatus}>
             <FilmStatusDropdownModule data={FilmStatusDropdownModuleMock} />
           </div>
