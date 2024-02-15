@@ -11,6 +11,7 @@ import {
   FilmStatusDropdownModuleMock,
   MainCharactersModuleMock,
   RelatedModuleMock,
+  StillsMock,
   StudioLogoMock,
   infoModuleMock,
   rateModuleMock
@@ -22,12 +23,14 @@ import AuthorModule from "src/widgets/film/AuthorModule/AuthorModule";
 import RelatedModule from "src/widgets/film/RelatedModule/RelatedModule";
 import MainCharactersModule from "src/widgets/film/MainCharactersModule/MainCharactersModule";
 import FilmStatusDropdownModule from "src/widgets/film/FilmStatusDropdownModule/FilmStatusDropdownModule";
+import DescriptionModule from "src/widgets/film/DescriptionModule/DescriptionModule";
+import StillsModule from "src/widgets/film/StillsModule/StillsModule";
 
 const Film: FC = () => {
   return (
     <MainTemplate>
       <div>
-        <h1 className={Styles.title}>Наименование Фильма</h1>
+        <h1 className={Styles.title}>Магическая битва 2 </h1>
         <Breadcrumbs data={filmBreadcrumbs} />
       </div>
       <div className={Styles.filmCard}>
@@ -38,15 +41,16 @@ const Film: FC = () => {
             <FilmStatusDropdownModule data={FilmStatusDropdownModuleMock} />
           </div>
         </div>
+
         <div className={Styles.moduleColumns}>
           <InfoModule data={infoModuleMock} />
+
           <div className={Styles.studioWidget}>
             <RatingModule rate={rateModuleMock} />
             <StudioModule logo={StudioLogoMock.logo} />
           </div>
         </div>
       </div>
-
       <div className={Styles.modules}>
         <RelatedModule data={RelatedModuleMock} />
         <AuthorModule data={AuthorModuleMock} />
@@ -54,6 +58,7 @@ const Film: FC = () => {
       <div className={Styles.modules}>
         <MainCharactersModule data={MainCharactersModuleMock} />
       </div>
+      <StillsModule data={StillsMock} />
     </MainTemplate>
   );
 };

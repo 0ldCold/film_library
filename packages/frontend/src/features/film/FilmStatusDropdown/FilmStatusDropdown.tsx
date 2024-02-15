@@ -6,12 +6,12 @@ import { getCurrentState } from "./helpers";
 import clsx from "clsx";
 import { USER_LISTS } from "./constants";
 
-interface DropdownListProps {
-  view?: "large" | "small";
+interface FilmStatusDropdownProps {
+  view?: "large" | "small" | "additionally";
   value: UserFilmsListType;
   onChange?: (newStatus: UserFilmsListType) => Promise<void>;
 }
-const FilmStatusDropdown: FC<DropdownListProps> = ({ view = "large" }) => {
+const FilmStatusDropdown: FC<FilmStatusDropdownProps> = ({ view = "large" }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => {
     setIsOpen((prev) => !prev);

@@ -7,7 +7,7 @@ interface FilmStatusDropdownModuleProps {
 }
 
 const FilmStatusDropdownModule: FC<FilmStatusDropdownModuleProps> = ({ data }) => {
-  return <FilmStatusDropdown value={data.status} />;
+  return <FilmStatusDropdown value={data.status} view='large' />;
 };
 
 export default FilmStatusDropdownModule;

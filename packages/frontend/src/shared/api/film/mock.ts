@@ -17,6 +17,9 @@ import SatoroDrezo from "./mainCharacterPicture/SatoroDrezo.webp";
 import SugurGeto from "./mainCharacterPicture/SugurGeto.webp";
 import YujiItadori from "./mainCharacterPicture/YujiItadori.webp";
 import { FilmStatusDropdownModuleInfo } from "src/widgets/film/FilmStatusDropdownModule/types";
+import { StillsModuleInfo } from "src/widgets/film/StillsModule/types";
+import frameOne from "./stillsPicture/frameOne.jpg";
+import frameTwo from "./stillsPicture/frameTwo.jpg";
 
 export const infoModuleMock: FilmInfo = {
   type: "TV Сериал",
@@ -129,3 +132,12 @@ export const MainCharactersModuleMock: MainCharactersModuleInfo[] = [
 export const FilmStatusDropdownModuleMock: FilmStatusDropdownModuleInfo = {
   status: null
 };
+
+export const StillsMock: StillsModuleInfo[] = [
+  {
+    frame: frameOne.src
+  },
+  {
+    frame: frameTwo.src
+  }
+];

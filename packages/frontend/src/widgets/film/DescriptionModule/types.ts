@@ -1,0 +1,3 @@
+interface DescriptionModuleInfo {
+  text: string;
+}
