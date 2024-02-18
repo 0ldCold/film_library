@@ -9,11 +9,11 @@ import ReviewIcon from "src/shared/uikit/ReviewIcon";
 const UserСomments: FC = () => {
   return (
     <div className={Styles.iconsPictures}>
-      <CommentIcon size={20} color='#444' />
-      <ReviewIcon size={20} color='#444' />
-      <FeatherIcons size={20} color='#444' />
-      <GearsIcon size={20} color='#444' />
-      <StarIcons size={20} color='#444' />
+      <CommentIcon size={19} color='#444' />
+      <ReviewIcon size={19} color='#444' />
+      <FeatherIcons size={19} color='#444' />
+      <StarIcons size={19} color='#444' />
+      <GearsIcon size={19} color='#444' />
     </div>
   );
 };

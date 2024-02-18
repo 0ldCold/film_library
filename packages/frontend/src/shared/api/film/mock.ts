@@ -1,25 +1,31 @@
+//types
+import { FilmStatusDropdownModuleInfo } from "src/widgets/film/FilmStatusDropdownModule/types";
+import { StillsModuleInfo } from "src/widgets/film/StillsModule/types";
+import { MovieExcerptsModuleInfo } from "src/widgets/film/MovieExcerptsModule/types";
+import { RelatedInfo } from "src/widgets/film/RelatedModule/types";
+import { MainCharactersModuleInfo } from "src/widgets/film/MainCharactersModule/types";
 import { AuthorModuleInfo } from "src/widgets/film/AuthorModule/types";
 import { FilmInfo } from "src/widgets/film/InfoModule/types";
-import GegeAvatar from "./authorsPicture/AuthorsGege.webp";
-import SetaAvatar from "./authorsPicture/Seta.webp";
-import KacyhiroAvatar from "./authorsPicture/Kacyhiro.webp";
-import StudioMappa from "./studioPicture/studio.png";
 import { StudioImgProps } from "src/widgets/film/StudioModule/StudioModule";
-import { RelatedInfo } from "src/widgets/film/RelatedModule/types";
-import MagicBattleManga from "./relatedPicture/MagicBattleManga.webp";
-import MagicBattle from "./relatedPicture/MagicBattle.webp";
-import MagicBattle2Recaps from "./relatedPicture/MagicBattle2Recaps.webp";
-import MagicBattleDeadlyMigration from "./relatedPicture/MagicBattleDeadlyMigration.webp";
-import { MainCharactersModuleInfo } from "src/widgets/film/MainCharactersModule/types";
+
+//Picture
 import MegumiFushiguro from "./mainCharacterPicture/MegumiFushiguro.webp";
 import NobaraKugisaki from "./mainCharacterPicture/NobaraKugisaki.webp";
 import SatoroDrezo from "./mainCharacterPicture/SatoroDrezo.webp";
 import SugurGeto from "./mainCharacterPicture/SugurGeto.webp";
 import YujiItadori from "./mainCharacterPicture/YujiItadori.webp";
-import { FilmStatusDropdownModuleInfo } from "src/widgets/film/FilmStatusDropdownModule/types";
-import { StillsModuleInfo } from "src/widgets/film/StillsModule/types";
 import frameOne from "./stillsPicture/frameOne.jpg";
 import frameTwo from "./stillsPicture/frameTwo.jpg";
+import gojo from "./movieExcerptsPicture/gojo.jpg";
+import gojoAndgeto from "./movieExcerptsPicture/gojoAndgeto.jpg";
+import MagicBattleManga from "./relatedPicture/MagicBattleManga.webp";
+import MagicBattle from "./relatedPicture/MagicBattle.webp";
+import MagicBattle2Recaps from "./relatedPicture/MagicBattle2Recaps.webp";
+import MagicBattleDeadlyMigration from "./relatedPicture/MagicBattleDeadlyMigration.webp";
+import GegeAvatar from "./authorsPicture/AuthorsGege.webp";
+import SetaAvatar from "./authorsPicture/Seta.webp";
+import KacyhiroAvatar from "./authorsPicture/Kacyhiro.webp";
+import StudioMappa from "./studioPicture/studio.png";
 
 export const infoModuleMock: FilmInfo = {
   type: "TV Сериал",
@@ -133,11 +139,20 @@ export const FilmStatusDropdownModuleMock: FilmStatusDropdownModuleInfo = {
   status: null
 };
 
-export const StillsMock: StillsModuleInfo[] = [
+export const StillsModuleMock: StillsModuleInfo[] = [
   {
     frame: frameOne.src
   },
   {
     frame: frameTwo.src
+  }
+];
+
+export const MovieExcerptsModuleMock: MovieExcerptsModuleInfo[] = [
+  {
+    video: gojo.src
+  },
+  {
+    video: gojoAndgeto.src
   }
 ];

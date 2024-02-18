@@ -10,8 +10,9 @@ import {
   AuthorModuleMock,
   FilmStatusDropdownModuleMock,
   MainCharactersModuleMock,
+  MovieExcerptsModuleMock,
   RelatedModuleMock,
-  StillsMock,
+  StillsModuleMock,
   StudioLogoMock,
   infoModuleMock,
   rateModuleMock
@@ -23,8 +24,8 @@ import AuthorModule from "src/widgets/film/AuthorModule/AuthorModule";
 import RelatedModule from "src/widgets/film/RelatedModule/RelatedModule";
 import MainCharactersModule from "src/widgets/film/MainCharactersModule/MainCharactersModule";
 import FilmStatusDropdownModule from "src/widgets/film/FilmStatusDropdownModule/FilmStatusDropdownModule";
-import DescriptionModule from "src/widgets/film/DescriptionModule/DescriptionModule";
 import StillsModule from "src/widgets/film/StillsModule/StillsModule";
+import MovieExcerptsModule from "src/widgets/film/MovieExcerptsModule/MovieExcerptsModule";
 
 const Film: FC = () => {
   return (
@@ -58,7 +59,10 @@ const Film: FC = () => {
       <div className={Styles.modules}>
         <MainCharactersModule data={MainCharactersModuleMock} />
       </div>
-      <StillsModule data={StillsMock} />
+      <div className={Styles.modules}>
+        <StillsModule data={StillsModuleMock} />
+        <MovieExcerptsModule data={MovieExcerptsModuleMock} />
+      </div>
     </MainTemplate>
   );
 };
