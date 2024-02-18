@@ -12,6 +12,7 @@ import {
   MainCharactersModuleMock,
   MovieExcerptsModuleMock,
   RelatedModuleMock,
+  SimilarModuleMock,
   StillsModuleMock,
   StudioLogoMock,
   infoModuleMock,
@@ -26,6 +27,7 @@ import MainCharactersModule from "src/widgets/film/MainCharactersModule/MainChar
 import FilmStatusDropdownModule from "src/widgets/film/FilmStatusDropdownModule/FilmStatusDropdownModule";
 import StillsModule from "src/widgets/film/StillsModule/StillsModule";
 import MovieExcerptsModule from "src/widgets/film/MovieExcerptsModule/MovieExcerptsModule";
+import SimilarModule from "src/widgets/film/SimilarModule/SimilarModule";
 
 const Film: FC = () => {
   return (
@@ -62,6 +64,9 @@ const Film: FC = () => {
       <div className={Styles.modules}>
         <StillsModule data={StillsModuleMock} />
         <MovieExcerptsModule data={MovieExcerptsModuleMock} />
+      </div>
+      <div className={Styles.modules}>
+        <SimilarModule data={SimilarModuleMock} />
       </div>
     </MainTemplate>
   );

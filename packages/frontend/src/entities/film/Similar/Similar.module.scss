@@ -4,6 +4,10 @@
 }
 
 .name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
   cursor: pointer;
   color: #176093;
   font-family: sans-serif;

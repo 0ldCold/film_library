@@ -7,6 +7,7 @@ import { MainCharactersModuleInfo } from "src/widgets/film/MainCharactersModule/
 import { AuthorModuleInfo } from "src/widgets/film/AuthorModule/types";
 import { FilmInfo } from "src/widgets/film/InfoModule/types";
 import { StudioImgProps } from "src/widgets/film/StudioModule/StudioModule";
+import { SimilarModuleInfo } from "src/widgets/film/SimilarModule/types";
 
 //Picture
 import MegumiFushiguro from "./mainCharacterPicture/MegumiFushiguro.webp";
@@ -26,6 +27,13 @@ import GegeAvatar from "./authorsPicture/AuthorsGege.webp";
 import SetaAvatar from "./authorsPicture/Seta.webp";
 import KacyhiroAvatar from "./authorsPicture/Kacyhiro.webp";
 import StudioMappa from "./studioPicture/studio.png";
+import AManOfChainsaw from "./similarPicture/AManOfChainsaw.webp";
+import GirlWhoSeesThis from "./similarPicture/GirlWhoSeesThis.webp";
+import GreatOfStrayDogs2 from "./similarPicture/GreatOfStrayDogs2.webp";
+import HellsParadise from "./similarPicture/HellsParadise.webp";
+import HellsingOVA from "./similarPicture/HellsingOVA.webp";
+import JojosIncredibleAdventureGoldenWind from "./similarPicture/JojosIncredibleAdventureGoldenWind.webp";
+import NarutoHurricaneChronicles from "./similarPicture/NarutoHurricaneChronicles.webp";
 
 export const infoModuleMock: FilmInfo = {
   type: "TV Сериал",
@@ -154,5 +162,36 @@ export const MovieExcerptsModuleMock: MovieExcerptsModuleInfo[] = [
   },
   {
     video: gojoAndgeto.src
+  }
+];
+
+export const SimilarModuleMock: SimilarModuleInfo[] = [
+  {
+    name: "Человек бензопила",
+    poster: AManOfChainsaw.src
+  },
+  {
+    name: "Адский рай",
+    poster: HellsParadise.src
+  },
+  {
+    name: "Великий из бродячих псов 2",
+    poster: GreatOfStrayDogs2.src
+  },
+  {
+    name: "Наруто: Ураганные хроники",
+    poster: NarutoHurricaneChronicles.src
+  },
+  {
+    name: "Невероятное приключение ДжоДжо: Золотой ветер",
+    poster: JojosIncredibleAdventureGoldenWind.src
+  },
+  {
+    name: "Девочка, которая видит это",
+    poster: GirlWhoSeesThis.src
+  },
+  {
+    name: "Хеллсинг OVA",
+    poster: HellsingOVA.src
   }
 ];
