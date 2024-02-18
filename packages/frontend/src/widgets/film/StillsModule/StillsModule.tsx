@@ -4,16 +4,16 @@ import ModuleCard from "src/entities/film/ModuleCard/ModuleCard";
 import Stills from "src/entities/film/Stills/Stills";
 import { StillsModuleInfo } from "./types";
 
-interface StillsModule {
+interface StillsModuleProps {
   data: StillsModuleInfo[];
 }
 
-const StillsModule: FC<StillsModule> = ({ data }) => {
+const StillsModule: FC<StillsModuleProps> = ({ data }) => {
   return (
     <ModuleCard title='Кадры'>
       <div className={Styles.wrapper}>
         {data.map((data) => (
-          <Stills frame={data.frame} />
+          <Stills key={data.frame} frame={data.frame} />
         ))}
       </div>
     </ModuleCard>
