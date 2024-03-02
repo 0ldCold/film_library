@@ -1,21 +1,40 @@
+//types
+import { FilmStatusDropdownModuleInfo } from "src/widgets/film/FilmStatusDropdownModule/types";
+import { StillsModuleInfo } from "src/widgets/film/StillsModule/types";
+import { MovieExcerptsModuleInfo } from "src/widgets/film/MovieExcerptsModule/types";
+import { RelatedInfo } from "src/widgets/film/RelatedModule/types";
+import { MainCharactersModuleInfo } from "src/widgets/film/MainCharactersModule/types";
 import { AuthorModuleInfo } from "src/widgets/film/AuthorModule/types";
 import { FilmInfo } from "src/widgets/film/InfoModule/types";
-import GegeAvatar from "./authorsPicture/AuthorsGege.webp";
-import SetaAvatar from "./authorsPicture/Seta.webp";
-import KacyhiroAvatar from "./authorsPicture/Kacyhiro.webp";
-import StudioMappa from "./studioPicture/studio.png";
 import { StudioImgProps } from "src/widgets/film/StudioModule/StudioModule";
-import { RelatedInfo } from "src/widgets/film/RelatedModule/types";
-import MagicBattleManga from "./relatedPicture/MagicBattleManga.webp";
-import MagicBattle from "./relatedPicture/MagicBattle.webp";
-import MagicBattle2Recaps from "./relatedPicture/MagicBattle2Recaps.webp";
-import MagicBattleDeadlyMigration from "./relatedPicture/MagicBattleDeadlyMigration.webp";
-import { MainCharactersModuleInfo } from "src/widgets/film/MainCharactersModule/types";
+import { SimilarModuleInfo } from "src/widgets/film/SimilarModule/types";
+
+//Picture
 import MegumiFushiguro from "./mainCharacterPicture/MegumiFushiguro.webp";
 import NobaraKugisaki from "./mainCharacterPicture/NobaraKugisaki.webp";
 import SatoroDrezo from "./mainCharacterPicture/SatoroDrezo.webp";
 import SugurGeto from "./mainCharacterPicture/SugurGeto.webp";
 import YujiItadori from "./mainCharacterPicture/YujiItadori.webp";
+import frameOne from "./stillsPicture/frameOne.jpg";
+import frameTwo from "./stillsPicture/frameTwo.jpg";
+import MagicBattleManga from "./relatedPicture/MagicBattleManga.webp";
+import MagicBattle from "./relatedPicture/MagicBattle.webp";
+import MagicBattle2Recaps from "./relatedPicture/MagicBattle2Recaps.webp";
+import MagicBattleDeadlyMigration from "./relatedPicture/MagicBattleDeadlyMigration.webp";
+import GegeAvatar from "./authorsPicture/AuthorsGege.webp";
+import SetaAvatar from "./authorsPicture/Seta.webp";
+import KacyhiroAvatar from "./authorsPicture/Kacyhiro.webp";
+import StudioMappa from "./studioPicture/studio.png";
+import AManOfChainsaw from "./similarPicture/AManOfChainsaw.webp";
+import GirlWhoSeesThis from "./similarPicture/GirlWhoSeesThis.webp";
+import GreatOfStrayDogs2 from "./similarPicture/GreatOfStrayDogs2.webp";
+import HellsParadise from "./similarPicture/HellsParadise.webp";
+import HellsingOVA from "./similarPicture/HellsingOVA.webp";
+import JojosIncredibleAdventureGoldenWind from "./similarPicture/JojosIncredibleAdventureGoldenWind.webp";
+import NarutoHurricaneChronicles from "./similarPicture/NarutoHurricaneChronicles.webp";
+import { Teaser, Trailer } from "./movieExcerptsPicture/mock";
+import Gojo from "./movieExcerptsPicture/gojo.jpg";
+import GojoAndgeto from "./movieExcerptsPicture/gojoAndgeto.jpg";
 
 export const infoModuleMock: FilmInfo = {
   type: "TV Сериал",
@@ -122,5 +141,62 @@ export const MainCharactersModuleMock: MainCharactersModuleInfo[] = [
   {
     name: "Юдзи Итадори",
     poster: YujiItadori.src
+  }
+];
+
+export const FilmStatusDropdownModuleMock: FilmStatusDropdownModuleInfo = {
+  status: null
+};
+
+export const StillsModuleMock: StillsModuleInfo[] = [
+  {
+    frame: frameOne.src
+  },
+  {
+    frame: frameTwo.src
+  }
+];
+
+export const MovieExcerptsModuleMock: MovieExcerptsModuleInfo[] = [
+  {
+    video: Teaser,
+    image: Gojo.src,
+    info: "PV1"
+  },
+  {
+    video: Trailer,
+    image: GojoAndgeto.src,
+    info: "PV1 (Head Pack Films) Озвучка"
+  }
+];
+
+export const SimilarModuleMock: SimilarModuleInfo[] = [
+  {
+    name: "Человек-бензопила",
+    poster: AManOfChainsaw.src
+  },
+  {
+    name: "Адский рай",
+    poster: HellsParadise.src
+  },
+  {
+    name: "Великий из бродячих псов 2",
+    poster: GreatOfStrayDogs2.src
+  },
+  {
+    name: "Наруто: Ураганные хроники",
+    poster: NarutoHurricaneChronicles.src
+  },
+  {
+    name: "Невероятное приключение ДжоДжо: Золотой ветер",
+    poster: JojosIncredibleAdventureGoldenWind.src
+  },
+  {
+    name: "Девочка, которая видит это",
+    poster: GirlWhoSeesThis.src
+  },
+  {
+    name: "Хеллсинг OVA",
+    poster: HellsingOVA.src
   }
 ];

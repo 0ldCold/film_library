@@ -1,0 +1,98 @@
+.row {
+  border: 1px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: none;
+  padding: 0 5px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  border-top: 1px solid transparent;
+}
+
+.blue {
+  .row {
+    background: #daf1ff;
+    border-color: #bce6ff;
+    color: #176093;
+  }
+}
+.green {
+  .row {
+    background: #eef6dc;
+    border-color: #e0efc0;
+    color: #419541;
+  }
+}
+.red {
+  .row {
+    background: #fedddf;
+    border-color: #fec2c5;
+    color: #fc575e;
+  }
+}
+.gray {
+  .row {
+    background: #ebeef1;
+    border-color: #dbe0e6;
+    color: #7b8084;
+  }
+}
+
+.listItemText {
+  padding-left: 5px;
+  font-family: sans-serif;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 200;
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &.removeFromList {
+    color: #ff4136;
+  }
+}
+
+.select {
+  min-height: 218px;
+}
+
+.itemsList {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.slideOutDown {
+  height: 186px;
+}
+
+.icons {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  transition: all 0.2s ease-in-out;
+}
+.turn {
+  transform: rotate(-90deg);
+
+  // animation-name: turn;
+  // animation-duration: 200ms;
+  // animation-fill-mode: forwards;
+}
+// @keyframes turn {
+//   0% {
+//     transform: rotate(0);
+//   }
+//   100% {
+//     transform: rotate(-90deg);
+//   }
+// }

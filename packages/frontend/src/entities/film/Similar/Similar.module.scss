@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  cursor: pointer;
+  color: #176093;
+  font-family: sans-serif;
+  font-weight: bold;
+  white-space: normal;
+  font-size: 13px;
+  margin-top: 5px;
+  max-width: 97px;
+  line-height: 1.65;
+}
