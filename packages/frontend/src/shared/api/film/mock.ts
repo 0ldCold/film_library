@@ -17,8 +17,6 @@ import SugurGeto from "./mainCharacterPicture/SugurGeto.webp";
 import YujiItadori from "./mainCharacterPicture/YujiItadori.webp";
 import frameOne from "./stillsPicture/frameOne.jpg";
 import frameTwo from "./stillsPicture/frameTwo.jpg";
-import gojo from "./movieExcerptsPicture/gojo.jpg";
-import gojoAndgeto from "./movieExcerptsPicture/gojoAndgeto.jpg";
 import MagicBattleManga from "./relatedPicture/MagicBattleManga.webp";
 import MagicBattle from "./relatedPicture/MagicBattle.webp";
 import MagicBattle2Recaps from "./relatedPicture/MagicBattle2Recaps.webp";
@@ -34,6 +32,9 @@ import HellsParadise from "./similarPicture/HellsParadise.webp";
 import HellsingOVA from "./similarPicture/HellsingOVA.webp";
 import JojosIncredibleAdventureGoldenWind from "./similarPicture/JojosIncredibleAdventureGoldenWind.webp";
 import NarutoHurricaneChronicles from "./similarPicture/NarutoHurricaneChronicles.webp";
+import { Teaser, Trailer } from "./movieExcerptsPicture/mock";
+import Gojo from "./movieExcerptsPicture/gojo.jpg";
+import GojoAndgeto from "./movieExcerptsPicture/gojoAndgeto.jpg";
 
 export const infoModuleMock: FilmInfo = {
   type: "TV Сериал",
@@ -158,16 +159,20 @@ export const StillsModuleMock: StillsModuleInfo[] = [
 
 export const MovieExcerptsModuleMock: MovieExcerptsModuleInfo[] = [
   {
-    video: gojo.src
+    video: Teaser,
+    image: Gojo.src,
+    info: "PV1"
   },
   {
-    video: gojoAndgeto.src
+    video: Trailer,
+    image: GojoAndgeto.src,
+    info: "PV1 (Head Pack Films) Озвучка"
   }
 ];
 
 export const SimilarModuleMock: SimilarModuleInfo[] = [
   {
-    name: "Человек бензопила",
+    name: "Человек-бензопила",
     poster: AManOfChainsaw.src
   },
   {

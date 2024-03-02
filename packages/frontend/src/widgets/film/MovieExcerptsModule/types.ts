@@ -1,4 +1,5 @@
 export interface MovieExcerptsModuleInfo {
-    video: string;
-  }
-  
+  video: string;
+  image: string;
+  info: string;
+}

@@ -1,5 +1,4 @@
 import { FC } from "react";
-import Styles from "./Stils.module.scss";
 import Image from "next/image";
 import poster404 from "./404poster.png";
 
@@ -9,7 +8,7 @@ export interface StillsProps {
 
 const Stills: FC<StillsProps> = ({ frame }) => {
   return (
-    <div className={Styles.wrapper}>
+    <div>
       <Image src={frame ?? poster404.src} alt='Постер' width={205} height={115} />
     </div>
   );

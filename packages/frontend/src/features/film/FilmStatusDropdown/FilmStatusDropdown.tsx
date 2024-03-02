@@ -1,5 +1,5 @@
 import React, { FC, ReactNode, useMemo, useState } from "react";
-import ArrowIcon from "src/shared/uikit/ArrowIcon";
+import ArrowIcon from "src/shared/icons/uikit/ArrowIcon";
 import Styles from "./FilmStatusDropdown.module.scss";
 import { UserFilmsListType } from "./types";
 import { getCurrentState } from "./helpers";

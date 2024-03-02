@@ -1,18 +1,17 @@
 import { ReactNode } from "react";
 import { DropdownColor, UserFilmsListType } from "./types";
-import PlusIcon from "src/shared/uikit/PlusIcon";
-import DoneIcon from "src/shared/uikit/DoneIcon";
-import CloseIcon from "src/shared/uikit/CloseIcon";
-import PlayIcon from "src/shared/uikit/PlayIcon";
-import PauseIcon from "src/shared/uikit/PauseIcon";
-import ReplayIcon from "src/shared/uikit/ReplayIcon";
+import PlusIcon from "src/shared/icons/uikit/PlusIcon";
+import DoneIcon from "src/shared/icons/uikit/DoneIcon";
+import CloseIcon from "src/shared/icons/uikit/CloseIcon";
+import PlayIcon from "src/shared/icons/uikit/PlayIcon";
+import PauseIcon from "src/shared/icons/uikit/PauseIcon";
+import ReplayIcon from "src/shared/icons/uikit/ReplayIcon";
 
 interface CurrentState {
   icon: ReactNode;
   name: string;
   color: DropdownColor;
 }
-
 
 export const getCurrentState = (FilmStatus: UserFilmsListType): CurrentState => {
   switch (FilmStatus) {
