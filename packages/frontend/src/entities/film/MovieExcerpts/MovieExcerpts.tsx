@@ -3,7 +3,6 @@ import Styles from "./MovieExcerpts.module.scss";
 import VideoPlayer from "src/shared/uiKit/VideoPlayer/VideoPlayer";
 import ModalWindow from "src/shared/uiKit/ModalWindow/ModalWindow";
 import Image from "next/image";
-import clsx from "clsx";
 
 export interface MovieExcerptsProps {
   video: string;
