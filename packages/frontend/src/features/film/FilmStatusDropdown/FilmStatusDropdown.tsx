@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useMemo, useState } from "react";
+import React, { FC, useMemo, useState } from "react";
 import ArrowIcon from "src/shared/icons/uikit/ArrowIcon";
 import Styles from "./FilmStatusDropdown.module.scss";
 import { UserFilmsListType } from "./types";
@@ -11,7 +11,8 @@ interface FilmStatusDropdownProps {
   value: UserFilmsListType;
   onChange?: (newStatus: UserFilmsListType) => Promise<void>;
 }
-const FilmStatusDropdown: FC<FilmStatusDropdownProps> = ({ view = "large" }) => {
+// TODO: Подключить пропсы value, onChange
+const FilmStatusDropdown: FC<FilmStatusDropdownProps> = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => {
     setIsOpen((prev) => !prev);

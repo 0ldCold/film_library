@@ -5,7 +5,7 @@ const ReplayIcon: FC<IconProps> = ({ size, color = "inherit" }) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      enable-background='new 0 0 24 24'
+      enableBackground='new 0 0 24 24'
       height={size}
       viewBox='-2 -2 30 30'
       width={size}
