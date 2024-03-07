@@ -9,6 +9,10 @@
     "project": "./tsconfig.json",
     "createDefaultProgram": true
   },
+  "ignorePatterns": [
+    "next.config.js",
+    "next-env.d.ts"
+  ],
   "plugins": ["@typescript-eslint"],
   "extends": [
     "next",
