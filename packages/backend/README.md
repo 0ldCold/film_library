@@ -5,6 +5,7 @@
 - Express
 - TypeScript
 - PostgreSQL
+- routing-controllers
 
 ## Запуск
 
