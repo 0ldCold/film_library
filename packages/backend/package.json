@@ -36,5 +36,5 @@
     "reflect-metadata": "^0.1.13",
     "routing-controllers": "^0.10.4"
   },
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.1.1"
 }
