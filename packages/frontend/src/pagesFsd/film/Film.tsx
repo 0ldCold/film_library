@@ -1,5 +1,4 @@
-import { useRouter } from "next/router";
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import MainTemplate from "src/widgets/template/MainTemplate/MainTemplate";
 import Styles from "./Film.module.scss";
 import Breadcrumbs from "src/entities/film/Breadcrumbs/Breadcrumbs";

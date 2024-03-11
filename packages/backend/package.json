@@ -8,7 +8,9 @@
     "build": "npx tsc",
     "start": "ts-node ./src/index.ts",
     "start:prod": "npm run build && node ./dist/index.js",
-    "test": "jest"
+    "test": "jest",
+    "types": "tsc --noEmit",
+    "check": "yarn run types && yarn run types"
   },
   "types": "./index.d.ts",
   "author": "",
@@ -36,5 +38,5 @@
     "reflect-metadata": "^0.1.13",
     "routing-controllers": "^0.10.4"
   },
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.1.1"
 }
