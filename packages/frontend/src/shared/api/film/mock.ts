@@ -8,7 +8,7 @@ import { AuthorModuleInfo } from "src/widgets/film/AuthorModule/types";
 import { FilmInfo } from "src/widgets/film/InfoModule/types";
 import { StudioImgProps } from "src/widgets/film/StudioModule/StudioModule";
 import { SimilarModuleInfo } from "src/widgets/film/SimilarModule/types";
-import {EnumContributor, FilmDescription} from "src/widgets/film/DescriptionModule/types";
+import { EnumContributor, FilmDescription } from "src/widgets/film/DescriptionModule/types";
 
 //Picture
 import MegumiFushiguro from "./mainCharacterPicture/MegumiFushiguro.webp";

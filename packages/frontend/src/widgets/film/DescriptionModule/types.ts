@@ -1,6 +1,6 @@
 export enum EnumContributor {
   Author = "Автор",
-  Source = "Источник",
+  Source = "Источник"
 }
 export type FilmDescription = Record<FilmDescriptionLanguage, FilmDescriptionData>;
 

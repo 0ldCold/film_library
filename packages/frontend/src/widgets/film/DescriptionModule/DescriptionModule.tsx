@@ -25,7 +25,7 @@ const DescriptionModule: FC<DescriptionModuleProps> = ({ data }) => {
       <ModuleCard title={"Описание"}>
         <LanguageButton language={switchLanguage(language)} onClick={onLanguageButtonClick} />
         <div className={Styles.text}>{text}</div>
-        <Contributor data={data[language].contributor}/>
+        <Contributor data={data[language].contributor} />
       </ModuleCard>
     </div>
   );
