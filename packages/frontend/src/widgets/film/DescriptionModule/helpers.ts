@@ -1,12 +1,10 @@
-import { Language } from "src/widgets/film/DescriptionModule/LanguageButton";
+import { Language } from "src/widgets/film/LanguageButton/LanguageButton";
 
-export const helpers = (language: Language) => {
+export const switchLanguage = (language: Language): Language => {
   switch (language) {
     case "ru":
       return "en";
-      break;
     case "en":
       return "ru";
-      break;
   }
 };

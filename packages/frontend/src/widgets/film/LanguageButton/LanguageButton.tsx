@@ -1,6 +1,5 @@
 import { FC } from "react";
-import Styles from "./DescriptionModule.module.scss";
-import {helpers} from "src/widgets/film/DescriptionModule/helpers";
+import Styles from "./LanguageButton.module.scss";
 
 export type Language = "ru" | "en";
 
@@ -12,7 +11,7 @@ export interface LanguageButtonProps {
 const LanguageButton: FC<LanguageButtonProps> = ({ language, onClick }) => {
   return (
     <div className={Styles.language_button} onClick={() => onClick?.(language)}>
-      <span>{helpers(language)}</span>
+      <span>{language}</span>
     </div>
   );
 };
