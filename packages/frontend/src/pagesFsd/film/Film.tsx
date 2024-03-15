@@ -6,7 +6,7 @@ import PictureContent from "src/entities/film/PictureContent/PictureContent";
 import UserСomments from "src/features/film/UserСomments/UserСomments";
 import InfoModule from "src/widgets/film/InfoModule/InfoModule";
 import {
-    AuthorModuleMock,
+    AuthorModuleMock, DescriptionMock,
     FilmStatusDropdownModuleMock,
     infoModuleMock,
     MainCharactersModuleMock,
@@ -32,7 +32,6 @@ import DescriptionModule from "src/widgets/film/DescriptionModule/DescriptionMod
 const Film: FC = () => {
     return (
         <MainTemplate>
-            <DescriptionModule text={"# Html stored as a string"}/>
             <div>
                 <h1 className={Styles.title}>Магическая битва 2 </h1>
                 <Breadcrumbs data={filmBreadcrumbs}/>
@@ -45,12 +44,15 @@ const Film: FC = () => {
                         <FilmStatusDropdownModule data={FilmStatusDropdownModuleMock}/>
                     </div>
                 </div>
-                <div className={Styles.moduleColumns}>
-                    <InfoModule data={infoModuleMock}/>
-                    <div className={Styles.studioWidget}>
-                        <RatingModule rate={rateModuleMock}/>
-                        <StudioModule logo={StudioLogoMock.logo}/>
+                <div>
+                    <div className={Styles.moduleColumns}>
+                        <InfoModule data={infoModuleMock}/>
+                        <div className={Styles.studioWidget}>
+                            <RatingModule rate={rateModuleMock}/>
+                            <StudioModule logo={StudioLogoMock.logo}/>
+                        </div>
                     </div>
+                    <DescriptionModule data={DescriptionMock}/>
                 </div>
             </div>
 
