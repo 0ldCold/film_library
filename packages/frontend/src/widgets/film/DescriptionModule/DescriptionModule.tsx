@@ -2,7 +2,7 @@ import markdownit from "markdown-it";
 import { FC, useState } from "react";
 import parse from "html-react-parser";
 import Styles from "./DescriptionModule.module.scss";
-import {FilmDescription, FilmDescriptionLanguage} from "./types";
+import { FilmDescription, FilmDescriptionLanguage } from "./types";
 import ModuleCard from "src/entities/film/ModuleCard/ModuleCard";
 import LanguageButton from "src/features/film/LanguageButton/LanguageButton";
 import Contributor from "src/features/film/Contributor/Contributor";
@@ -18,7 +18,7 @@ const DescriptionModule: FC<DescriptionModuleProps> = ({ data }) => {
   const onLanguageButtonClick = (language: FilmDescriptionLanguage): void => {
     setLanguage(language);
   };
-  
+
   return (
     <div className={Styles.description}>
       <ModuleCard title={"Описание"}>

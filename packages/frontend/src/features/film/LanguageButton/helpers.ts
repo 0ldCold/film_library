@@ -1,5 +1,4 @@
-import {FilmDescriptionLanguage} from "src/widgets/film/DescriptionModule/types";
-
+import { FilmDescriptionLanguage } from "src/widgets/film/DescriptionModule/types";
 
 export const switchLanguage = (language: FilmDescriptionLanguage): FilmDescriptionLanguage => {
   switch (language) {
