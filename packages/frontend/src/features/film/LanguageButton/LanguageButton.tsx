@@ -5,7 +5,7 @@ import { FilmDescriptionLanguage } from "src/widgets/film/DescriptionModule/type
 
 export interface LanguageButtonProps {
   currentLanguage: FilmDescriptionLanguage;
-  onClick?: (type: FilmDescriptionLanguage) => void;
+  onClick?: (newLanguage: FilmDescriptionLanguage) => void;
 }
 
 const LanguageButton: FC<LanguageButtonProps> = ({ currentLanguage, onClick }) => {

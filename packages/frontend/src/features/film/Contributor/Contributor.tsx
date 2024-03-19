@@ -2,8 +2,6 @@ import { FC } from "react";
 import Styles from "./Contributor.module.scss";
 import Image from "next/image";
 import Avatar404 from "src/entities/film/Author/404Avatar.png";
-import parse from "html-react-parser";
-import markdownit from "markdown-it";
 import { FilmDescriptionData } from "../../../widgets/film/DescriptionModule/types";
 import { useTranslation } from "react-i18next";
 
@@ -25,7 +23,9 @@ const Contributor: FC<ContributorProps> = ({ data }) => {
           height={16}
         />
       )}
-      <div className={Styles.name}>{parse(markdownit().render(`[${data.name}]()`))}</div>
+      <div className={Styles.name}>
+        <a href=''>{data.name}</a>
+      </div>
     </div>
   );
 };
