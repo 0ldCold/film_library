@@ -1,0 +1,25 @@
+.language_button {
+  position: absolute;
+  width: 30px;
+  height: 18px;
+  top: 70px;
+  right: 0;
+  margin: -2px 0 5px 20px;
+  padding: 0;
+  border: 0;
+
+  cursor: pointer;
+  font-size: 11px;
+  line-height: 20px;
+
+  color: #176093;
+  background: none;
+}
+
+.language_button:before {
+  content: "[ ";
+}
+
+.language_button:after {
+  content: " ]";
+}

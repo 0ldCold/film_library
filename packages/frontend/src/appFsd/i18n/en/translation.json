@@ -6,6 +6,11 @@
       "announcement": "announcement",
       "ongoing": "ongoing",
       "release": "release"
+    },
+
+    "contributor": {
+      "author": "Author",
+      "externalSource": "Source"
     }
   }
 }

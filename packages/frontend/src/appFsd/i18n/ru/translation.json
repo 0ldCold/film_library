@@ -6,6 +6,11 @@
       "announcement": "анонс",
       "ongoing": "онгоинг",
       "release": "вышло"
+    },
+
+    "contributor": {
+      "author": "Автор",
+      "externalSource": "Источник"
     }
   }
 }

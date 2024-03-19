@@ -1,0 +1,34 @@
+.contributor {
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  display: flex;
+
+  line-height: 1.65;
+  font-size: 13px;
+}
+
+.type {
+  color: #9da2a8;
+  margin-right: 5px;
+}
+
+.img {
+  margin-top: 3px;
+  padding-right: 2px;
+}
+
+.name {
+  a {
+    color: #176093;
+    text-decoration: none;
+  }
+}
+
+.name:hover {
+  a {
+    color: #dd5202;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
