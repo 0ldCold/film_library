@@ -1,21 +1,19 @@
 .language_button {
   position: absolute;
-  width: 25px;
+  width: 30px;
+  height: 18px;
   top: 70px;
   right: 0;
   margin: -2px 0 5px 20px;
   padding: 0;
+  border: 0;
 
   cursor: pointer;
   font-size: 11px;
   line-height: 20px;
 
-  span {
-    color: #176093;
-    border-bottom-color: var(--link-border-color);
-    border-bottom-style: dotted;
-    border-bottom-width: 1px;
-  }
+  color: #176093;
+  background: none;
 }
 
 .language_button:before {

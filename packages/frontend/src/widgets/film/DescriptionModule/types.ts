@@ -1,8 +1,4 @@
-export enum EnumContributor {
-  Author = "Автор",
-  Source = "Источник"
-}
-export type FilmDescription = Record<FilmDescriptionLanguage, FilmDescriptionData>;
+export type EnumContributor = "author" | "externalSource";
 
 export type FilmDescriptionLanguage = "ru" | "en";
 
@@ -14,3 +10,5 @@ export interface FilmDescriptionData {
     avatar?: string;
   };
 }
+
+export type FilmDescription = Record<FilmDescriptionLanguage, FilmDescriptionData>;

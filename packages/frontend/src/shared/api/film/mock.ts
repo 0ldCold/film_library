@@ -8,7 +8,7 @@ import { AuthorModuleInfo } from "src/widgets/film/AuthorModule/types";
 import { FilmInfo } from "src/widgets/film/InfoModule/types";
 import { StudioImgProps } from "src/widgets/film/StudioModule/StudioModule";
 import { SimilarModuleInfo } from "src/widgets/film/SimilarModule/types";
-import { EnumContributor, FilmDescription } from "src/widgets/film/DescriptionModule/types";
+import { FilmDescription } from "src/widgets/film/DescriptionModule/types";
 
 //Picture
 import MegumiFushiguro from "./mainCharacterPicture/MegumiFushiguro.webp";
@@ -59,7 +59,7 @@ export const DescriptionMock: FilmDescription = {
       "\n" +
       "Ученики и преподаватели Магического техникума разбиваются на группы, чтобы быстрее эвакуировать мирных жителей перед началом масштабной битвы. Вместе с тем, сам Сатору Годзё прибывает на место действия и отправляется прямиком к станции. События развиваются согласно плану [Сугуру Гэто]().",
     contributor: {
-      type: EnumContributor.Author,
+      type: "author",
       name: "onaset"
     }
   },
@@ -69,7 +69,7 @@ export const DescriptionMock: FilmDescription = {
       "\n" +
       "Twelve years later, students and sorcerers are the frontline defense against the rising number of high-level curses born from humans' negative emotions. As the entities grow in power, their self-awareness and ambition increase too. The curses unite for the common goal of eradicating humans and creating a world of only cursed energy users, led by a dangerous, ancient cursed spirit. To dispose of their greatest obstacle—the strongest sorcerer, Gojou—they orchestrate an attack at Shibuya Station on Halloween. Dividing into teams, the sorcerers enter the fight prepared to risk everything to protect the innocent and their own kind.",
     contributor: {
-      type: EnumContributor.Source,
+      type: "externalSource",
       name: "myanimelist.net"
     }
   }
