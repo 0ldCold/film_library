@@ -35,6 +35,7 @@ import NarutoHurricaneChronicles from "./similarPicture/NarutoHurricaneChronicle
 import { Teaser, Trailer } from "./movieExcerptsPicture/mock";
 import Gojo from "./movieExcerptsPicture/gojo.jpg";
 import GojoAndgeto from "./movieExcerptsPicture/gojoAndgeto.jpg";
+import { RateChartInfo } from "src/widgets/film/RateChartModule/types";
 
 export const infoModuleMock: FilmInfo = {
   type: "TV Сериал",
@@ -198,5 +199,32 @@ export const SimilarModuleMock: SimilarModuleInfo[] = [
   {
     name: "Хеллсинг OVA",
     poster: HellsingOVA.src
+  }
+];
+
+export const RateChartModuleMock: RateChartInfo[] = [
+  {
+    rate: 10,
+    count: 9854
+  },
+  {
+    rate: 9,
+    count: 7458
+  },
+  {
+    rate: 8,
+    count: 6560
+  },
+  {
+    rate: 7,
+    count: 2898
+  },
+  {
+    rate: 6,
+    count: 1035
+  },
+  {
+    rate: 5,
+    count: 402
   }
 ];

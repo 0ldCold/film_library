@@ -11,6 +11,7 @@ import {
   FilmStatusDropdownModuleMock,
   MainCharactersModuleMock,
   MovieExcerptsModuleMock,
+  RateChartModuleMock,
   RelatedModuleMock,
   SimilarModuleMock,
   StillsModuleMock,
@@ -28,6 +29,7 @@ import FilmStatusDropdownModule from "src/widgets/film/FilmStatusDropdownModule/
 import StillsModule from "src/widgets/film/StillsModule/StillsModule";
 import MovieExcerptsModule from "src/widgets/film/MovieExcerptsModule/MovieExcerptsModule";
 import SimilarModule from "src/widgets/film/SimilarModule/SimilarModule";
+import RateChartModule from "src/widgets/film/RateChartModule/RateChartModule";
 
 const Film: FC = () => {
   return (
@@ -51,6 +53,9 @@ const Film: FC = () => {
           <div className={Styles.studioWidget}>
             <RatingModule rate={rateModuleMock} />
             <StudioModule logo={StudioLogoMock.logo} />
+          </div>
+          <div>
+            <RateChartModule data={RateChartModuleMock} />
           </div>
         </div>
       </div>
