@@ -1,9 +1,6 @@
 name: Frontend PullRequest Tests
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
-  push:
-    paths:
-      - 'packages/frontend/**'
   pull_request:
     paths:
       - 'packages/frontend/**'
