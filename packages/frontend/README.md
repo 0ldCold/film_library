@@ -26,8 +26,8 @@
 
 1. `yarn install --immutable`
 2. `yarn run types`
-3. `yarn run lint`
-4. `yarn run prettier`
+3. `yarn run lint:check`
+4. `yarn run prettier:check`
 5. `yarn run build`
 
 ### Проверка кода:
