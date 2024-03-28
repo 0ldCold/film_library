@@ -1,4 +1,4 @@
-import { UserFilmsListType } from "src/shared/api/film/filmStatusDropdown/types";
+import { UserFilmsListType } from "src/shared/api/film/types";
 import { USER_LISTS } from "src/features/film/FilmStatusDropdown/constants";
 
 export const viewingStatus = (FilmStatus: UserFilmsListType, rate: number) => {

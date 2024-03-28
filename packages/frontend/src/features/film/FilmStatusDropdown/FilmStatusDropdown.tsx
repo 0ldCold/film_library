@@ -1,7 +1,7 @@
 import React, { FC, useMemo, useState } from "react";
 import ArrowIcon from "src/shared/icons/uikit/ArrowIcon";
 import Styles from "./FilmStatusDropdown.module.scss";
-import { UserFilmsListType } from "../../../shared/api/film/filmStatusDropdown/types";
+import { UserFilmsListType } from "../../../shared/api/film/types";
 import { getCurrentState } from "./helpers";
 import clsx from "clsx";
 import { USER_LISTS } from "./constants";

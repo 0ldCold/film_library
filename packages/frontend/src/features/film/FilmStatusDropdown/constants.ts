@@ -1,4 +1,4 @@
-import { UserFilmsListType } from "../../../shared/api/film/filmStatusDropdown/types";
+import { UserFilmsListType } from "../../../shared/api/film/types";
 
 type FilmStatus = {
   type: UserFilmsListType;
