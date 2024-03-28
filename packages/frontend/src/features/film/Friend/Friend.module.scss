@@ -1,0 +1,24 @@
+.friend {
+  height: 23px;
+  display: flex;
+  gap: 2px;
+}
+
+.img {
+  align-content: center;
+}
+
+.name {
+  line-height: 1.65;
+  font-size: 13px;
+  font-family:
+    Helvetica Neue,
+    Arial,
+    Verdana,
+    sans-serif;
+
+  a {
+    color: #176093;
+    text-decoration: none;
+  }
+}

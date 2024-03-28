@@ -9,6 +9,7 @@ import { FilmInfo } from "src/widgets/film/InfoModule/types";
 import { StudioImgProps } from "src/widgets/film/StudioModule/StudioModule";
 import { SimilarModuleInfo } from "src/widgets/film/SimilarModule/types";
 import { FilmDescription } from "src/widgets/film/DescriptionModule/types";
+import { IFilmFriends } from "src/widgets/film/FriendsFilm/types";
 
 //Picture
 import MegumiFushiguro from "./mainCharacterPicture/MegumiFushiguro.webp";
@@ -222,5 +223,34 @@ export const SimilarModuleMock: SimilarModuleInfo[] = [
   {
     name: "Хеллсинг OVA",
     poster: HellsingOVA.src
+  }
+];
+
+export const FriendsFilmMock: IFilmFriends[] = [
+  {
+    friend: {
+      name: "CitryZ"
+    },
+    list: "watching",
+    rate: 6
+  },
+  {
+    friend: {
+      name: "Limart"
+    },
+    list: "dropped"
+  },
+  {
+    friend: {
+      name: "Red_Fox"
+    },
+    list: "watched",
+    rate: 10
+  },
+  {
+    friend: {
+      name: "DarkFreon"
+    },
+    list: "planned"
   }
 ];

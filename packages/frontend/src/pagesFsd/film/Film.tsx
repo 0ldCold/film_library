@@ -9,6 +9,7 @@ import {
   AuthorModuleMock,
   DescriptionMock,
   FilmStatusDropdownModuleMock,
+  FriendsFilmMock,
   infoModuleMock,
   MainCharactersModuleMock,
   MovieExcerptsModuleMock,
@@ -29,6 +30,7 @@ import StillsModule from "src/widgets/film/StillsModule/StillsModule";
 import MovieExcerptsModule from "src/widgets/film/MovieExcerptsModule/MovieExcerptsModule";
 import SimilarModule from "src/widgets/film/SimilarModule/SimilarModule";
 import DescriptionModule from "src/widgets/film/DescriptionModule/DescriptionModule";
+import FriendsFilm from "src/widgets/film/FriendsFilm/FriendsFilm";
 
 const Film: FC = () => {
   return (
@@ -37,39 +39,48 @@ const Film: FC = () => {
         <h1 className={Styles.title}>Магическая битва 2 </h1>
         <Breadcrumbs data={filmBreadcrumbs} />
       </div>
-      <div className={Styles.filmCard}>
-        <div>
-          <PictureContent />
-          <UserСomments />
-          <div className={Styles.filmStatus}>
-            <FilmStatusDropdownModule data={FilmStatusDropdownModuleMock} />
-          </div>
-        </div>
-        <div>
-          <div className={Styles.moduleColumns}>
-            <InfoModule data={infoModuleMock} />
-            <div className={Styles.studioWidget}>
-              <RatingModule rate={rateModuleMock} />
-              <StudioModule logo={StudioLogoMock.logo} />
+
+      <div className={Styles.moduleColumns}>
+        <div className={Styles.content}>
+          <div className={Styles.filmCard}>
+            <div>
+              <PictureContent />
+              <UserСomments />
+              <div className={Styles.filmStatus}>
+                <FilmStatusDropdownModule data={FilmStatusDropdownModuleMock} />
+              </div>
+            </div>
+            <div>
+              <div className={Styles.moduleColumns}>
+                <InfoModule data={infoModuleMock} />
+                <div className={Styles.studioWidget}>
+                  <RatingModule rate={rateModuleMock} />
+                  <StudioModule logo={StudioLogoMock.logo} />
+                </div>
+              </div>
+              <DescriptionModule data={DescriptionMock} />
             </div>
           </div>
-          <DescriptionModule data={DescriptionMock} />
-        </div>
-      </div>
 
-      <div className={Styles.modules}>
-        <RelatedModule data={RelatedModuleMock} />
-        <AuthorModule data={AuthorModuleMock} />
-      </div>
-      <div className={Styles.modules}>
-        <MainCharactersModule data={MainCharactersModuleMock} />
-      </div>
-      <div className={Styles.modules}>
-        <StillsModule data={StillsModuleMock} />
-        <MovieExcerptsModule data={MovieExcerptsModuleMock} />
-      </div>
-      <div className={Styles.modules}>
-        <SimilarModule data={SimilarModuleMock} />
+          <div className={Styles.modules}>
+            <RelatedModule data={RelatedModuleMock} />
+            <AuthorModule data={AuthorModuleMock} />
+          </div>
+          <div className={Styles.modules}>
+            <MainCharactersModule data={MainCharactersModuleMock} />
+          </div>
+          <div className={Styles.modules}>
+            <StillsModule data={StillsModuleMock} />
+            <MovieExcerptsModule data={MovieExcerptsModuleMock} />
+          </div>
+          <div className={Styles.modules}>
+            <SimilarModule data={SimilarModuleMock} />
+          </div>
+        </div>
+
+        <div className={Styles.menu}>
+          <FriendsFilm data={FriendsFilmMock} />
+        </div>
       </div>
     </MainTemplate>
   );

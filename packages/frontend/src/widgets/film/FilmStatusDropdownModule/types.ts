@@ -1,4 +1,4 @@
-import { UserFilmsListType } from "src/features/film/FilmStatusDropdown/types";
+import { UserFilmsListType } from "src/shared/api/film/types";
 
 export interface FilmStatusDropdownModuleInfo {
   status: UserFilmsListType;
