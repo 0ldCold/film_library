@@ -14,7 +14,7 @@ const Friend: FC<FriendProps> = ({ friend }) => {
       <div className={Styles.img}>
         <Image
           src={friend.avatar ?? Avatar404.src}
-          alt={friend.avatar ?? ""}
+          alt={"аватарка пользователя"}
           width={16}
           height={16}
         />

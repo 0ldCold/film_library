@@ -231,28 +231,26 @@ export const FriendsFilmMock: IFilmFriends[] = [
     friend: {
       name: "CitryZ"
     },
-    episodeCount: 19,
-    episodesTotal: infoModuleMock.episodes?.total ?? null
+    list: "watching",
+    rate: 6
   },
   {
     friend: {
       name: "Limart"
     },
-    episodeCount: 0,
-    episodesTotal: infoModuleMock.episodes?.total ?? null
+    list: "dropped"
   },
   {
     friend: {
       name: "Red_Fox"
     },
-    episodeCount: 23,
-    episodesTotal: infoModuleMock.episodes?.total ?? null
+    list: "watched",
+    rate: 10
   },
   {
     friend: {
       name: "DarkFreon"
     },
-    episodeCount: 9,
-    episodesTotal: infoModuleMock.episodes?.total ?? null
+    list: "planned"
   }
 ];

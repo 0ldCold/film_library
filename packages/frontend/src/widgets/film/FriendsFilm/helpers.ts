@@ -1,5 +1,7 @@
-export const viewingStatus = (episodeCount: number, episodesTotal: number): string => {
-  if (episodeCount == episodesTotal) return "Просмотрено";
-  if (episodeCount < episodesTotal && episodeCount != 0) return `Просмотрено - ${episodeCount}`;
-  return "Запланировано";
+import { UserFilmsListType } from "src/shared/api/film/filmStatusDropdown/types";
+import { USER_LISTS } from "src/features/film/FilmStatusDropdown/constants";
+
+export const viewingStatus = (FilmStatus: UserFilmsListType, rate: number) => {
+  const filmsList = USER_LISTS.find((filmList) => filmList.type == FilmStatus);
+  return `${filmsList?.name}${!Number.isNaN(rate) ? ` - ${rate}` : ""}`;
 };

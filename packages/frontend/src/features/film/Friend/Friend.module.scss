@@ -1,6 +1,7 @@
 .friend {
   height: 23px;
   display: flex;
+  gap: 2px;
 }
 
 .img {
@@ -8,7 +9,6 @@
 }
 
 .name {
-  padding-left: 2px;
   line-height: 1.65;
   font-size: 13px;
   font-family:

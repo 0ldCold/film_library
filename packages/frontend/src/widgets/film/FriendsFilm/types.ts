@@ -1,8 +1,10 @@
+import { UserFilmsListType } from "src/shared/api/film/filmStatusDropdown/types";
+
 export interface IFilmFriends {
   friend: {
     name: string;
     avatar?: string;
   };
-  episodeCount: number;
-  episodesTotal: number | null;
+  list: UserFilmsListType;
+  rate?: number;
 }
