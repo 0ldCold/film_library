@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { DropdownColor, UserFilmsListType } from "./types";
+import { DropdownColor, UserFilmsListType } from "../../../shared/api/film/types";
 import PlusIcon from "src/shared/icons/uikit/PlusIcon";
 import DoneIcon from "src/shared/icons/uikit/DoneIcon";
 import CloseIcon from "src/shared/icons/uikit/CloseIcon";
