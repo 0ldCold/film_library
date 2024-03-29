@@ -1,16 +1,17 @@
 .friends {
-  //align-items: center;
+  display: grid;
 }
 
 .friend {
+  margin: 1px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .status {
-  font-size: 10px;
-  line-height: 10px;
+  font-size: 11px;
+  line-height: 16px;
   font-family:
     Helvetica Neue,
     Arial,

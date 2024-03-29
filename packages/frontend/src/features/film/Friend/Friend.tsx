@@ -11,15 +11,12 @@ export interface FriendProps {
 const Friend: FC<FriendProps> = ({ friend }) => {
   return (
     <div className={Styles.friend}>
-      <div className={Styles.img}>
-        <Image
-          src={friend.avatar ?? Avatar404.src}
-          alt={"аватарка пользователя"}
-          width={16}
-          height={16}
-        />
-      </div>
-
+      <Image
+        src={friend.avatar ?? Avatar404.src}
+        alt={"аватарка пользователя"}
+        width={16}
+        height={16}
+      />
       <div className={Styles.name}>
         <a href=''>{friend.name}</a>
       </div>
