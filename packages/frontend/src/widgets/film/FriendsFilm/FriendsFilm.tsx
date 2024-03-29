@@ -12,13 +12,11 @@ interface FilmFriendsProps {
 const FriendsFilm: FC<FilmFriendsProps> = ({ data }) => {
   return (
     <ModuleCard title={"У друзей"}>
-      <div className={Styles.friends}>
+      <div>
         {data.map((friendsFilm) => (
           <div key={friendsFilm.friend.name} className={Styles.friend}>
             <Friend friend={friendsFilm.friend} />
-            <div className={Styles.status}>
-              {viewingStatus(friendsFilm.list, Number(friendsFilm.rate))}
-            </div>
+            <div className={Styles.status}>{viewingStatus(friendsFilm.list, friendsFilm.rate)}</div>
           </div>
         ))}
       </div>
