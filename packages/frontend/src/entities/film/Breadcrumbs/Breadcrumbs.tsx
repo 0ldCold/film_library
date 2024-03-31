@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Styles from "./breadcrumbs.module.scss";
+import Styles from "./Breadcrumbs.module.scss";
 import { Breadcrumb } from "./types";
 
 interface BreadcrumbsProps {
