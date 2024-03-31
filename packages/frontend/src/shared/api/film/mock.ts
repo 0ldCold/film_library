@@ -255,6 +255,7 @@ export const FriendsFilmMock: IFilmFriends[] = [
     list: "planned"
   }
 ];
+
 export const RateChartModuleMock: RateChartInfo[] = [
   {
     rate: 10,
