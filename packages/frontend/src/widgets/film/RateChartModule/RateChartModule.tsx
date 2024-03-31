@@ -3,7 +3,6 @@ import ModuleCard from "src/entities/film/ModuleCard/ModuleCard";
 import { RateChartInfo } from "./types";
 import RateChart from "src/entities/film/RateChart/RateChartRow";
 import { calkWidth } from "./helper";
-import Styles from "./RateChartModule.module.scss";
 
 interface RateChartModuleProps {
   data: RateChartInfo[];
