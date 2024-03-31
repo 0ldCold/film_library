@@ -81,8 +81,11 @@ const Film: FC = () => {
         </div>
 
         <div className={Styles.menu}>
-          <FriendsFilm data={FriendsFilmMock} />
           <RateChartModule data={RateChartModuleMock} />
+
+          <div className={Styles.modules}>
+            <FriendsFilm data={FriendsFilmMock} />
+          </div>
         </div>
       </div>
     </MainTemplate>
