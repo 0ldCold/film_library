@@ -1,4 +1,4 @@
-import { FC, useMemo, CSSProperties } from "react";
+import { FC, useMemo } from "react";
 import Styles from "./BarChart.module.scss";
 import { calcWidth } from "./helper";
 import { BarChartRowData } from "./types";
