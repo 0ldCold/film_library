@@ -37,7 +37,7 @@ import NarutoHurricaneChronicles from "./similarPicture/NarutoHurricaneChronicle
 import { Teaser, Trailer } from "./movieExcerptsPicture/mock";
 import Gojo from "./movieExcerptsPicture/gojo.jpg";
 import GojoAndgeto from "./movieExcerptsPicture/gojoAndgeto.jpg";
-import { RateChartInfo } from "src/widgets/film/RateChartModule/types";
+import { RateChartInfo } from "./types";
 
 export const infoModuleMock: FilmInfo = {
   type: "TV Сериал",
