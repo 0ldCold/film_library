@@ -1,6 +1,6 @@
 .wrapper {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  gap: 1px 15px;
 }

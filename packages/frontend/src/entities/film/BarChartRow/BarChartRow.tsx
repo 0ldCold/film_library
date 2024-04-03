@@ -2,25 +2,29 @@ import { CSSProperties, FC } from "react";
 import Styles from "./BarChartRow.module.scss";
 import { BarChartRowData } from "../BarChart/types";
 import { getColorByWidth } from "./helper";
+import clsx from "clsx";
 
 export interface BarChartRowProps {
   data: BarChartRowData;
   widthPercent: number;
-  labelWidth: CSSProperties["width"];
 }
-const BarChartRow: FC<BarChartRowProps> = ({ data, widthPercent, labelWidth }) => {
+const BarChartRow: FC<BarChartRowProps> = ({ data, widthPercent }) => {
   return (
-    <div
-      style={{
-        width: `${widthPercent}%`,
-        background: getColorByWidth(widthPercent)
-      }}
-    >
-      <div className={Styles.wrapper}>
-        <div>{data.value}</div>
-        <div>{data.label}</div>
+    <>
+      <div
+        style={{
+          width: `${widthPercent}%`,
+          background: getColorByWidth(widthPercent)
+        }}
+        className={Styles.bar}
+      >
+        {widthPercent > 10 && <span>{data.value}</span>}
       </div>
-    </div>
+
+      <div className={Styles.label}>
+        <span>{data.label}</span>
+      </div>
+    </>
   );
 };
 

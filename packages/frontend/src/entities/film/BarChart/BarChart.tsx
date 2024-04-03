@@ -6,9 +6,8 @@ import BarChartRow from "../BarChartRow/BarChartRow";
 
 interface BarChartProps {
   data: BarChartRowData[];
-  labelWidth: CSSProperties["width"];
 }
-const BarChart: FC<BarChartProps> = ({ data, labelWidth }) => {
+const BarChart: FC<BarChartProps> = ({ data }) => {
   const maxValue = useMemo<number>(() => {
     if (data.length <= 0) {
       return 0;
@@ -19,12 +18,7 @@ const BarChart: FC<BarChartProps> = ({ data, labelWidth }) => {
   return (
     <div className={Styles.wrapper}>
       {data.map((item) => (
-        <BarChartRow
-          key={item.label}
-          data={item}
-          widthPercent={calcWidth(item.value, maxValue)}
-          labelWidth={labelWidth}
-        />
+        <BarChartRow key={item.label} data={item} widthPercent={calcWidth(item.value, maxValue)} />
       ))}
     </div>
   );
