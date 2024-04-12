@@ -8,6 +8,5 @@
     "start": "yarn start:back && yarn start:front"
   },
   "author": "",
-  "license": "ISC",
-  "packageManager": "yarn@4.0.2"
+  "license": "ISC"
 }
