@@ -2,7 +2,7 @@ import { Seeder, SeederFactoryManager } from 'typeorm-extension';
 import { DataSource } from 'typeorm';
 import { User } from './User';
 
-export default class UserSeeder implements Seeder {
+export class UserSeeder implements Seeder {
   public async run(
     dataSource: DataSource,
     factoryManager: SeederFactoryManager
@@ -26,3 +26,4 @@ export default class UserSeeder implements Seeder {
     await userFactory.saveMany(5);
   }
 }
+export default UserSeeder;

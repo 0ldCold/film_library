@@ -36,6 +36,6 @@ AppDataSource.initialize().then(async () => {
   // start express server
   app.listen(+port)
 
-  console.log(`Express server has started on port 3000. Open http://localhost:${port} to see results`)
+  console.log(`Express server has started on port 3000. Open http://localhost:${port}/users to see results`)
 
 }).catch(error => console.log(error))

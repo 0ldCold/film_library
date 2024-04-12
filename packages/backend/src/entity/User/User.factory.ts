@@ -1,7 +1,7 @@
 import { setSeederFactory } from 'typeorm-extension';
 import { User } from './User';
 
-export default setSeederFactory(User, (faker) => {
+export const UserFactory = setSeederFactory(User, (faker) => {
   const user = new User();
   user.firstName = faker.person.firstName('male');
   user.lastName = faker.person.lastName('male');
@@ -11,3 +11,4 @@ export default setSeederFactory(User, (faker) => {
 
   return user;
 })
+export default UserFactory;

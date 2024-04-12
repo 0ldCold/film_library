@@ -1,8 +1,12 @@
-import {dropDatabase} from 'typeorm-extension';
 import {AppDataSource} from "../data-source";
 
-(async () => {
-  await dropDatabase({
-    options: AppDataSource.options
-  });
-})();
+const dropDb = async (): Promise<void> => {
+  AppDataSource.setOptions({...AppDataSource.options, synchronize: false})
+  await AppDataSource.initialize();
+  await AppDataSource.dropDatabase();
+}
+
+dropDb().then(() => {
+  console.log("DB dropped successfully.");
+  process.exit(0);
+})
