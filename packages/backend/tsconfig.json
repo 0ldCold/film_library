@@ -13,6 +13,7 @@
     "sourceMap": true,
     "types": ["node", "vite/client"],
     "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]

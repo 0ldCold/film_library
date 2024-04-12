@@ -1,11 +1,10 @@
 import "reflect-metadata"
 
-import express from "express"
-import bodyParser from "body-parser"
-import {Request, Response} from "express"
+import express, {json, urlencoded, } from "express";
 import {AppDataSource} from "./database/data-source"
-import {Routes} from "./routes"
+
 import {isExist} from "./helpers/isExist";
+import {RoutesList} from "./controller/routes";
 
 const port = process.env.VITE_APP_PORT;
 if (!isExist(port) || Number.isNaN(+port)) {
@@ -14,24 +13,18 @@ if (!isExist(port) || Number.isNaN(+port)) {
 
 AppDataSource.initialize().then(async () => {
 
-  // create express app
-  const app = express()
-  app.use(bodyParser.json())
+  const app = express();
 
-  Routes.forEach(route => {
-    (app as any)[route.method](route.route, (req: Request, res: Response, next: Function) => {
-      const result = (new (route.controller as any))[route.action](req, res, next)
-      if (result instanceof Promise) {
-        result.then(result => result !== null && result !== undefined ? res.send(result) : undefined)
-
-      } else if (result !== null && result !== undefined) {
-        res.json(result)
-      }
+  app.use(
+    urlencoded({
+      extended: true,
     })
-  })
+  );
+  app.use(json());
 
-  // setup express app here
-  // ...
+  RoutesList.map((route) => {
+    app.use(route.path, route.router)
+  })
 
   // start express server
   app.listen(+port)
