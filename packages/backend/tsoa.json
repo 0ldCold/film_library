@@ -10,5 +10,11 @@
     "routesDir": "build",
     "esm": true,
     "middleware": "express"
+  },
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["./src/*"]
+    }
   }
 }

@@ -1,13 +1,13 @@
 import "reflect-metadata";
 
-import express, {json, Response as ExResponse, Request as ExRequest, urlencoded, NextFunction,} from "express";
+import express, {json, Response as ExResponse, Request as ExRequest, urlencoded} from "express";
 import {AppDataSource} from "./database/data-source"
 
 import {isExist} from "./helpers/isExist";
-import {NotFoundError} from "./helpers/errors";
 import swaggerUi from "swagger-ui-express";
 import { RegisterRoutes } from "../build/routes";
 import swagger from "../build/swagger.json";
+import {errorHandler} from "src/middlewares/error/errorHeandler";
 
 const port = process.env.VITE_APP_PORT;
 if (!isExist(port) || Number.isNaN(+port)) {
@@ -33,17 +33,12 @@ AppDataSource.initialize().then(async () => {
   });
   RegisterRoutes(app);
 
-  app.use((err: unknown, _: ExRequest, res: ExResponse, next: NextFunction) => {
-    if (err instanceof NotFoundError) {
-      return res.status(404).send(err.message);
-    }
-    return next();
-  })
+  app.use(errorHandler);
 
 
   // start express server
   app.listen(+port, () => {
-    console.log(`Express server has started on port ${port}. Open http://localhost:${port}/users to see results`)
+    console.log(`Express server has started on port ${port}. Open http://localhost:${port}/docs to see results`)
   })
 
 }).catch(error => console.log(error))
