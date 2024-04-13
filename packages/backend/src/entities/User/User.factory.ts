@@ -1,8 +1,8 @@
 import { setSeederFactory } from 'typeorm-extension';
-import { User } from './User';
+import { UserEntity } from './User.entity';
 
-export const UserFactory = setSeederFactory(User, (faker) => {
-  const user = new User();
+export const UserFactory = setSeederFactory(UserEntity, (faker) => {
+  const user = new UserEntity();
   user.firstName = faker.person.firstName('male');
   user.lastName = faker.person.lastName('male');
   user.email = faker.internet.email({
@@ -11,4 +11,3 @@ export const UserFactory = setSeederFactory(User, (faker) => {
 
   return user;
 })
-export default UserFactory;

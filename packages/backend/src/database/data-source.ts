@@ -1,8 +1,8 @@
 import {DataSource} from "typeorm"
-import {User} from "../entity/User/User"
 import {dbConfig} from "./dbConfig";
 import type {SeederOptions} from "typeorm-extension";
-import {PostgresConnectionOptions} from "typeorm/driver/postgres/PostgresConnectionOptions";
+import type {PostgresConnectionOptions} from "typeorm/driver/postgres/PostgresConnectionOptions";
+import {entities} from "src/entities/entities"
 
 const isProd = process.env.NODE_ENV === "production";
 
@@ -11,7 +11,7 @@ export const options: PostgresConnectionOptions & SeederOptions = {
   ...dbConfig,
   synchronize: !isProd,
   logging: false,
-  entities: [User],
+  entities: entities,
   migrations: [],
   subscribers: [],
 };

@@ -1,14 +1,14 @@
 import { runSeeders } from 'typeorm-extension';
 import {AppDataSource} from "../data-source";
-import {seeders} from "../../entity/seeders";
-import {factories} from "../../entity/factories";
+import {seeds} from "src/entities/seeds";
+import {factories} from "src/entities/factories";
 
 const seedDb = async (): Promise<void> => {
   await AppDataSource.initialize();
 
   await runSeeders(AppDataSource, {
     factories: factories,
-    seeds: seeders,
+    seeds: seeds,
     seedTracking: true,
   });
 }

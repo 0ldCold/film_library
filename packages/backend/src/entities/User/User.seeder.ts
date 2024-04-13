@@ -1,13 +1,13 @@
 import { Seeder, SeederFactoryManager } from 'typeorm-extension';
 import { DataSource } from 'typeorm';
-import { User } from './User';
+import { UserEntity } from './User.entity';
 
 export class UserSeeder implements Seeder {
   public async run(
     dataSource: DataSource,
     factoryManager: SeederFactoryManager
   ): Promise<any> {
-    const repository =  dataSource.getRepository(User);
+    const repository =  dataSource.getRepository(UserEntity);
     await repository.insert([
       {
         firstName: 'Caleb',
@@ -18,7 +18,7 @@ export class UserSeeder implements Seeder {
 
     // ---------------------------------------------------
 
-    const userFactory = await factoryManager.get(User);
+    const userFactory = await factoryManager.get(UserEntity);
     // save 1 factory generated entity, to the database
     await userFactory.save();
 
@@ -26,4 +26,3 @@ export class UserSeeder implements Seeder {
     await userFactory.saveMany(5);
   }
 }
-export default UserSeeder;

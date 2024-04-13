@@ -1,17 +1,17 @@
-import {AppDataSource} from "../../database/data-source"
+import {AppDataSource} from "src/database/data-source"
 import {NextFunction, Request, Response} from "express"
-import {User} from "../../entity/User/User"
-import {NotFoundError} from "../../helpers/errors";
+import {UserEntity} from "src/entities/User/User.entity"
+import {NotFoundError} from "src/helpers/errors";
 
 export class UserController {
 
-  private userRepository = AppDataSource.getRepository(User)
+  private userRepository = AppDataSource.getRepository(UserEntity)
 
-  async all(request: Request, response: Response, next: NextFunction): Promise<User[]> {
+  async all(request: Request, response: Response, next: NextFunction): Promise<UserEntity[]> {
     return this.userRepository.find()
   }
 
-  async one(request: Request, response: Response, next: NextFunction): Promise<User> {
+  async one(request: Request, response: Response, next: NextFunction): Promise<UserEntity> {
     const id = parseInt(request.params.id);
 
     const user = await this.userRepository.findOne({
@@ -27,7 +27,7 @@ export class UserController {
   async save(request: Request, response: Response, next: NextFunction): Promise<void> {
     const {firstName, lastName, email} = request.body;
 
-    const user = new User();
+    const user = new UserEntity();
     user.firstName = firstName;
     user.lastName = lastName;
     user.email = email;

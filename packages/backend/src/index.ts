@@ -4,7 +4,7 @@ import express, {json, Request, Response, NextFunction, urlencoded,} from "expre
 import {AppDataSource} from "./database/data-source"
 
 import {isExist} from "./helpers/isExist";
-import {RoutesList} from "./controller/routes";
+import {RoutesList} from "./controllers/routes";
 import {NotFoundError} from "./helpers/errors";
 
 const port = process.env.VITE_APP_PORT;

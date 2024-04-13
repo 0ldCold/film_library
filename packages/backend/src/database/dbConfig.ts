@@ -1,4 +1,4 @@
-import {isExist} from "../helpers/isExist.js";
+import {isExist} from "src/helpers/isExist.js";
 import type {PostgresConnectionOptions} from "typeorm/driver/postgres/PostgresConnectionOptions";
 
 class DbConfigError extends Error {}
