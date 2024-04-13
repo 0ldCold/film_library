@@ -2,22 +2,27 @@
 
 ## Стек
 
-- Express
-- TypeScript
-- PostgreSQL
-- routing-controllers
+- [Express.js](https://github.com/expressjs/express)
+- [TypeScript](https://github.com/microsoft/TypeScript)
+- [PostgreSQL](https://github.com/postgres/postgres)
+- [TypeORM](https://github.com/typeorm/typeorm)
+- [TSOA](https://github.com/lukeautry/tsoa)
+- [class-validator](https://github.com/typestack/class-validator)
 
 ## Запуск
 
 ### В dev-mode
 
 1. `yarn install`
-2. `yarn run dev`
+2. `docker-compose up`
+3. `yarn run seed:fresh`
+4. `yarn run dev`
 
 ### В prod-mode
 
-1. `yarn install`
-2. `yarn run start:prod`
+1. `yarn install --immutable`
+2. `docker-compose up`
+3. `yarn run start`
 
 ### CI/CD
 

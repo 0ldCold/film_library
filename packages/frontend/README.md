@@ -19,7 +19,7 @@
 
 ### В prod-mode
 
-1. `yarn install`
+1. `yarn install --immutable`
 2. `yarn run prodmode`
 
 ### CI/CD

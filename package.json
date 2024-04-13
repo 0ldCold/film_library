@@ -1,13 +1,33 @@
 {
   "name": "film_library",
   "version": "1.0.0",
-  "description": "",
+  "description": "Библиотека фильмов со списками, оценками и обзорами",
   "scripts": {
     "start:back": "cd ./packages/backend && yarn dev",
     "start:front": "cd ./packages/frontend && yarn dev",
     "start": "yarn start:back && yarn start:front"
   },
-  "author": "",
-  "license": "ISC",
-  "packageManager": "yarn@4.0.2"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0ldCold/film_library.git"
+  },
+  "bugs": {
+    "url": "https://github.com/0ldCold/film_library/issues"
+  },
+  "homepage": "https://github.com/0ldCold/film_library#readme",
+  "license": "MIT",
+  "author": {
+    "name": "Ilya Susskiy",
+    "email": "susskij14@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Dmitry Lagoda",
+      "email": "Aeronnaxog@gmail.com"
+    },
+    {
+      "name": "Evgenia Zaitseva",
+      "email": "evgeniya.zaitseva.98@gmail.com"
+    }
+  ]
 }

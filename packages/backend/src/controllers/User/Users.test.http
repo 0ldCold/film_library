@@ -1,0 +1,24 @@
+@host = http://localhost:3000
+
+### Users all
+GET {{host}}/users
+Accept: application/json
+
+### Users one
+GET {{host}}/users/1
+Accept: application/json
+
+### Create new User
+POST {{host}}/users
+Accept: application/json
+Content-Type: application/json
+
+{
+  "firstName": "Ilya",
+  "lastName": "Susskiy",
+  "email": "susskij14@gmail.com"
+}
+
+### Remove user
+DELETE {{host}}/users/1
+Accept: application/json
