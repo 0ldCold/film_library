@@ -7,7 +7,7 @@
     "start": "npx vite-node src/index.ts",
     "dev": "nodemon .",
     "typeorm": "typeorm-ts-node-esm -d ./src/database/data-source",
-    "types-check": "tsc --noEmit",
+    "types": "tsc --noEmit",
     "db:create": "npx vite-node src/database/actions/dbCreate.ts",
     "db:drop": "npx vite-node src/database/actions/dbDrop.ts",
     "db:fresh": "yarn run db:drop && yarn run db:create",
