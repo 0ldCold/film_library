@@ -1,4 +1,4 @@
-import "reflect-metadata"
+import "reflect-metadata";
 
 import express, {json, Response as ExResponse, Request as ExRequest, urlencoded, NextFunction,} from "express";
 import {AppDataSource} from "./database/data-source"
@@ -6,6 +6,8 @@ import {AppDataSource} from "./database/data-source"
 import {isExist} from "./helpers/isExist";
 import {NotFoundError} from "./helpers/errors";
 import swaggerUi from "swagger-ui-express";
+import { RegisterRoutes } from "../build/routes";
+import swagger from "../build/swagger.json";
 
 const port = process.env.VITE_APP_PORT;
 if (!isExist(port) || Number.isNaN(+port)) {
@@ -26,9 +28,10 @@ AppDataSource.initialize().then(async () => {
 
   app.use("/docs", swaggerUi.serve, async (_req: ExRequest, res: ExResponse) => {
     return res.send(
-      swaggerUi.generateHTML(await import("src/../build/swagger.json"))
+      swaggerUi.generateHTML(swagger)
     );
   });
+  RegisterRoutes(app);
 
   app.use((err: unknown, _: ExRequest, res: ExResponse, next: NextFunction) => {
     if (err instanceof NotFoundError) {
@@ -39,8 +42,8 @@ AppDataSource.initialize().then(async () => {
 
 
   // start express server
-  app.listen(+port)
-
-  console.log(`Express server has started on port 3000. Open http://localhost:${port}/users to see results`)
+  app.listen(+port, () => {
+    console.log(`Express server has started on port ${port}. Open http://localhost:${port}/users to see results`)
+  })
 
 }).catch(error => console.log(error))

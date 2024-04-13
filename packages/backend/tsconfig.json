@@ -30,7 +30,7 @@
     "skipLibCheck": true,
 
     /* Module Resolution Options */
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "baseUrl": ".",
     "esModuleInterop": true,
     "resolveJsonModule": true,
@@ -47,5 +47,5 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "build", "dist"]
+  "exclude": ["node_modules", "build"]
 }

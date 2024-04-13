@@ -1,6 +1,4 @@
-import type {UsersEntity} from "src/entities/Users/Users.entity";
-
-export interface UsersDTO extends UsersEntity {
+export interface UsersDTO {
   id: number
   firstName: string
   lastName: string

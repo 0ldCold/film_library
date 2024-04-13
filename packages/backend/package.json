@@ -4,8 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "npx vite-node src/app.ts",
+    "start": "yarn run build:routes && npx vite-node src/app.ts",
     "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec-and-routes\"",
+    "build:routes": "tsoa spec-and-routes",
+    "build:app": "yarn run build:routes && vite build",
+    "build:run": "node build/src/app.js",
+    "build:start": "yarn run build:app && yarn run build:run",
     "typeorm": "typeorm-ts-node-esm -d ./src/database/data-source",
     "types": "tsc --noEmit",
     "check": "yarn run types",
@@ -25,6 +29,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
+    "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-swc": "^0.3.0",
     "@rollup/plugin-typescript": "^11.1.6",
     "@swc/core": "^1.4.13",
@@ -35,11 +40,13 @@
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
     "nodemon": "^3.1.0",
+    "rollup": "^4.14.2",
     "ts-node": "^10.9.2",
     "typeorm-extension": "^3.5.1",
     "typescript": "^5.4.5",
     "vite": "^5.2.8",
     "vite-node": "^1.5.0",
+    "vite-tsconfig-paths": "^4.3.2",
     "vitest": "^1.5.0"
   },
   "engines": {
