@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "npx vite-node src/index.ts",
+    "start": "npx vite-node src/app.ts",
     "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec-and-routes\"",
     "typeorm": "typeorm-ts-node-esm -d ./src/database/data-source",
     "types": "tsc --noEmit",
@@ -50,7 +50,8 @@
     "ignore": [
       ".git",
       "node_modules",
-      "dist"
+      "dist",
+      "build"
     ],
     "watch": [
       "./src"

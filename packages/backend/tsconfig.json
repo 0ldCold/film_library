@@ -2,12 +2,13 @@
   "compilerOptions": {
     /* Basic Options */
     "incremental": true,
+    "rootDir": ".",
     "target": "ES2022",
     "module": "ES2022",
     "outDir": "./build",
     "types": ["node", "vite/client"],
     "lib": [
-      "ES2022", "DOM"
+      "ES6", "ES2022", "DOM"
     ],
     "sourceMap": true,
 
@@ -26,12 +27,14 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
 
     /* Module Resolution Options */
     "moduleResolution": "node",
     "baseUrl": ".",
     "esModuleInterop": true,
     "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "paths": {
       "src/*": ["./src/*"]
     },

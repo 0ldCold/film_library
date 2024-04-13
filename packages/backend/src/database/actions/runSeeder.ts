@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import { runSeeders } from 'typeorm-extension';
 import {AppDataSource} from "../data-source";
 import {seeds} from "src/entities/seeds";

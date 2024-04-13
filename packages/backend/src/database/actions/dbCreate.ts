@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import { createDatabase } from 'typeorm-extension';
 import {AppDataSource} from "../data-source";
 

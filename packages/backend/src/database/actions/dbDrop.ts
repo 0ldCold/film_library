@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import {AppDataSource} from "../data-source";
 
 const dropDb = async (): Promise<void> => {

@@ -4,7 +4,6 @@ import express, {json, Response as ExResponse, Request as ExRequest, urlencoded,
 import {AppDataSource} from "./database/data-source"
 
 import {isExist} from "./helpers/isExist";
-import {RoutesList} from "./controllers/routes";
 import {NotFoundError} from "./helpers/errors";
 import swaggerUi from "swagger-ui-express";
 
@@ -24,9 +23,7 @@ AppDataSource.initialize().then(async () => {
   );
   app.use(json());
 
-  RoutesList.map((route) => {
-    app.use(route.path, route.router)
-  })
+
   app.use("/docs", swaggerUi.serve, async (_req: ExRequest, res: ExResponse) => {
     return res.send(
       swaggerUi.generateHTML(await import("src/../build/swagger.json"))
