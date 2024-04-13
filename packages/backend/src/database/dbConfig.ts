@@ -34,13 +34,6 @@ const checkValidConfigWithError = (envConfig: DbConfigFormEnv): envConfig is Rec
 
   return true;
 }
-const checkValidConfig = (envConfig: DbConfigFormEnv): envConfig is Record<keyof ValidDbConfig, string> => {
-  try {
-    return checkValidConfigWithError(envConfig);
-  } catch (_) {
-    return false;
-  }
-}
 
 const dbConfigFormEnv: DbConfigFormEnv = {
   host: process.env.VITE_DB_HOST,

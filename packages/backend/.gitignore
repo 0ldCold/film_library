@@ -22,6 +22,7 @@ build/
 dist/
 tmp/
 temp/
+.rollup.cache/
 
 # debug
 npm-debug.log*

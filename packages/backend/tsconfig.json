@@ -1,25 +1,48 @@
 {
   "compilerOptions": {
-    "rootDir": ".",
+    /* Basic Options */
+    "incremental": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "outDir": "./build",
+    "types": ["node", "vite/client"],
     "lib": [
-      "ES2020"
+      "ES2022", "DOM"
     ],
-    "target": "ES2020",
-    "module": "ES2020",
+    "sourceMap": true,
+
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+
+    /* Additional Checks */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Module Resolution Options */
     "moduleResolution": "node",
-    "outDir": "./dist",
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "src/*": ["./src/*"]
+    },
+
+    /* Experimental Options */
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": true,
-    "strict": true,
-    "types": ["node", "vite/client"],
-    "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
-    "paths": {
-      "src/*": ["./src/*"],
-    }
+
+    /* Advanced Options */
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "build", "dist"]
 }

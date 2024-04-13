@@ -3,27 +3,27 @@ import {UserController} from './User.controller';
 
 export const UserRouter = Router();
 
-UserRouter.get('/', (req, res, next) => {
+UserRouter.get('/', (_, res, next) => {
   const controller = new UserController();
-  controller.all(req, res, next)
+  controller.all()
     .then((result) => res.json(result))
     .catch((error) => next(error));
 });
 UserRouter.get("/:id", (req, res, next) => {
   const controller = new UserController();
-  controller.one(req, res, next)
+  controller.one(req)
     .then((result) => res.json(result))
     .catch((error) => next(error));
 })
 UserRouter.post("/", (req, res, next) => {
   const controller = new UserController();
-  controller.save(req, res, next)
+  controller.save(req)
     .then(() => res.status(201).send())
     .catch((error) => next(error))
 })
 UserRouter.delete("/:id", (req, res, next) => {
   const controller = new UserController();
-  controller.remove(req, res, next)
+  controller.remove(req)
     .then(() => res.status(204).send())
     .catch((error) => next(error));
 })
