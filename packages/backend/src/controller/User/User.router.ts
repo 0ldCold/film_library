@@ -18,12 +18,12 @@ UserRouter.get("/:id", (req, res, next) => {
 UserRouter.post("/", (req, res, next) => {
   const controller = new UserController();
   controller.save(req, res, next)
-    .then(() => res.status(201))
+    .then(() => res.status(201).send())
     .catch((error) => next(error))
 })
 UserRouter.delete("/:id", (req, res, next) => {
   const controller = new UserController();
   controller.remove(req, res, next)
-    .then(() => res.status(204))
+    .then(() => res.status(204).send())
     .catch((error) => next(error));
 })

@@ -4,3 +4,4 @@ export class NotFoundError extends Error {
     super(isCustom ? message : `${message} not found`);
   }
 }
+

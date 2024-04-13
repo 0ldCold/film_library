@@ -25,13 +25,12 @@ export class UserController {
   }
 
   async save(request: Request, response: Response, next: NextFunction): Promise<void> {
-    const {firstName, lastName, age} = request.body;
+    const {firstName, lastName, email} = request.body;
 
-    const user = Object.assign(new User(), {
-      firstName,
-      lastName,
-      age
-    })
+    const user = new User();
+    user.firstName = firstName;
+    user.lastName = lastName;
+    user.email = email;
 
     await this.userRepository.save(user);
   }

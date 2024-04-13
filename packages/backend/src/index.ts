@@ -5,6 +5,7 @@ import {AppDataSource} from "./database/data-source"
 
 import {isExist} from "./helpers/isExist";
 import {RoutesList} from "./controller/routes";
+import {NotFoundError} from "./helpers/errors";
 
 const port = process.env.VITE_APP_PORT;
 if (!isExist(port) || Number.isNaN(+port)) {
@@ -25,6 +26,13 @@ AppDataSource.initialize().then(async () => {
   RoutesList.map((route) => {
     app.use(route.path, route.router)
   })
+  app.use((err, req, res, next) => {
+    if (err instanceof NotFoundError) {
+      return res.status(404).send(err.message);
+    }
+    next();
+  })
+
 
   // start express server
   app.listen(+port)
