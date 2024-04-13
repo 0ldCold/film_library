@@ -2,12 +2,12 @@
 
 ## Стек
 
-- Express.js
-- TypeScript
-- PostgreSQL
-- TypeORM
-- TSOA
-- class-validator
+- [Express.js](https://github.com/expressjs/express)
+- [TypeScript](https://github.com/microsoft/TypeScript)
+- [PostgreSQL](https://github.com/postgres/postgres)
+- [TypeORM](https://github.com/typeorm/typeorm)
+- [TSOA](https://github.com/lukeautry/tsoa)
+- [class-validator](https://github.com/typestack/class-validator)
 
 ## Запуск
 
@@ -20,8 +20,9 @@
 
 ### В prod-mode
 
-1. `yarn install`
-2. `yarn run start:prod`
+1. `yarn install --immutable`
+2. `docker-compose up`
+3. `yarn run start`
 
 ### CI/CD
 
