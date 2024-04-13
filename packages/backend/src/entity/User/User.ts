@@ -7,14 +7,14 @@ import {
 @Entity()
 export class User {
   @PrimaryGeneratedColumn()
-  id: number
+  declare id: number
 
   @Column()
-  firstName: string
+  declare firstName: string
 
   @Column()
-  lastName: string
+  declare lastName: string
 
   @Column()
-  email: string
+  declare email: string
 }

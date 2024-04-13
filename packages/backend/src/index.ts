@@ -1,6 +1,6 @@
 import "reflect-metadata"
 
-import express, {json, urlencoded, } from "express";
+import express, {json, Request, Response, NextFunction, urlencoded,} from "express";
 import {AppDataSource} from "./database/data-source"
 
 import {isExist} from "./helpers/isExist";
@@ -26,7 +26,7 @@ AppDataSource.initialize().then(async () => {
   RoutesList.map((route) => {
     app.use(route.path, route.router)
   })
-  app.use((err, req, res, next) => {
+  app.use((err: unknown, req: Request, res: Response, next: NextFunction) => {
     if (err instanceof NotFoundError) {
       return res.status(404).send(err.message);
     }
