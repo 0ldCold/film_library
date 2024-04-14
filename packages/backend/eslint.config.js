@@ -3,6 +3,7 @@
 import eslint from '@eslint/js';
 import tsEslint from 'typescript-eslint';
 import importPlugin from 'eslint-plugin-import';
+import eslintConfigPrettier from 'eslint-config-prettier';
 
 export default tsEslint.config(
   {
@@ -40,4 +41,5 @@ export default tsEslint.config(
     files: ['**/*.js'],
     ...tsEslint.configs.disableTypeChecked,
   },
+  eslintConfigPrettier,
 );
