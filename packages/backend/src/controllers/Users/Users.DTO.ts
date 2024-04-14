@@ -7,25 +7,24 @@ export interface UsersDTO {
    * @isInt
    * @example 1
    */
-  id: number
+  id: number;
   /**
    * @example "Иван"
    */
-  firstName: string
+  firstName: string;
   /**
    * @example "Иванов"
    */
-  lastName: string
+  lastName: string;
   /**
    * @example "ivan.ivanov@gmail.com"
    * @pattern ^(.+)@(.+)$
    */
-  email: string
+  email: string;
 }
 
 /**
  * Данные для создания или редактирования пользователя
  * @tsoaModel
  */
-export interface UserCreationParams
-  extends Pick<UsersDTO, "firstName" | "lastName" | "email"> {}
+export interface UserCreationParams extends Pick<UsersDTO, 'firstName' | 'lastName' | 'email'> {}

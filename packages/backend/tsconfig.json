@@ -6,9 +6,7 @@
     "module": "ES2022",
     "outDir": "./build",
     "types": ["node", "vite/client"],
-    "lib": [
-      "ES6", "ES2022", "DOM"
-    ],
+    "lib": ["ES6", "ES2022", "DOM"],
     "sourceMap": true,
 
     "strict": true,
@@ -38,8 +36,8 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
 
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*",  "rollup.config.ts", "swagger.json"],
+  "include": ["src/**/*", "swagger.json", "vite.config.ts"],
   "exclude": ["node_modules", "build/**/*"]
 }

@@ -1,18 +1,21 @@
 import {
   Body,
-  Controller, Delete,
+  Controller,
+  Delete,
   Get,
   Path,
-  Post, Put,
-  Route, SuccessResponse, Response
-} from "tsoa";
-import type { UsersDTO, UserCreationParams } from "./Users.DTO";
-import { UsersService } from "./Users.service";
-import type {NotFoundErrorJSON, ValidateErrorJSON} from "src/middlewares/error/types";
+  Post,
+  Put,
+  Route,
+  SuccessResponse,
+  Response,
+} from 'tsoa';
+import type { UsersDTO, UserCreationParams } from './Users.DTO';
+import { UsersService } from './Users.service';
+import type { NotFoundErrorJSON, ValidateErrorJSON } from 'src/middlewares/error/types';
 
-@Route("users")
+@Route('users')
 export class UsersController extends Controller {
-
   /**
    * @summary Получение списка пользователей
    */
@@ -25,11 +28,9 @@ export class UsersController extends Controller {
    * @summary Получение указанного пользователя
    * @param userId Идентификатор существующего пользователя
    */
-  @Response<NotFoundErrorJSON>(404, "Not found")
-  @Get("{userId}")
-  public async getUser(
-    @Path() userId: UsersDTO['id']
-  ): Promise<UsersDTO> {
+  @Response<NotFoundErrorJSON>(404, 'Not found')
+  @Get('{userId}')
+  public async getUser(@Path() userId: UsersDTO['id']): Promise<UsersDTO> {
     return new UsersService().getOne(userId);
   }
 
@@ -37,12 +38,10 @@ export class UsersController extends Controller {
    * @summary Создание нового пользователя
    * @param requestBody Данные для нового пользователя
    */
-  @Response<ValidateErrorJSON>(422, "Validation Failed")
-  @SuccessResponse(201, "Created")
+  @Response<ValidateErrorJSON>(422, 'Validation Failed')
+  @SuccessResponse(201, 'Created')
   @Post()
-  public async createUser(
-    @Body() requestBody: UserCreationParams
-  ): Promise<UsersDTO> {
+  public async createUser(@Body() requestBody: UserCreationParams): Promise<UsersDTO> {
     const result = await new UsersService().create(requestBody);
     this.setStatus(201);
     return result;
@@ -53,9 +52,9 @@ export class UsersController extends Controller {
    * @param userId Идентификатор пользователя, у которого нужно изменить данные
    * @param requestBody Новые данные пользователя
    */
-  @Response<NotFoundErrorJSON>(404, "Not found")
-  @Response<ValidateErrorJSON>(422, "Validation Failed")
-  @Put("{userId}")
+  @Response<NotFoundErrorJSON>(404, 'Not found')
+  @Response<ValidateErrorJSON>(422, 'Validation Failed')
+  @Put('{userId}')
   public async updateUser(
     @Path() userId: UsersDTO['id'],
     @Body() requestBody: UserCreationParams,
@@ -67,11 +66,9 @@ export class UsersController extends Controller {
    * @summary Удаление пользователя
    * @param userId  Идентификатор существующего пользователя, которого нужно удалить
    */
-  @Response<NotFoundErrorJSON>(404, "Not found")
-  @Delete("{userId}")
-  public async deleteUser(
-    @Path() userId: UsersDTO['id']
-  ): Promise<void> {
-    return await new UsersService().delete(userId)
+  @Response<NotFoundErrorJSON>(404, 'Not found')
+  @Delete('{userId}')
+  public async deleteUser(@Path() userId: UsersDTO['id']): Promise<void> {
+    return await new UsersService().delete(userId);
   }
 }

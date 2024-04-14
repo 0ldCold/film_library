@@ -1,7 +1,7 @@
-import type {FieldErrors} from "tsoa";
+import type { FieldErrors } from 'tsoa';
 
 export interface ValidateErrorJSON {
-  message: "Validation failed";
+  message: 'Validation failed';
   details: FieldErrors;
 }
 
