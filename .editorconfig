@@ -1,13 +1,13 @@
 # EditorConfig is awesome: https://EditorConfig.org
 
+# Stop the editor from looking for .editorconfig files in the parent directories
 root = true
 
 [*]
+charset = utf-8
 end_of_line = lf
 insert_final_newline = true
-
-[*.{js,json,yml,ts,tsx,css}]
-charset = utf-8
 indent_style = space
 indent_size = 2
+tab_width = 2
 max_line_length = 100

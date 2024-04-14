@@ -6,13 +6,7 @@
 
 # dependencies
 node_modules/
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+.yarn/
 
 # testing
 coverage/
@@ -33,5 +27,6 @@ yarn-error.log*
 tsconfig.tsbuildinfo
 
 # local env files
-/.env
-/.env*.local
+.env*
+
+/swagger.json

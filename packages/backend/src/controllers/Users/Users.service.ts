@@ -45,7 +45,7 @@ export class UsersService {
   }
 
   public async delete(userId: UsersDTO['id']):Promise<void> {
-    let userToRemove = await this.userRepository.findOneBy({id: userId})
+    const userToRemove = await this.userRepository.findOneBy({id: userId})
 
     if (!userToRemove) {
       throw new NotFoundError("User");

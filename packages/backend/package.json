@@ -12,6 +12,10 @@
     "----CHECK": "",
     "types": "tsc --noEmit",
     "check": "yarn run types",
+    "lint": "eslint --fix",
+    "lint:check": "eslint",
+    "prettier": "prettier --write .",
+    "prettier:check": "prettier .",
     "----DATABASE": "",
     "typeorm": "typeorm-ts-node-esm -d ./src/database/data-source",
     "db:create": "npx vite-node src/database/actions/dbCreate.ts",
@@ -29,6 +33,7 @@
     "typeorm": "^0.3.20"
   },
   "devDependencies": {
+    "@eslint/js": "^9.0.0",
     "@faker-js/faker": "^8.4.1",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/express": "^4",
@@ -37,10 +42,14 @@
     "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^9.1.0",
     "nodemon": "^3.1.0",
+    "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
     "typeorm-extension": "^3.5.1",
     "typescript": "^5.4.5",
+    "typescript-eslint": "^7.6.0",
     "vite": "^5.2.8",
     "vite-node": "^1.5.0",
     "vitest": "^1.5.0"
