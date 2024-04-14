@@ -8,7 +8,7 @@ import { migrations } from 'src/migrations/migrations';
 export const options: PostgresConnectionOptions & SeederOptions = {
   type: 'postgres',
   ...dbConfig,
-  synchronize: false,
+  synchronize: false, // Работа с БД без миграций
   logging: false,
   entities: entities,
   migrations: migrations,
