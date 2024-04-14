@@ -4,12 +4,16 @@
   "private": true,
   "type": "module",
   "scripts": {
+
+    "build:routes": "tsoa spec-and-routes",
+    "----RUN": "",
     "start": "yarn run build:routes && npx vite-node src/app.ts",
     "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec-and-routes\"",
-    "build:routes": "tsoa spec-and-routes",
-    "typeorm": "typeorm-ts-node-esm -d ./src/database/data-source",
+    "----CHECK": "",
     "types": "tsc --noEmit",
     "check": "yarn run types",
+    "----DATABASE": "",
+    "typeorm": "typeorm-ts-node-esm -d ./src/database/data-source",
     "db:create": "npx vite-node src/database/actions/dbCreate.ts",
     "db:drop": "npx vite-node src/database/actions/dbDrop.ts",
     "db:fresh": "yarn run db:drop && yarn run db:create",
