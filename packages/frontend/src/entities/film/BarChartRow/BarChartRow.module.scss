@@ -1,0 +1,29 @@
+$barHeight: 16px;
+
+.bar {
+  height: $barHeight;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  font-family: $font-main;
+  cursor: default;
+  color: #ffffff;
+  font-size: 11px;
+  line-height: 16px;
+  padding-right: 3px;
+}
+.label {
+  height: $barHeight;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  font-family: $font-main;
+  color: #444;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+}

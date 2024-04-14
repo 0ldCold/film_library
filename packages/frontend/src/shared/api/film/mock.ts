@@ -37,6 +37,7 @@ import NarutoHurricaneChronicles from "./similarPicture/NarutoHurricaneChronicle
 import { Teaser, Trailer } from "./movieExcerptsPicture/mock";
 import Gojo from "./movieExcerptsPicture/gojo.jpg";
 import GojoAndgeto from "./movieExcerptsPicture/gojoAndgeto.jpg";
+import { RateChartInfo } from "./types";
 
 export const infoModuleMock: FilmInfo = {
   type: "TV Сериал",
@@ -252,5 +253,48 @@ export const FriendsFilmMock: IFilmFriends[] = [
       name: "DarkFreon"
     },
     list: "planned"
+  }
+];
+
+export const RateChartModuleMock: RateChartInfo[] = [
+  {
+    rate: 10,
+    count: 9854
+  },
+  {
+    rate: 9,
+    count: 7458
+  },
+  {
+    rate: 8,
+    count: 6560
+  },
+  {
+    rate: 7,
+    count: 2898
+  },
+  {
+    rate: 6,
+    count: 1035
+  },
+  {
+    rate: 5,
+    count: 433
+  },
+  {
+    rate: 4,
+    count: 1200
+  },
+  {
+    rate: 3,
+    count: 136
+  },
+  {
+    rate: 2,
+    count: 220
+  },
+  {
+    rate: 1,
+    count: 245
   }
 ];

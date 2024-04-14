@@ -8,3 +8,8 @@ export type UserFilmsListType =
   | null;
 
 export type DropdownColor = "blue" | "green" | "red" | "gray";
+
+export interface RateChartInfo {
+  rate: number;
+  count: number;
+}
