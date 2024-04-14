@@ -7,8 +7,9 @@
     "----BUILD": "",
     "build:routes": "tsoa spec-and-routes",
     "build:app": "tsc && tsc-alias",
+    "build:full": "yarn run build:routes && yarn run build:app",
     "build:run": "node --no-warnings=ExperimentalWarning ./build/src/app.js",
-    "build:start": "yarn run build:routes && yarn run build:app && yarn run build:run",
+    "build:start": "yarn run build:full && yarn run build:run",
     "----RUN": "",
     "start": "yarn run build:start",
     "dev": "nodemon .",
@@ -25,7 +26,12 @@
     "db:drop": "npx vite-node src/database/actions/dbDrop.ts",
     "db:fresh": "yarn run db:drop && yarn run db:create",
     "seed:run": "npx vite-node src/database/actions/runSeeder.ts",
-    "seed:fresh": "yarn run db:fresh && yarn run seed:run"
+    "seed:fresh": "yarn run db:fresh && yarn run seed:run",
+    "----MIGRATIONS": "",
+    "migration:generate": "typeorm migration:generate -d ./build/src/database/data-source.js",
+    "migration:create": "typeorm migration:create",
+    "migration:run": "typeorm migration:run -d ./build/src/database/data-source.js",
+    "migration:revert": "typeorm migration:revert -d ./build/src/database/data-source.js"
   },
   "dependencies": {
     "express": "^4.19.2",
