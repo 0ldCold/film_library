@@ -279,6 +279,22 @@ export const RateChartModuleMock: RateChartInfo[] = [
   },
   {
     rate: 5,
-    count: 402
+    count: 433
+  },
+  {
+    rate: 4,
+    count: 1200
+  },
+  {
+    rate: 3,
+    count: 136
+  },
+  {
+    rate: 2,
+    count: 220
+  },
+  {
+    rate: 1,
+    count: 245
   }
 ];

@@ -17,7 +17,7 @@ const BarChartRow: FC<BarChartRowProps> = ({ data, widthPercent }) => {
         }}
         className={Styles.bar}
       >
-        {widthPercent > 10 && <span>{data.value}</span>}
+        {widthPercent > 11 && <span>{data.value}</span>}
       </div>
 
       <div className={Styles.label}>

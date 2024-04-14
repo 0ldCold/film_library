@@ -1,6 +1,6 @@
 import { FC, useMemo } from "react";
 import Styles from "./BarChart.module.scss";
-import { calcWidth } from "./helper";
+import { calcWidth, removeItems } from "./helper";
 import { BarChartRowData } from "./types";
 import BarChartRow from "../BarChartRow/BarChartRow";
 
@@ -12,12 +12,16 @@ const BarChart: FC<BarChartProps> = ({ data }) => {
     if (data.length <= 0) {
       return 0;
     }
-    return data.sort((a, b) => b.value - a.value)[0].value;
+    return Math.max(...data.map((item) => item.value));
   }, [data]);
+  const filteredData = useMemo<BarChartRowData[]>(
+    () => removeItems(data, 10, maxValue),
+    [data, maxValue]
+  );
 
   return (
     <div className={Styles.wrapper}>
-      {data.map((item) => (
+      {filteredData.map((item) => (
         <BarChartRow key={item.label} data={item} widthPercent={calcWidth(item.value, maxValue)} />
       ))}
     </div>
