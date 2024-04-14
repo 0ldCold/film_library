@@ -1,7 +1,4 @@
-import dotenv from 'dotenv';
-
-dotenv.config();
-
+import 'dotenv/config';
 import 'reflect-metadata';
 
 import express, { json, Response as ExResponse, Request as ExRequest, urlencoded } from 'express';
@@ -12,6 +9,7 @@ import swaggerUi from 'swagger-ui-express';
 import { RegisterRoutes } from './routes';
 import { errorHandler } from 'src/middlewares/error/errorHeandler';
 import swagger from '../swagger.json' with { type: 'json' };
+import { corsResolver } from 'src/middlewares/corsResolver';
 
 const port = process.env.VITE_APP_PORT;
 if (!isExist(port) || Number.isNaN(+port)) {
@@ -28,6 +26,8 @@ AppDataSource.initialize()
       }),
     );
     app.use(json());
+
+    app.use(corsResolver);
 
     app.use('/docs', swaggerUi.serve, (_req: ExRequest, res: ExResponse) => {
       return res.send(swaggerUi.generateHTML(swagger));

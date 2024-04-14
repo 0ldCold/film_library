@@ -1,6 +1,4 @@
-import dotenv from 'dotenv';
-
-dotenv.config();
+import 'dotenv/config';
 
 import { isExist } from 'src/helpers/isExist.js';
 import type { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions';
