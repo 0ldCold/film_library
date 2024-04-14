@@ -6,8 +6,9 @@ export const UsersFactory = setSeederFactory(UsersEntity, (faker) => {
   user.firstName = faker.person.firstName('male');
   user.lastName = faker.person.lastName('male');
   user.email = faker.internet.email({
-    firstName: user.firstName, lastName: user.lastName
+    firstName: user.firstName,
+    lastName: user.lastName,
   });
 
   return user;
-})
+});

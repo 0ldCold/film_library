@@ -31,7 +31,8 @@
 1. `yarn install --immutable`
 2. `yarn run build:routes`
 3. `yarn run types`
-4. `yarn run test`
+4. `yarn run lint:check`
+5. `yarn run prettier:check`
 
 ### Проверка кода:
 

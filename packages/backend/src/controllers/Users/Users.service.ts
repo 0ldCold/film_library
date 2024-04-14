@@ -1,24 +1,23 @@
-import {AppDataSource} from "src/database/data-source"
-import {UsersEntity} from "src/entities/Users/Users.entity"
-import {NotFoundError} from "src/helpers/errors";
-import type {UserCreationParams, UsersDTO} from "src/controllers/Users/Users.DTO";
-import {isExist} from "src/helpers/isExist";
+import { AppDataSource } from 'src/database/data-source';
+import { UsersEntity } from 'src/entities/Users/Users.entity';
+import { NotFoundError } from 'src/helpers/errors';
+import type { UserCreationParams, UsersDTO } from 'src/controllers/Users/Users.DTO';
+import { isExist } from 'src/helpers/isExist';
 
 export class UsersService {
-
-  private userRepository = AppDataSource.getRepository(UsersEntity)
+  private userRepository = AppDataSource.getRepository(UsersEntity);
 
   public async getAll(): Promise<UsersDTO[]> {
-    return this.userRepository.find()
+    return this.userRepository.find();
   }
 
   public async getOne(userId: UsersDTO['id']): Promise<UsersDTO> {
     const user = await this.userRepository.findOne({
-      where: {id: userId}
-    })
+      where: { id: userId },
+    });
 
     if (!user) {
-      throw new NotFoundError("User")
+      throw new NotFoundError('User');
     }
     return user;
   }
@@ -34,25 +33,24 @@ export class UsersService {
 
   public async update(userId: UsersDTO['id'], updatedUser: UserCreationParams): Promise<UsersDTO> {
     const user = await this.userRepository.findOneBy({
-      id: userId
+      id: userId,
     });
     if (!isExist(user)) {
-      throw new NotFoundError("User");
+      throw new NotFoundError('User');
     }
 
-    this.userRepository.merge(user, updatedUser)
+    this.userRepository.merge(user, updatedUser);
     return await this.userRepository.save(user);
   }
 
-  public async delete(userId: UsersDTO['id']):Promise<void> {
-    const userToRemove = await this.userRepository.findOneBy({id: userId})
+  public async delete(userId: UsersDTO['id']): Promise<void> {
+    const userToRemove = await this.userRepository.findOneBy({ id: userId });
 
     if (!userToRemove) {
-      throw new NotFoundError("User");
+      throw new NotFoundError('User');
     }
 
     await this.userRepository.remove(userToRemove);
     return;
   }
-
 }
