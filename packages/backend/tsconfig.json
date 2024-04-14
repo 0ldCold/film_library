@@ -2,8 +2,8 @@
   "compilerOptions": {
     "incremental": true,
     "rootDir": ".",
-    "target": "ES2022",
-    "module": "ES2022",
+    "target": "ESNext",
+    "module": "ESNext",
     "outDir": "./build",
     "types": ["node", "vite/client"],
     "lib": ["ES6", "ES2022", "DOM"],
@@ -38,6 +38,9 @@
 
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*", "swagger.json", "vite.config.ts"],
+  "tsc-alias": {
+    "resolveFullPaths": true
+  },
+  "include": ["src/**/*", "swagger.json"],
   "exclude": ["node_modules", "build/**/*"]
 }

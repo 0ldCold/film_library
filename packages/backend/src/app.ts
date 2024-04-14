@@ -1,3 +1,7 @@
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 import 'reflect-metadata';
 
 import express, { json, Response as ExResponse, Request as ExRequest, urlencoded } from 'express';
@@ -6,8 +10,8 @@ import { AppDataSource } from './database/data-source';
 import { isExist } from './helpers/isExist';
 import swaggerUi from 'swagger-ui-express';
 import { RegisterRoutes } from './routes';
-import swagger from '../swagger.json';
 import { errorHandler } from 'src/middlewares/error/errorHeandler';
+import swagger from '../swagger.json' with { type: 'json' };
 
 const port = process.env.VITE_APP_PORT;
 if (!isExist(port) || Number.isNaN(+port)) {

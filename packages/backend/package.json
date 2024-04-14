@@ -6,9 +6,12 @@
   "scripts": {
     "----BUILD": "",
     "build:routes": "tsoa spec-and-routes",
+    "build:app": "tsc && tsc-alias",
+    "build:run": "node --no-warnings=ExperimentalWarning ./build/src/app.js",
+    "build:start": "yarn run build:routes && yarn run build:app && yarn run build:run",
     "----RUN": "",
-    "start": "yarn run build:routes && npx vite-node src/app.ts",
-    "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec-and-routes\"",
+    "start": "yarn run build:start",
+    "dev": "nodemon .",
     "----CHECK": "",
     "types": "tsc --noEmit",
     "lint": "eslint --fix .",
@@ -48,6 +51,7 @@
     "nodemon": "^3.1.0",
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.8",
     "typeorm-extension": "^3.5.1",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.6.0",
@@ -64,12 +68,13 @@
       ".git",
       "node_modules",
       "dist",
-      "build"
+      "build",
+      "./src/routes.ts"
     ],
     "watch": [
       "./src"
     ],
-    "exec": "npm start",
+    "exec": "yarn run start",
     "ext": "ts"
   }
 }
