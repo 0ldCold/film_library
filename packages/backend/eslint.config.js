@@ -2,17 +2,9 @@
 
 import eslint from '@eslint/js';
 import tsEslint from 'typescript-eslint';
+import importPlugin from 'eslint-plugin-import';
 
 export default tsEslint.config(
-  eslint.configs.recommended,
-  ...tsEslint.configs.recommendedTypeChecked,
-  {
-    languageOptions: {
-      parserOptions: {
-        project: true,
-      },
-    },
-  },
   {
     ignores: [
       'build/**',
@@ -22,6 +14,24 @@ export default tsEslint.config(
       '.yarn/**',
       '.rollup.cache/**',
     ],
+  },
+  eslint.configs.recommended,
+  ...tsEslint.configs.recommendedTypeChecked,
+  {
+    languageOptions: {
+      parserOptions: {
+        project: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
+  {
+    plugins: {
+      import: importPlugin,
+    },
+    rules: {
+      'import/newline-after-import': ['error', { count: 1 }],
+    },
   },
   {
     files: ['**/*.ts'],
