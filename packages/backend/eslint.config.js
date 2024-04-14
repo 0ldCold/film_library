@@ -14,6 +14,7 @@ export default tsEslint.config(
       'src/routes.ts',
       '.yarn/**',
       '.rollup.cache/**',
+      'vite.config.ts',
     ],
   },
   eslint.configs.recommended,

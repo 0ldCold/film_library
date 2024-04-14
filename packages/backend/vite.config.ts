@@ -1,3 +1,5 @@
+// @ts-check
+
 import typescript from '@rollup/plugin-typescript';
 import { defineConfig, loadEnv } from 'vite';
 
