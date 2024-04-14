@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-
+    "----BUILD": "",
     "build:routes": "tsoa spec-and-routes",
     "----RUN": "",
     "start": "yarn run build:routes && npx vite-node src/app.ts",
