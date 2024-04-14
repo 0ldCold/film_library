@@ -7,10 +7,10 @@
     "----BUILD": "",
     "build:routes": "tsoa spec-and-routes",
     "build:app": "tsc && tsc-alias",
-    "build:start": "node --no-warnings=ExperimentalWarning ./build/src/app.js",
-    "build:build-start": "yarn run build:routes && yarn run build:app && yarn run build:start",
+    "build:run": "node --no-warnings=ExperimentalWarning ./build/src/app.js",
+    "build:start": "yarn run build:routes && yarn run build:app && yarn run build:run",
     "----RUN": "",
-    "start": "yarn run build:build-start",
+    "start": "yarn run build:start",
     "dev": "nodemon .",
     "----CHECK": "",
     "types": "tsc --noEmit",
@@ -74,7 +74,7 @@
     "watch": [
       "./src"
     ],
-    "exec": "npm start",
+    "exec": "yarn run start",
     "ext": "ts"
   }
 }
