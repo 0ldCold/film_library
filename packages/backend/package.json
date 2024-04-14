@@ -4,11 +4,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "npx vite-node src/index.ts",
-    "dev": "nodemon .",
-    "typeorm": "typeorm-ts-node-esm -d ./src/database/data-source",
+    "----BUILD": "",
+    "build:routes": "tsoa spec-and-routes",
+    "----RUN": "",
+    "start": "yarn run build:routes && npx vite-node src/app.ts",
+    "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec-and-routes\"",
+    "----CHECK": "",
     "types": "tsc --noEmit",
     "check": "yarn run types",
+    "----DATABASE": "",
+    "typeorm": "typeorm-ts-node-esm -d ./src/database/data-source",
     "db:create": "npx vite-node src/database/actions/dbCreate.ts",
     "db:drop": "npx vite-node src/database/actions/dbDrop.ts",
     "db:fresh": "yarn run db:drop && yarn run db:create",
@@ -19,15 +24,17 @@
     "express": "^4.19.2",
     "pg": "^8.4.0",
     "reflect-metadata": "^0.1.13",
+    "swagger-ui-express": "^5.0.0",
+    "tsoa": "^6.2.0",
     "typeorm": "^0.3.20"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
-    "@rollup/plugin-swc": "^0.3.0",
     "@rollup/plugin-typescript": "^11.1.6",
-    "@swc/core": "^1.4.13",
     "@types/express": "^4",
     "@types/node": "^20.12.7",
+    "@types/swagger-ui-express": "^4.1.6",
+    "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
     "nodemon": "^3.1.0",
@@ -46,7 +53,8 @@
     "ignore": [
       ".git",
       "node_modules",
-      "dist"
+      "dist",
+      "build"
     ],
     "watch": [
       "./src"

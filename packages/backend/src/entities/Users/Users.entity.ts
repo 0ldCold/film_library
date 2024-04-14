@@ -4,8 +4,8 @@ import {
   Column
 } from 'typeorm';
 
-@Entity()
-export class UserEntity {
+@Entity({ name: 'Users' })
+export class UsersEntity {
   @PrimaryGeneratedColumn()
   declare id: number
 
