@@ -3,11 +3,12 @@
   "noImplicitAdditionalProperties": "throw-on-extras",
   "controllerPathGlobs": ["src/**/*.controller.ts"],
   "spec": {
-    "outputDirectory": "build",
+    "outputDirectory": ".",
     "specVersion": 3
   },
   "routes": {
-    "routesDir": "build",
+    "routesFileName": "routes.ts",
+    "routesDir": "src",
     "esm": true,
     "middleware": "express"
   },

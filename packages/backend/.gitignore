@@ -23,6 +23,8 @@ dist/
 tmp/
 temp/
 .rollup.cache/
+spec/
+src/routes.ts
 
 # debug
 npm-debug.log*

@@ -1,7 +1,7 @@
 import {AppDataSource} from "src/database/data-source"
 import {UsersEntity} from "src/entities/Users/Users.entity"
 import {NotFoundError} from "src/helpers/errors";
-import {UserCreationParams, UsersDTO} from "src/controllers/Users/Users.DTO";
+import type {UserCreationParams, UsersDTO} from "src/controllers/Users/Users.DTO";
 import {isExist} from "src/helpers/isExist";
 
 export class UsersService {

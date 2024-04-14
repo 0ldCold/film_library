@@ -1,7 +1,7 @@
-import {NextFunction, Request as ExRequest, Response as ExResponse} from "express";
+import type {NextFunction, Request as ExRequest, Response as ExResponse} from "express";
 import {ValidateError} from "tsoa";
 import {NotFoundError} from "src/helpers/errors";
-import {NotFoundErrorJSON, ValidateErrorJSON} from "src/middlewares/error/types";
+import type {NotFoundErrorJSON, ValidateErrorJSON} from "src/middlewares/error/types";
 
 
 export const errorHandler = (

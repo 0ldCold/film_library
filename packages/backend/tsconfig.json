@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    /* Basic Options */
     "incremental": true,
     "rootDir": ".",
     "target": "ES2022",
@@ -12,7 +11,6 @@
     ],
     "sourceMap": true,
 
-    /* Strict Type-Checking Options */
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -22,14 +20,12 @@
     "noImplicitThis": true,
     "alwaysStrict": true,
 
-    /* Additional Checks */
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
 
-    /* Module Resolution Options */
     "moduleResolution": "Node",
     "baseUrl": ".",
     "esModuleInterop": true,
@@ -39,13 +35,11 @@
       "src/*": ["./src/*"]
     },
 
-    /* Experimental Options */
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
 
-    /* Advanced Options */
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "build"]
+  "include": ["src/**/*",  "rollup.config.ts", "swagger.json"],
+  "exclude": ["node_modules", "build/**/*"]
 }

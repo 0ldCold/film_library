@@ -8,7 +8,7 @@ import {
 } from "tsoa";
 import type { UsersDTO, UserCreationParams } from "./Users.DTO";
 import { UsersService } from "./Users.service";
-import {NotFoundErrorJSON, ValidateErrorJSON} from "src/middlewares/error/types";
+import type {NotFoundErrorJSON, ValidateErrorJSON} from "src/middlewares/error/types";
 
 @Route("users")
 export class UsersController extends Controller {

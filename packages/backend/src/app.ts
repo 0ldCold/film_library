@@ -5,8 +5,8 @@ import {AppDataSource} from "./database/data-source"
 
 import {isExist} from "./helpers/isExist";
 import swaggerUi from "swagger-ui-express";
-import { RegisterRoutes } from "../build/routes";
-import swagger from "../build/swagger.json";
+import { RegisterRoutes } from "./routes";
+import swagger from "../swagger.json";
 import {errorHandler} from "src/middlewares/error/errorHeandler";
 
 const port = process.env.VITE_APP_PORT;
