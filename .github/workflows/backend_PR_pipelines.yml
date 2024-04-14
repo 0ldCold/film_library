@@ -22,5 +22,7 @@ jobs:
           cache-dependency-path: packages/backend/yarn.lock
       - name: Install dependencies
         run: yarn install --immutable
+      - name: Generate routes and swagger
+        run: yarn run build:routes
       - name: Check types
         run: yarn run types

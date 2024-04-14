@@ -16,19 +16,22 @@
 1. `yarn install`
 2. `docker-compose up`
 3. `yarn run seed:fresh`
-4. `yarn run dev`
+4. `yarn run build:routes`
+5. `yarn run dev`
 
 ### В prod-mode
 
 1. `yarn install --immutable`
 2. `docker-compose up`
-3. `yarn run start`
+3. `yarn run build:routes`
+4. `yarn run start`
 
 ### CI/CD
 
 1. `yarn install --immutable`
-2. `yarn run types`
-3. `yarn run test`
+2. `yarn run build:routes`
+3. `yarn run types`
+4. `yarn run test`
 
 ### Проверка кода:
 
