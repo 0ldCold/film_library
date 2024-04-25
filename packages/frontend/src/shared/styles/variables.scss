@@ -1,2 +1,2 @@
-$font-main: "--font-helveticaNeueCyr", "Arial", "Verdana", sans-serif;
-$font-alt: "--font-openSans", "Helvetica Neue", "Arial", "Verdana", sans-serif;
+$font-main: var(--font-helveticaNeueCyr), "Arial", "Verdana", sans-serif;
+$font-alt: var(--font-openSans), "Helvetica Neue", "Arial", "Verdana", sans-serif;
