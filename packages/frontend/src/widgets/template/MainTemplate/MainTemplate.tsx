@@ -3,6 +3,7 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import SectionWrap from "src/entities/template/SectionWrap/SectionWrap";
 
+
 interface MainTemplateProps {
   children?: ReactNode;
 }
