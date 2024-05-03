@@ -7,7 +7,7 @@
   flex-direction: column;
 }
 .label {
-  font-family: "Arial";
+  font-family: $font-main;
   font-weight: bold;
   font-size: 12px;
   color: #444;
@@ -18,7 +18,7 @@
   gap: 10px;
 }
 .role {
-  font-family: "Open Sans";
+  font-family: $font-alt;
   font-size: 12px;
   color: #112233;
   border-bottom: 1px dashed #bbb;
@@ -31,6 +31,6 @@
 .name {
   cursor: pointer;
   color: #176093;
-  font-family: sans-serif;
+  font-family: $font-main;
   font-weight: bold;
 }

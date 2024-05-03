@@ -16,12 +16,12 @@
 .name {
   cursor: pointer;
   color: #176093;
-  font-family: sans-serif;
+  font-family: $font-main;
   font-weight: bold;
 }
 .signs {
   display: flex;
-  font-family: "Open Sans";
+  font-family: $font-alt;
   font-size: 12px;
   color: #112233;
   border-bottom: 1px dashed #2b8acc;
@@ -30,7 +30,7 @@
 
 .publisher {
   background: #e8ebef;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: $font-main;
   border: 1px solid #e3e7ed;
   font-size: 12px;
   line-height: 1.4;
@@ -40,7 +40,7 @@
 .story {
   color: #fff;
   background: #678;
-  font-family: "Open Sans";
+  font-family: $font-alt;
   border: 1px solid #637384;
   font-size: 12px;
   line-height: 1.4;
