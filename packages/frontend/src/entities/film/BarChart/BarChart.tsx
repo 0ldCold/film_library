@@ -1,7 +1,7 @@
 import { FC, useMemo } from "react";
 import Styles from "./BarChart.module.scss";
 import { calcWidth, removeItems } from "./helper";
-import { BarChartRowData } from "./types";
+import { BarChartRowData } from "../BarChartRow/types";
 import BarChartRow from "../BarChartRow/BarChartRow";
 
 interface BarChartProps {
