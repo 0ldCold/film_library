@@ -18,7 +18,8 @@ import {
   RelatedModuleMock,
   SimilarModuleMock,
   StillsModuleMock,
-  StudioLogoMock
+  StudioLogoMock,
+  PeoplesListsModuleMock
 } from "src/shared/api/film/mock";
 import RatingModule from "src/widgets/film/RatingModule/RatingModule";
 import StudioModule from "src/widgets/film/StudioModule/StudioModule";
@@ -33,6 +34,7 @@ import SimilarModule from "src/widgets/film/SimilarModule/SimilarModule";
 import DescriptionModule from "src/widgets/film/DescriptionModule/DescriptionModule";
 import FriendsFilm from "src/widgets/film/FriendsFilm/FriendsFilm";
 import RateChartModule from "src/widgets/film/RateChartModule/RateChartModule";
+import PeoplesListsModule from "src/widgets/film/PeoplesListsModule/PeoplesListsModule";
 
 const Film: FC = () => {
   return (
@@ -82,6 +84,9 @@ const Film: FC = () => {
 
         <div className={Styles.menu}>
           <RateChartModule data={RateChartModuleMock} />
+          <div className={Styles.modules}>
+            <PeoplesListsModule data={PeoplesListsModuleMock} />
+          </div>
 
           <div className={Styles.modules}>
             <FriendsFilm data={FriendsFilmMock} />
