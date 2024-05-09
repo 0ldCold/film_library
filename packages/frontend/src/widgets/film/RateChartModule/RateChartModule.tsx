@@ -15,7 +15,7 @@ const RateChartModule: FC<RateChartModuleProps> = ({ data }) => {
   );
   return (
     <ModuleCard title='Оценки Людей'>
-      <BarChart data={transformedData} isFilterLowItems={true} />
+      <BarChart data={transformedData} isFilterLowItems />
     </ModuleCard>
   );
 };

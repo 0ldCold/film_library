@@ -15,7 +15,7 @@ const PeoplesListsModule: FC<PeoplesListsModuleProps> = ({ data }) => {
   );
   return (
     <ModuleCard title='В списках у людей'>
-      <BarChart data={transformedData} isFilterLowItems={false} />
+      <BarChart data={transformedData} />
     </ModuleCard>
   );
 };
