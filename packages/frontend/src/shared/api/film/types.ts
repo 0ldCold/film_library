@@ -13,3 +13,8 @@ export interface RateChartInfo {
   rate: number;
   count: number;
 }
+
+export interface PeoplesListsInfo {
+  count: number;
+  status: string;
+}

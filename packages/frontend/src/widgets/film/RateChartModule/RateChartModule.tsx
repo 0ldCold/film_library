@@ -1,6 +1,6 @@
 import { FC, useMemo } from "react";
 import ModuleCard from "src/entities/film/ModuleCard/ModuleCard";
-import { BarChartRowData } from "src/entities/film/BarChart/types";
+import { BarChartRowData } from "src/entities/film/BarChartRow/types";
 import BarChart from "src/entities/film/BarChart/BarChart";
 import { RateChartInfo } from "src/shared/api/film/types";
 
@@ -15,7 +15,7 @@ const RateChartModule: FC<RateChartModuleProps> = ({ data }) => {
   );
   return (
     <ModuleCard title='Оценки Людей'>
-      <BarChart data={transformedData} />
+      <BarChart data={transformedData} isFilterLowItems />
     </ModuleCard>
   );
 };

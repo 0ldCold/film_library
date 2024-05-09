@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Styles from "./BarChartRow.module.scss";
-import { BarChartRowData } from "../BarChart/types";
+import { BarChartRowData } from "./types";
 import { getColorByWidth } from "./helper";
 
 export interface BarChartRowProps {

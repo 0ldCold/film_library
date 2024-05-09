@@ -10,6 +10,7 @@ import { StudioImgProps } from "src/widgets/film/StudioModule/StudioModule";
 import { SimilarModuleInfo } from "src/widgets/film/SimilarModule/types";
 import { FilmDescription } from "src/widgets/film/DescriptionModule/types";
 import { IFilmFriends } from "src/widgets/film/FriendsFilm/types";
+import { PeoplesListsInfo, RateChartInfo } from "./types";
 
 //Picture
 import MegumiFushiguro from "./mainCharacterPicture/MegumiFushiguro.webp";
@@ -37,7 +38,6 @@ import NarutoHurricaneChronicles from "./similarPicture/NarutoHurricaneChronicle
 import { Teaser, Trailer } from "./movieExcerptsPicture/mock";
 import Gojo from "./movieExcerptsPicture/gojo.jpg";
 import GojoAndgeto from "./movieExcerptsPicture/gojoAndgeto.jpg";
-import { RateChartInfo } from "./types";
 
 export const infoModuleMock: FilmInfo = {
   type: "TV Сериал",
@@ -296,5 +296,28 @@ export const RateChartModuleMock: RateChartInfo[] = [
   {
     rate: 1,
     count: 245
+  }
+];
+
+export const PeoplesListsModuleMock: PeoplesListsInfo[] = [
+  {
+    count: 20238,
+    status: "Запланировано"
+  },
+  {
+    count: 50629,
+    status: "Просмотрено"
+  },
+  {
+    count: 12892,
+    status: "Смотрю"
+  },
+  {
+    count: 736,
+    status: "Брошено"
+  },
+  {
+    count: 1235,
+    status: "Отложено"
   }
 ];
