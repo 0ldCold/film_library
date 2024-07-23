@@ -11,6 +11,7 @@ export const useRemoveUser = () => {
     mutationFn: (userId: number) => getResponseData(removeUser(userId)),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: [QueryKeys.USERS_LIST] });
+      queryClient.invalidateQueries({ queryKey: [QueryKeys.USERS_ITEM] });
     }
   });
 };
