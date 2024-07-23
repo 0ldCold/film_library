@@ -3,7 +3,8 @@ import { useRouter } from "next/router";
 
 const Users: NextPage = () => {
   const router = useRouter();
-  return <>user name: {router.query.userName}</>;
+  const userId = router.query.userId;
+  return <>user name: {userId}</>;
 };
 
 export default Users;
