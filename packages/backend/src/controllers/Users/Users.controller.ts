@@ -9,12 +9,14 @@ import {
   Route,
   SuccessResponse,
   Response,
+  Tags,
 } from 'tsoa';
 import type { UsersDTO, UserCreationParams } from './Users.DTO';
 import { UsersService } from './Users.service';
 import type { NotFoundErrorJSON, ValidateErrorJSON } from 'src/middlewares/error/types';
 
 @Route('users')
+@Tags('User')
 export class UsersController extends Controller {
   /**
    * @summary Получение списка пользователей

@@ -1,9 +1,10 @@
-import { Controller, Get, Path, Route, Response } from 'tsoa';
+import { Controller, Get, Path, Route, Response, Tags } from 'tsoa';
 import type { NotFoundErrorJSON } from 'src/middlewares/error/types';
 import { FilmsDTO } from 'src/controllers/Films/Films.DTO';
 import { FilmsService } from 'src/controllers/Films/Films.service';
 
 @Route('films')
+@Tags('Film')
 export class FilmsController extends Controller {
   /**
    * @summary Получение списка фильмов

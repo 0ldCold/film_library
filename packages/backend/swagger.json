@@ -157,6 +157,9 @@
 					}
 				},
 				"summary": "Получение списка пользователей",
+				"tags": [
+					"User"
+				],
 				"security": [],
 				"parameters": []
 			},
@@ -188,6 +191,9 @@
 					}
 				},
 				"summary": "Создание нового пользователя",
+				"tags": [
+					"User"
+				],
 				"security": [],
 				"parameters": [],
 				"requestBody": {
@@ -233,6 +239,9 @@
 					}
 				},
 				"summary": "Получение указанного пользователя",
+				"tags": [
+					"User"
+				],
 				"security": [],
 				"parameters": [
 					{
@@ -288,6 +297,9 @@
 					}
 				},
 				"summary": "Изменение пользователя",
+				"tags": [
+					"User"
+				],
 				"security": [],
 				"parameters": [
 					{
@@ -335,6 +347,9 @@
 					}
 				},
 				"summary": "Удаление пользователя",
+				"tags": [
+					"User"
+				],
 				"security": [],
 				"parameters": [
 					{
@@ -369,6 +384,9 @@
 					}
 				},
 				"summary": "Получение списка фильмов",
+				"tags": [
+					"Film"
+				],
 				"security": [],
 				"parameters": []
 			}
@@ -402,6 +420,9 @@
 					}
 				},
 				"summary": "Получение указанного фильма",
+				"tags": [
+					"Film"
+				],
 				"security": [],
 				"parameters": [
 					{
