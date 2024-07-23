@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import Film from "src/pagesFsd/film/Film";
+import FilmPage from "src/pagesFsd/film/Film";
 
-const Users: NextPage = () => {
-  return <Film />;
+const Film: NextPage = () => {
+  return <FilmPage />;
 };
 
-export default Users;
+export default Film;

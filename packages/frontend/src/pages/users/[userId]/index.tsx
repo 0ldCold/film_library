@@ -1,10 +1,8 @@
 import type { NextPage } from "next";
-import { useRouter } from "next/router";
+import UserPage from "src/pagesFsd/user/User";
 
-const Users: NextPage = () => {
-  const router = useRouter();
-  const userId = router.query.userId;
-  return <>user name: {userId}</>;
+const User: NextPage = () => {
+  return <UserPage />;
 };
 
-export default Users;
+export default User;
