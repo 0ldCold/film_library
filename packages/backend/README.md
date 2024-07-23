@@ -26,10 +26,12 @@
 ## Запуск
 
 ### Подготовка
-1. `yarn install`
-2. `docker-compose up -d`
-3. `yarn run build:full`
-4. `yarn run migration:run`
+
+1. Создать файл `.env` со структурой как в файле `.env.example`
+2. `yarn install`
+3. `docker-compose up -d`
+4. `yarn run build:full`
+5. `yarn run migration:run`
 
 ### В dev-mode
 
