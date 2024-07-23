@@ -6,6 +6,13 @@ declare namespace Components {
                 message: string;
             };
         }
+        /**
+         * Стандартная DTO фильма
+         */
+        export interface FilmsDTO {
+            id: number; // int32
+            name: string;
+        }
         export interface NotFoundErrorJSON {
             message: string;
         }
@@ -84,6 +91,18 @@ declare namespace Paths {
             export type $404 = Components.Schemas.NotFoundErrorJSON;
         }
     }
+    namespace GetFilm {
+        namespace Parameters {
+            export type FilmId = number; // double
+        }
+        export interface PathParameters {
+            filmId: Parameters.FilmId /* double */;
+        }
+        namespace Responses {
+            export type $200 = /* Стандартная DTO фильма */ Components.Schemas.FilmsDTO;
+            export type $404 = Components.Schemas.NotFoundErrorJSON;
+        }
+    }
     namespace GetUser {
         namespace Parameters {
             export type UserId = number; // double
@@ -94,6 +113,11 @@ declare namespace Paths {
         namespace Responses {
             export type $200 = /* Стандартная DTO пользователя */ Components.Schemas.UsersDTO;
             export type $404 = Components.Schemas.NotFoundErrorJSON;
+        }
+    }
+    namespace ListFilms {
+        namespace Responses {
+            export type $200 = /* Стандартная DTO фильма */ Components.Schemas.FilmsDTO[];
         }
     }
     namespace ListUsers {
