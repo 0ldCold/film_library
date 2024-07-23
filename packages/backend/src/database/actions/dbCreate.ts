@@ -7,7 +7,9 @@ const createDb = async (): Promise<void> => {
     options: AppDataSource.options,
   });
 
-  await AppDataSource.initialize();
+  const database = await AppDataSource.initialize();
+  await database.runMigrations()
+  await database.destroy();
 };
 
 await createDb();
