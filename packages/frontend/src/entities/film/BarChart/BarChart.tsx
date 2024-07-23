@@ -17,7 +17,7 @@ const BarChart: FC<BarChartProps> = ({ data, isFilterLowItems }) => {
   }, [data]);
   const filteredData = useMemo<BarChartRowData[]>(
     () => (isFilterLowItems ? removeItems(data, 10, maxValue) : data),
-    [data, maxValue]
+    [data, isFilterLowItems, maxValue]
   );
 
   return (
