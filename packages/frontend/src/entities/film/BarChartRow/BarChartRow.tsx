@@ -1,7 +1,7 @@
-import { FC } from "react";
-import Styles from "./BarChartRow.module.scss";
-import { BarChartRowData } from "./types";
-import { getColorByWidth } from "./helper";
+import { FC } from 'react';
+import Styles from './BarChartRow.module.scss';
+import { BarChartRowData } from './types';
+import { getColorByWidth } from './helper';
 
 export interface BarChartRowProps {
   data: BarChartRowData;
@@ -13,7 +13,7 @@ const BarChartRow: FC<BarChartRowProps> = ({ data, widthPercent }) => {
       <div
         style={{
           width: `${widthPercent}%`,
-          background: getColorByWidth(widthPercent)
+          background: getColorByWidth(widthPercent),
         }}
         className={Styles.bar}
       >

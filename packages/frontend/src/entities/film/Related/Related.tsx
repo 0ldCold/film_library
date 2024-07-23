@@ -1,8 +1,8 @@
-import { FC } from "react";
-import Styles from "./Related.module.scss";
-import Image from "next/image";
-import poster404 from "./404poster.png";
-import { transformReleaseDate } from "./helper";
+import { FC } from 'react';
+import Styles from './Related.module.scss';
+import Image from 'next/image';
+import poster404 from './404poster.png';
+import { transformReleaseDate } from './helper';
 
 interface RelatedProps {
   name: string;
@@ -21,11 +21,11 @@ const Related: FC<RelatedProps> = ({
   story,
   publisher,
   studio,
-  releaseDate
+  releaseDate,
 }) => {
   return (
     <div className={Styles.wrapper}>
-      <Image src={poster ?? poster404.src} alt='Постер' width={48} height={75} />
+      <Image src={poster ?? poster404.src} alt="Постер" width={48} height={75} />
       <div className={Styles.container}>
         <div className={Styles.name}>{name}</div>
         <div className={Styles.row}>

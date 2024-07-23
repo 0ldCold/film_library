@@ -1,6 +1,6 @@
-import { FC } from "react";
-import Styles from "./FilmStatusRating.module.scss";
-import { genLikesFromRate } from "./helper";
+import { FC } from 'react';
+import Styles from './FilmStatusRating.module.scss';
+import { genLikesFromRate } from './helper';
 
 interface FilmStatusRatingProps {
   rate: number;

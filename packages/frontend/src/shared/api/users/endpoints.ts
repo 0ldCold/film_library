@@ -1,11 +1,11 @@
-import { BackendResponseWrapper } from "src/shared/api/types";
-import { instance } from "src/shared/api/instance";
+import { BackendResponseWrapper } from 'src/shared/api/types';
+import { instance } from 'src/shared/api/instance';
 
 export const getUsers = (): Promise<BackendResponseWrapper<Components.Schemas.UsersDTO[]>> => {
-  return instance.get("users");
+  return instance.get('users');
 };
 export const getUser = (
-  userId: number
+  userId: number,
 ): Promise<BackendResponseWrapper<Components.Schemas.UsersDTO>> => {
   return instance.get(`users/${userId}`);
 };

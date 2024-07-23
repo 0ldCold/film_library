@@ -1,9 +1,9 @@
-import { isExist } from "src/shared/helpers/isExist";
+import { isExist } from 'src/shared/helpers/isExist';
 
 export type QueryUserId = string | string[] | undefined;
 
 export const checkUserId = (id: QueryUserId): id is string => {
-  if (!isExist(id) || typeof id !== "string" || Number.isNaN(+id)) return false;
+  if (!isExist(id) || typeof id !== 'string' || Number.isNaN(+id)) return false;
   return true;
 };
 

@@ -1,8 +1,8 @@
-import { FC, useMemo } from "react";
-import Styles from "./BarChart.module.scss";
-import { calcWidth, removeItems } from "./helper";
-import { BarChartRowData } from "../BarChartRow/types";
-import BarChartRow from "../BarChartRow/BarChartRow";
+import { FC, useMemo } from 'react';
+import Styles from './BarChart.module.scss';
+import { calcWidth, removeItems } from './helper';
+import { BarChartRowData } from '../BarChartRow/types';
+import BarChartRow from '../BarChartRow/BarChartRow';
 
 interface BarChartProps {
   data: BarChartRowData[];
@@ -17,7 +17,7 @@ const BarChart: FC<BarChartProps> = ({ data, isFilterLowItems }) => {
   }, [data]);
   const filteredData = useMemo<BarChartRowData[]>(
     () => (isFilterLowItems ? removeItems(data, 10, maxValue) : data),
-    [data, isFilterLowItems, maxValue]
+    [data, isFilterLowItems, maxValue],
   );
 
   return (

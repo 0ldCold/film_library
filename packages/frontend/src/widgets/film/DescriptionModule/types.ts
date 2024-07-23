@@ -1,6 +1,6 @@
-export type EnumContributor = "author" | "externalSource";
+export type EnumContributor = 'author' | 'externalSource';
 
-export type FilmDescriptionLanguage = "ru" | "en";
+export type FilmDescriptionLanguage = 'ru' | 'en';
 
 export interface FilmDescriptionData {
   text: string;

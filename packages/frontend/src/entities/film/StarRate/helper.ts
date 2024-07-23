@@ -1,4 +1,4 @@
-import { StarType } from "../Star/types";
+import { StarType } from '../Star/types';
 
 const STARS_COUNT = 5;
 
@@ -13,8 +13,8 @@ export const getStarsFormRate = (rateCur: number): StarType[] => {
   const emptyedStars = STARS_COUNT - (filledStars + halfedStars);
 
   return [
-    ...genStarTypeArray(filledStars, "filled"),
-    ...genStarTypeArray(halfedStars, "half"),
-    ...genStarTypeArray(emptyedStars, "empty")
+    ...genStarTypeArray(filledStars, 'filled'),
+    ...genStarTypeArray(halfedStars, 'half'),
+    ...genStarTypeArray(emptyedStars, 'empty'),
   ];
 };

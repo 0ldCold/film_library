@@ -1,5 +1,5 @@
-import { FC, ReactNode } from "react";
-import Styles from "./ModalWindow.module.scss";
+import { FC, ReactNode } from 'react';
+import Styles from './ModalWindow.module.scss';
 
 interface ModalWindowProps {
   children?: ReactNode;

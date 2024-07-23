@@ -1,5 +1,5 @@
-import { FC, ReactNode } from "react";
-import Styles from "./InfoLabel.module.scss";
+import { FC, ReactNode } from 'react';
+import Styles from './InfoLabel.module.scss';
 
 interface InfoLabelProps {
   label: string;

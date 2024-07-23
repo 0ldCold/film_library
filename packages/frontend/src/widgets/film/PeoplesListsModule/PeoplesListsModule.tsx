@@ -1,8 +1,8 @@
-import { FC, useMemo } from "react";
-import BarChart from "src/entities/film/BarChart/BarChart";
-import { BarChartRowData } from "src/entities/film/BarChartRow/types";
-import ModuleCard from "src/entities/film/ModuleCard/ModuleCard";
-import { PeoplesListsInfo } from "src/shared/api/film/types";
+import { FC, useMemo } from 'react';
+import BarChart from 'src/entities/film/BarChart/BarChart';
+import { BarChartRowData } from 'src/entities/film/BarChartRow/types';
+import ModuleCard from 'src/entities/film/ModuleCard/ModuleCard';
+import { PeoplesListsInfo } from 'src/shared/api/film/types';
 
 interface PeoplesListsModuleProps {
   data: PeoplesListsInfo[];
@@ -11,10 +11,10 @@ interface PeoplesListsModuleProps {
 const PeoplesListsModule: FC<PeoplesListsModuleProps> = ({ data }) => {
   const transformedData = useMemo<BarChartRowData[]>(
     () => data.map((item) => ({ value: item.count, label: String(item.status) })),
-    [data]
+    [data],
   );
   return (
-    <ModuleCard title='В списках у людей'>
+    <ModuleCard title="В списках у людей">
       <BarChart data={transformedData} />
     </ModuleCard>
   );
