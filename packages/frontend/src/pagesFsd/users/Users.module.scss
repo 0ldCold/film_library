@@ -1,0 +1,8 @@
+.usersGrid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, max-content);
+}
+.row {
+  display: contents;
+}
