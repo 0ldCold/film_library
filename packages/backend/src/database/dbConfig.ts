@@ -27,13 +27,13 @@ const checkValidConfigWithError = (
   }
   if (!isExist(envConfig.port)) {
     throw new DbConfigError(
-      'В конфиге (.env) отсутствует поле VITE_DN_PORT. Попробуйте установить значение вида "5432". ' +
+      'В конфиге (.env) отсутствует поле VITE_DB_PORT. Попробуйте установить значение вида "5432". ' +
         'Это значение должно совпадать с портом, на котором хостуется PostgreSQL',
     );
   }
   if (Number.isNaN(+envConfig.port)) {
     throw new DbConfigError(
-      'В конфиге (.env) поле VITE_DN_PORT не является числом. Попробуйте установить значение вида "5432". ' +
+      'В конфиге (.env) поле VITE_DB_PORT не является числом. Попробуйте установить значение вида "5432". ' +
         'Это значение должно совпадать с портом, на котором хостуется PostgreSQL',
     );
   }
@@ -58,7 +58,7 @@ const checkValidConfigWithError = (
 
 const dbConfigFormEnv: DbConfigFormEnv = {
   host: process.env.VITE_DB_HOST,
-  port: process.env.VITE_DN_PORT,
+  port: process.env.VITE_DB_PORT,
   username: process.env.VITE_DB_USERNAME,
   password: process.env.VITE_DB_PASSWORD,
   database: process.env.VITE_DB_NAME,

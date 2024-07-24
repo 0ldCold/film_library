@@ -1,7 +1,7 @@
-import { FilmStatus as TFilmStatus } from "src/entities/film/FilmStatusLabel/types";
-import { FC, useMemo } from "react";
-import FilmStatusLabel from "src/entities/film/FilmStatusLabel/FilmStatusLabel";
-import { transformDate } from "src/entities/film/FilmStatus/helpers";
+import { FilmStatus as TFilmStatus } from 'src/entities/film/FilmStatusLabel/types';
+import { FC, useMemo } from 'react';
+import FilmStatusLabel from 'src/entities/film/FilmStatusLabel/FilmStatusLabel';
+import { transformDate } from 'src/entities/film/FilmStatus/helpers';
 
 export interface FilmStatusProps {
   status: TFilmStatus;
@@ -10,10 +10,10 @@ export interface FilmStatusProps {
 }
 const FilmStatus: FC<FilmStatusProps> = ({ status, createFrom, createTo }) => {
   const datesSting = useMemo<string>(() => {
-    if (status === "announcement") {
+    if (status === 'announcement') {
       return `на ${transformDate(createFrom)}`;
     }
-    return `c ${transformDate(createFrom)} по ${createTo ? transformDate(createTo) : "???"}`;
+    return `c ${transformDate(createFrom)} по ${createTo ? transformDate(createTo) : '???'}`;
   }, [status, createFrom, createTo]);
 
   return (

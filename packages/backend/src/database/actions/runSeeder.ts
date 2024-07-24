@@ -5,13 +5,13 @@ import { seeds } from 'src/entities/seeds';
 import { factories } from 'src/entities/factories';
 
 const seedDb = async (): Promise<void> => {
-  await AppDataSource.initialize();
-
-  await runSeeders(AppDataSource, {
+  const database = await AppDataSource.initialize();
+  await runSeeders(database, {
     factories: factories,
     seeds: seeds,
     seedTracking: true,
   });
+  await database.destroy();
 };
 
 await seedDb();

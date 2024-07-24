@@ -25,19 +25,23 @@
 
 ## Запуск
 
+### Подготовка
+
+1. Создать файл `.env` со структурой как в файле `.env.example`
+2. `yarn install`
+3. `docker-compose up -d`
+4. `yarn run build:full`
+5. `yarn run migration:run`
+
 ### В dev-mode
 
-1. `yarn install`
-2. `docker-compose up -d`
-3. `yarn run seed:fresh`
-4. `yarn run dev`
+1. `yarn run seed:fresh`
+2. `yarn run dev`
 
 ### Для FrontEnd разработчиков
 
-1. `yarn install`
-2. `docker-compose up -d`
-3. `yarn run seed:fresh`
-4. `yarn run start`
+1. `yarn run seed:fresh`
+2. `yarn run start`
 
 ### В prod-mode
 

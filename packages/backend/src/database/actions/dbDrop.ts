@@ -3,8 +3,9 @@ import { AppDataSource } from '../data-source';
 
 const dropDb = async (): Promise<void> => {
   AppDataSource.setOptions({ ...AppDataSource.options, synchronize: false });
-  await AppDataSource.initialize();
-  await AppDataSource.dropDatabase();
+  const database = await AppDataSource.initialize();
+  await database.dropDatabase();
+  await database.destroy();
 };
 
 await dropDb();

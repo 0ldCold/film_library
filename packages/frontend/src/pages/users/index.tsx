@@ -1,7 +1,8 @@
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
+import UsersPage from 'src/pagesFsd/users/Users';
 
 const Users: NextPage = () => {
-  return <>users</>;
+  return <UsersPage />;
 };
 
 export default Users;
