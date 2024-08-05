@@ -1,13 +1,13 @@
-import { FC } from "react";
-import { IconProps } from "./types";
+import { FC } from 'react';
+import { IconProps } from './types';
 
-const StarHalf: FC<IconProps> = ({ size, color = "inherit" }) => (
+const StarHalf: FC<IconProps> = ({ size, color = 'inherit' }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     height={size}
     width={size}
     viewBox="0 0 24 24"
-    fill={"currentColor"}
+    fill={'currentColor'}
     color={color}
   >
     <path d="M0 0h24v24H0z" fill="none" />

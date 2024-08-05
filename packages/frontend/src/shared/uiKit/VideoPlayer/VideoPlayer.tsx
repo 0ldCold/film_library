@@ -1,10 +1,10 @@
-import { FC, VideoHTMLAttributes } from "react";
-import Styles from "./VideoPlayer.module.scss";
+import { FC, VideoHTMLAttributes } from 'react';
+import Styles from './VideoPlayer.module.scss';
 
 type VideoProps = VideoHTMLAttributes<HTMLVideoElement>;
 interface VideoPlayer {
-  height?: VideoProps["height"];
-  width?: VideoProps["width"];
+  height?: VideoProps['height'];
+  width?: VideoProps['width'];
   src: string;
   image?: string;
 }

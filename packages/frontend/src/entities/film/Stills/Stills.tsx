@@ -1,6 +1,6 @@
-import { FC } from "react";
-import Image from "next/image";
-import poster404 from "./404poster.png";
+import { FC } from 'react';
+import Image from 'next/image';
+import poster404 from './404poster.png';
 
 export interface StillsProps {
   frame: string;

@@ -1,1 +1,1 @@
-export type FilmStatus = "announcement" | "ongoing" | "release";
+export type FilmStatus = 'announcement' | 'ongoing' | 'release';

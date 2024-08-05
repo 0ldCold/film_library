@@ -1,8 +1,8 @@
-import { FC } from "react";
-import ModuleCard from "src/entities/film/ModuleCard/ModuleCard";
-import Related from "src/entities/film/Related/Related";
-import { RelatedInfo } from "./types";
-import Styles from "./RelatedModule.module.scss";
+import { FC } from 'react';
+import ModuleCard from 'src/entities/film/ModuleCard/ModuleCard';
+import Related from 'src/entities/film/Related/Related';
+import { RelatedInfo } from './types';
+import Styles from './RelatedModule.module.scss';
 
 interface RelatedModuleProps {
   data: RelatedInfo[];

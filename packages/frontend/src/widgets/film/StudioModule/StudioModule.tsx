@@ -1,8 +1,8 @@
-import { FC } from "react";
-import Styles from "./StudioModule.module.scss";
-import ModuleCard from "src/entities/film/ModuleCard/ModuleCard";
-import Image from "next/image";
-import Logo404 from "./logo404.jpg";
+import { FC } from 'react';
+import Styles from './StudioModule.module.scss';
+import ModuleCard from 'src/entities/film/ModuleCard/ModuleCard';
+import Image from 'next/image';
+import Logo404 from './logo404.jpg';
 
 export interface StudioImgProps {
   logo?: string;

@@ -1,8 +1,8 @@
-import { FC, useState } from "react";
-import Styles from "./MovieExcerpts.module.scss";
-import VideoPlayer from "src/shared/uiKit/VideoPlayer/VideoPlayer";
-import ModalWindow from "src/shared/uiKit/ModalWindow/ModalWindow";
-import Image from "next/image";
+import { FC, useState } from 'react';
+import Styles from './MovieExcerpts.module.scss';
+import VideoPlayer from 'src/shared/uiKit/VideoPlayer/VideoPlayer';
+import ModalWindow from 'src/shared/uiKit/ModalWindow/ModalWindow';
+import Image from 'next/image';
 
 export interface MovieExcerptsProps {
   video: string;
@@ -38,13 +38,13 @@ const MovieExcerpts: FC<MovieExcerptsProps> = ({ video, preview, info }) => {
           width={206}
           height={116}
           style={{
-            objectFit: "cover",
+            objectFit: 'cover',
           }}
         />
       </div>
       {isVideoOpen && (
         <ModalWindow onClose={handleClose}>
-          <VideoPlayer src={video} image={preview} width={"auto"} />
+          <VideoPlayer src={video} image={preview} width={'auto'} />
         </ModalWindow>
       )}
     </div>

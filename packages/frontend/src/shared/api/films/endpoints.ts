@@ -1,5 +1,5 @@
-import { BackendResponseWrapper } from "src/shared/api/types";
-import { instance } from "src/shared/api/instance";
+import { BackendResponseWrapper } from 'src/shared/api/types';
+import { instance } from 'src/shared/api/instance';
 
 export const getMovie = (
   movieId: number,

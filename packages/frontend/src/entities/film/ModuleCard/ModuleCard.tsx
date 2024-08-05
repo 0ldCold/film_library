@@ -1,5 +1,5 @@
-import { FC, ReactNode } from "react";
-import Styles from "./ModuleCard.module.scss";
+import { FC, ReactNode } from 'react';
+import Styles from './ModuleCard.module.scss';
 
 interface ModuleCardProps {
   title: string;

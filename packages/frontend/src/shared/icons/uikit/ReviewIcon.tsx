@@ -1,7 +1,7 @@
-import { FC } from "react";
-import { IconProps } from "./types";
+import { FC } from 'react';
+import { IconProps } from './types';
 
-const ReviewIcon: FC<IconProps> = ({ size, color = "inherit" }) => {
+const ReviewIcon: FC<IconProps> = ({ size, color = 'inherit' }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

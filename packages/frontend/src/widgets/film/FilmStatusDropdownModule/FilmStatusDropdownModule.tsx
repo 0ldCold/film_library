@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { FilmStatusDropdownModuleInfo } from "./types";
-import FilmStatusDropdown from "src/features/film/FilmStatusDropdown/FilmStatusDropdown";
+import { FC } from 'react';
+import { FilmStatusDropdownModuleInfo } from './types';
+import FilmStatusDropdown from 'src/features/film/FilmStatusDropdown/FilmStatusDropdown';
 
 interface FilmStatusDropdownModuleProps {
   data: FilmStatusDropdownModuleInfo;

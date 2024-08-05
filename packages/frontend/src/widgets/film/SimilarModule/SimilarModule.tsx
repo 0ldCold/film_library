@@ -1,8 +1,8 @@
-import { FC } from "react";
-import ModuleCard from "src/entities/film/ModuleCard/ModuleCard";
-import Styles from "./SimilarModule.module.scss";
-import { SimilarModuleInfo } from "./types";
-import Similar from "src/entities/film/Similar/Similar";
+import { FC } from 'react';
+import ModuleCard from 'src/entities/film/ModuleCard/ModuleCard';
+import Styles from './SimilarModule.module.scss';
+import { SimilarModuleInfo } from './types';
+import Similar from 'src/entities/film/Similar/Similar';
 
 interface SimilarModuleProps {
   data: SimilarModuleInfo[];

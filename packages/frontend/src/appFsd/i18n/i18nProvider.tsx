@@ -1,17 +1,17 @@
-import React, { ReactNode } from "react";
-import i18n from "./config";
-import { I18nextProvider } from "react-i18next";
+import React, { ReactNode } from 'react';
+import i18n from './config';
+import { I18nextProvider } from 'react-i18next';
 
 export const getTranslation = (code: string): string => {
   const { t } = i18n;
   return t(code);
 };
 
-export const changeLanguage = (lang: "ru" | "en" | "ch"): void => {
+export const changeLanguage = (lang: 'ru' | 'en' | 'ch'): void => {
   i18n.changeLanguage(lang);
 
   console.log(lang);
-  console.log("i18n.language", i18n.language);
+  console.log('i18n.language', i18n.language);
 };
 
 const I18nProvider: React.FC<{ children?: ReactNode }> = ({ children }) => {

@@ -1,8 +1,8 @@
-import { FC } from "react";
-import ModuleCard from "src/entities/film/ModuleCard/ModuleCard";
-import { MainCharactersModuleInfo } from "./types";
-import MainCharacters from "src/entities/film/MainCharacters/MainCharacters";
-import Styles from "./MainCharactersModule.module.scss";
+import { FC } from 'react';
+import ModuleCard from 'src/entities/film/ModuleCard/ModuleCard';
+import { MainCharactersModuleInfo } from './types';
+import MainCharacters from 'src/entities/film/MainCharacters/MainCharacters';
+import Styles from './MainCharactersModule.module.scss';
 
 interface MainCharactersModuleProps {
   data: MainCharactersModuleInfo[];

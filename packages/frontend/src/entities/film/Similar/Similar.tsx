@@ -1,6 +1,6 @@
-import { FC } from "react";
-import Image from "next/image";
-import Styles from "./Similar.module.scss";
+import { FC } from 'react';
+import Image from 'next/image';
+import Styles from './Similar.module.scss';
 
 interface SimilarProps {
   name: string;

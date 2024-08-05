@@ -1,1 +1,1 @@
-export type StarType = "empty" | "half" | "filled";
+export type StarType = 'empty' | 'half' | 'filled';

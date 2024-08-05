@@ -1,4 +1,4 @@
-import { BackendResponseWrapper } from "src/shared/api/types";
+import { BackendResponseWrapper } from 'src/shared/api/types';
 
 export const getResponseData = async <T>(
   response: Promise<BackendResponseWrapper<T>>,

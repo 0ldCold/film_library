@@ -1,9 +1,9 @@
-import { FC } from "react";
-import MainTemplate from "src/widgets/template/MainTemplate/MainTemplate";
-import { useGetUsersList } from "src/shared/api/users/hooks/useGetUsersList";
-import styles from "./Users.module.scss";
-import Link from "next/link";
-import { useRemoveUser } from "src/shared/api/users/hooks/useRemoveUser";
+import { FC } from 'react';
+import MainTemplate from 'src/widgets/template/MainTemplate/MainTemplate';
+import { useGetUsersList } from 'src/shared/api/users/hooks/useGetUsersList';
+import styles from './Users.module.scss';
+import Link from 'next/link';
+import { useRemoveUser } from 'src/shared/api/users/hooks/useRemoveUser';
 
 const Users: FC = () => {
   const { data } = useGetUsersList();

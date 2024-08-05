@@ -1,14 +1,14 @@
-import { FC } from "react";
-import { IconProps } from "./types";
+import { FC } from 'react';
+import { IconProps } from './types';
 
-const DoneIcon: FC<IconProps> = ({ size, color = "inherit" }) => {
+const DoneIcon: FC<IconProps> = ({ size, color = 'inherit' }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       height={size}
       viewBox="0 0 28 28"
       width={size}
-      fill={"currentColor"}
+      fill={'currentColor'}
       color={color}
     >
       <path d="M0 0h24v24H0V0z" fill="none" />

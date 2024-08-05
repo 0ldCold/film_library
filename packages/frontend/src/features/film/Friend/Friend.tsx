@@ -1,11 +1,11 @@
-import { FC } from "react";
-import { IFilmFriends } from "src/widgets/film/FriendsFilm/types";
-import Styles from "./Friend.module.scss";
-import Avatar404 from "src/entities/film/Author/404Avatar.png";
-import Image from "next/image";
+import { FC } from 'react';
+import { IFilmFriends } from 'src/widgets/film/FriendsFilm/types';
+import Styles from './Friend.module.scss';
+import Avatar404 from 'src/entities/film/Author/404Avatar.png';
+import Image from 'next/image';
 
 export interface FriendProps {
-  friend: IFilmFriends["friend"];
+  friend: IFilmFriends['friend'];
 }
 
 const Friend: FC<FriendProps> = ({ friend }) => {
@@ -13,7 +13,7 @@ const Friend: FC<FriendProps> = ({ friend }) => {
     <div className={Styles.friend}>
       <Image
         src={friend.avatar ?? Avatar404.src}
-        alt={"аватарка пользователя"}
+        alt={'аватарка пользователя'}
         width={16}
         height={16}
       />

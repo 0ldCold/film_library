@@ -1,8 +1,8 @@
-import { FC, useMemo } from "react";
-import BarChart from "src/entities/film/BarChart/BarChart";
-import { BarChartRowData } from "src/entities/film/BarChartRow/types";
-import ModuleCard from "src/entities/film/ModuleCard/ModuleCard";
-import { PeoplesListsInfo } from "src/shared/api/film/types";
+import { FC, useMemo } from 'react';
+import BarChart from 'src/entities/film/BarChart/BarChart';
+import { BarChartRowData } from 'src/entities/film/BarChartRow/types';
+import ModuleCard from 'src/entities/film/ModuleCard/ModuleCard';
+import { PeoplesListsInfo } from 'src/shared/api/film/types';
 
 interface PeoplesListsModuleProps {
   data: PeoplesListsInfo[];
