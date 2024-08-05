@@ -1,10 +1,11 @@
-import { FC } from 'react';
-import MainTemplate from 'src/widgets/template/MainTemplate/MainTemplate';
-import Styles from './Film.module.scss';
-import Breadcrumbs from 'src/entities/film/Breadcrumbs/Breadcrumbs';
-import PictureContent from 'src/entities/film/PictureContent/PictureContent';
-import UserСomments from 'src/features/film/UserСomments/UserСomments';
-import InfoModule from 'src/widgets/film/InfoModule/InfoModule';
+import { FC } from "react";
+import MainTemplate from "src/widgets/template/MainTemplate/MainTemplate";
+import Styles from "./Film.module.scss";
+import { useRouter } from "next/router";
+import Breadcrumbs from "src/entities/film/Breadcrumbs/Breadcrumbs";
+import PictureContent from "src/entities/film/PictureContent/PictureContent";
+import UserСomments from "src/features/film/UserСomments/UserСomments";
+import InfoModule from "src/widgets/film/InfoModule/InfoModule";
 import {
   AuthorModuleMock,
   DescriptionMock,
@@ -13,34 +14,49 @@ import {
   infoModuleMock,
   MainCharactersModuleMock,
   MovieExcerptsModuleMock,
-  rateModuleMock,
+  PeoplesListsModuleMock,
   RateChartModuleMock,
+  rateModuleMock,
   RelatedModuleMock,
   SimilarModuleMock,
   StillsModuleMock,
   StudioLogoMock,
-  PeoplesListsModuleMock,
-} from 'src/shared/api/film/mock';
-import RatingModule from 'src/widgets/film/RatingModule/RatingModule';
-import StudioModule from 'src/widgets/film/StudioModule/StudioModule';
-import { filmBreadcrumbs } from './constants';
-import AuthorModule from 'src/widgets/film/AuthorModule/AuthorModule';
-import RelatedModule from 'src/widgets/film/RelatedModule/RelatedModule';
-import MainCharactersModule from 'src/widgets/film/MainCharactersModule/MainCharactersModule';
-import FilmStatusDropdownModule from 'src/widgets/film/FilmStatusDropdownModule/FilmStatusDropdownModule';
-import StillsModule from 'src/widgets/film/StillsModule/StillsModule';
-import MovieExcerptsModule from 'src/widgets/film/MovieExcerptsModule/MovieExcerptsModule';
-import SimilarModule from 'src/widgets/film/SimilarModule/SimilarModule';
-import DescriptionModule from 'src/widgets/film/DescriptionModule/DescriptionModule';
-import FriendsFilm from 'src/widgets/film/FriendsFilm/FriendsFilm';
-import RateChartModule from 'src/widgets/film/RateChartModule/RateChartModule';
-import PeoplesListsModule from 'src/widgets/film/PeoplesListsModule/PeoplesListsModule';
+} from "src/shared/api/film/mock";
+import RatingModule from "src/widgets/film/RatingModule/RatingModule";
+import StudioModule from "src/widgets/film/StudioModule/StudioModule";
+import { filmBreadcrumbs } from "./constants";
+import AuthorModule from "src/widgets/film/AuthorModule/AuthorModule";
+import RelatedModule from "src/widgets/film/RelatedModule/RelatedModule";
+import MainCharactersModule from "src/widgets/film/MainCharactersModule/MainCharactersModule";
+import FilmStatusDropdownModule from "src/widgets/film/FilmStatusDropdownModule/FilmStatusDropdownModule";
+import StillsModule from "src/widgets/film/StillsModule/StillsModule";
+import MovieExcerptsModule from "src/widgets/film/MovieExcerptsModule/MovieExcerptsModule";
+import SimilarModule from "src/widgets/film/SimilarModule/SimilarModule";
+import DescriptionModule from "src/widgets/film/DescriptionModule/DescriptionModule";
+import FriendsFilm from "src/widgets/film/FriendsFilm/FriendsFilm";
+import RateChartModule from "src/widgets/film/RateChartModule/RateChartModule";
+import PeoplesListsModule from "src/widgets/film/PeoplesListsModule/PeoplesListsModule";
+import { checkId, transformQueryId } from "src/shared/helpers/checkParamIsNumber";
+import { useGetMovie } from "src/shared/api/films/hooks/useGetMovie";
+import { isExist } from "src/shared/helpers/isExist";
 
 const Film: FC = () => {
+  const router = useRouter();
+  const movieId = router.query.movieId;
+
+  const { data } = useGetMovie(transformQueryId(movieId) ?? -1, checkId(movieId));
+
+  if (!isExist(movieId) || typeof movieId !== "string" || Number.isNaN(+movieId)) {
+    return "Error";
+  }
+  if (!data) {
+    return <MainTemplate>Loading...</MainTemplate>;
+  }
+
   return (
     <MainTemplate>
       <div>
-        <h1 className={Styles.title}>Магическая битва 2 </h1>
+        <h1 className={Styles.title}>{data.name}</h1>
         <Breadcrumbs data={filmBreadcrumbs} />
       </div>
 
