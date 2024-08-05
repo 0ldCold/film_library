@@ -1,4 +1,4 @@
-import { UserFilmsListType } from 'src/shared/api/film/types';
+import { UserFilmsListType } from "src/shared/api/film/types";
 
 export interface IFilmFriends {
   friend: {

@@ -1,7 +1,7 @@
-import { FC } from 'react';
-import Styles from './LanguageButton.module.scss';
-import { switchLanguage } from 'src/features/film/LanguageButton/helpers';
-import { FilmDescriptionLanguage } from 'src/widgets/film/DescriptionModule/types';
+import { FC } from "react";
+import Styles from "./LanguageButton.module.scss";
+import { switchLanguage } from "src/features/film/LanguageButton/helpers";
+import { FilmDescriptionLanguage } from "src/widgets/film/DescriptionModule/types";
 
 export interface LanguageButtonProps {
   currentLanguage: FilmDescriptionLanguage;

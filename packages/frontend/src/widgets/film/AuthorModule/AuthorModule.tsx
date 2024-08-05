@@ -1,8 +1,8 @@
-import { FC } from 'react';
-import Author from 'src/entities/film/Author/Author';
-import ModuleCard from 'src/entities/film/ModuleCard/ModuleCard';
-import { AuthorModuleInfo } from './types';
-import Styles from './AuthorModule.module.scss';
+import { FC } from "react";
+import Author from "src/entities/film/Author/Author";
+import ModuleCard from "src/entities/film/ModuleCard/ModuleCard";
+import { AuthorModuleInfo } from "./types";
+import Styles from "./AuthorModule.module.scss";
 
 interface AuthorModuleProps {
   data: AuthorModuleInfo[];

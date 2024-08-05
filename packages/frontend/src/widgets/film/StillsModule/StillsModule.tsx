@@ -1,8 +1,8 @@
-import { FC } from 'react';
-import Styles from './StillsModule.module.scss';
-import ModuleCard from 'src/entities/film/ModuleCard/ModuleCard';
-import Stills from 'src/entities/film/Stills/Stills';
-import { StillsModuleInfo } from './types';
+import { FC } from "react";
+import Styles from "./StillsModule.module.scss";
+import ModuleCard from "src/entities/film/ModuleCard/ModuleCard";
+import Stills from "src/entities/film/Stills/Stills";
+import { StillsModuleInfo } from "./types";
 
 interface StillsModuleProps {
   data: StillsModuleInfo[];

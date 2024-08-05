@@ -1,4 +1,4 @@
-import { FilmStatus } from 'src/entities/film/FilmStatusLabel/types';
+import { FilmStatus } from "src/entities/film/FilmStatusLabel/types";
 
 export interface FilmInfo {
   type: string;

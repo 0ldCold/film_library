@@ -1,14 +1,14 @@
-import { FC } from 'react';
-import { IconProps } from './types';
+import { FC } from "react";
+import { IconProps } from "./types";
 
-const PlusIcon: FC<IconProps> = ({ size, color = 'inherit' }) => {
+const PlusIcon: FC<IconProps> = ({ size, color = "inherit" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       height={size}
       viewBox="1 0 25 25"
       width={size}
-      fill={'currentColor'}
+      fill={"currentColor"}
       color={color}
     >
       <path d="M0 0h24v24H0V0z" fill="none" />

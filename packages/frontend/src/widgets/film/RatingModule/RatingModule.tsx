@@ -1,8 +1,8 @@
-import { FC } from 'react';
-import ModuleCard from 'src/entities/film/ModuleCard/ModuleCard';
-import FilmStatusRating from 'src/entities/film/FilmStatusRating/FilmStatusRating';
-import StarRate from 'src/entities/film/StarRate/StarRate';
-import Styles from './RatingModule.module.scss';
+import { FC } from "react";
+import ModuleCard from "src/entities/film/ModuleCard/ModuleCard";
+import FilmStatusRating from "src/entities/film/FilmStatusRating/FilmStatusRating";
+import StarRate from "src/entities/film/StarRate/StarRate";
+import Styles from "./RatingModule.module.scss";
 
 interface RatingModuleProps {
   rate: number;

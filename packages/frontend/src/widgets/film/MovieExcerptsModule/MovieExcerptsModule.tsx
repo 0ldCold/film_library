@@ -1,8 +1,8 @@
-import { FC } from 'react';
-import Styles from './MovieExcerptsModule.module.scss';
-import ModuleCard from 'src/entities/film/ModuleCard/ModuleCard';
-import MovieExcerpts from 'src/entities/film/MovieExcerpts/MovieExcerpts';
-import { MovieExcerptsModuleInfo } from './types';
+import { FC } from "react";
+import Styles from "./MovieExcerptsModule.module.scss";
+import ModuleCard from "src/entities/film/ModuleCard/ModuleCard";
+import MovieExcerpts from "src/entities/film/MovieExcerpts/MovieExcerpts";
+import { MovieExcerptsModuleInfo } from "./types";
 
 interface MovieExcerptsModuleProps {
   data: MovieExcerptsModuleInfo[];

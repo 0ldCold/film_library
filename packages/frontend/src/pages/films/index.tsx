@@ -1,5 +1,5 @@
-import type { NextPage } from 'next';
-import FilmPage from 'src/pagesFsd/film/Film';
+import type { NextPage } from "next";
+import FilmPage from "src/pagesFsd/film/Film";
 
 const Film: NextPage = () => {
   return <FilmPage />;

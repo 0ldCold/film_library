@@ -1,4 +1,4 @@
-import { BarChartRowData } from '../BarChartRow/types';
+import { BarChartRowData } from "../BarChartRow/types";
 
 export const calcWidth = (count: number, maxCount: number): number => {
   const sum = (count * 100) / maxCount;

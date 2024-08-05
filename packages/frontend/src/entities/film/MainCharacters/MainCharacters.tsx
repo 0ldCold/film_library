@@ -1,7 +1,7 @@
-import { FC } from 'react';
-import Image from 'next/image';
-import poster404 from './404poster.png';
-import Styles from './MainCharacters.module.scss';
+import { FC } from "react";
+import Image from "next/image";
+import poster404 from "./404poster.png";
+import Styles from "./MainCharacters.module.scss";
 
 interface MainCharactersProps {
   name: string;

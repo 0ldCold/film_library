@@ -1,7 +1,7 @@
-import { FC } from 'react';
-import { IconProps } from './types';
+import { FC } from "react";
+import { IconProps } from "./types";
 
-const ReplayIcon: FC<IconProps> = ({ size, color = 'inherit' }) => {
+const ReplayIcon: FC<IconProps> = ({ size, color = "inherit" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +9,7 @@ const ReplayIcon: FC<IconProps> = ({ size, color = 'inherit' }) => {
       height={size}
       viewBox="-2 -2 30 30"
       width={size}
-      fill={'currentColor'}
+      fill={"currentColor"}
       color={color}
     >
       <g>

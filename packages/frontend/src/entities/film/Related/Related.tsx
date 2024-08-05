@@ -1,8 +1,8 @@
-import { FC } from 'react';
-import Styles from './Related.module.scss';
-import Image from 'next/image';
-import poster404 from './404poster.png';
-import { transformReleaseDate } from './helper';
+import { FC } from "react";
+import Styles from "./Related.module.scss";
+import Image from "next/image";
+import poster404 from "./404poster.png";
+import { transformReleaseDate } from "./helper";
 
 interface RelatedProps {
   name: string;

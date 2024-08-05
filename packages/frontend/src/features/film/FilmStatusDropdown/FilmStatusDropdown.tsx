@@ -1,13 +1,13 @@
-import React, { FC, useMemo, useState } from 'react';
-import ArrowIcon from 'src/shared/icons/uikit/ArrowIcon';
-import Styles from './FilmStatusDropdown.module.scss';
-import { UserFilmsListType } from '../../../shared/api/film/types';
-import { getCurrentState } from './helpers';
-import clsx from 'clsx';
-import { USER_LISTS } from './constants';
+import React, { FC, useMemo, useState } from "react";
+import ArrowIcon from "src/shared/icons/uikit/ArrowIcon";
+import Styles from "./FilmStatusDropdown.module.scss";
+import { UserFilmsListType } from "../../../shared/api/film/types";
+import { getCurrentState } from "./helpers";
+import clsx from "clsx";
+import { USER_LISTS } from "./constants";
 
 interface FilmStatusDropdownProps {
-  view?: 'large' | 'small' | 'additionally';
+  view?: "large" | "small" | "additionally";
   value: UserFilmsListType;
   onChange?: (newStatus: UserFilmsListType) => Promise<void>;
 }
@@ -49,7 +49,7 @@ const FilmStatusDropdown: FC<FilmStatusDropdownProps> = () => {
       <div className={clsx(Styles.itemsList, isOpen && Styles.slideOutDown)}>
         {USER_LISTS.map(({ name, type }) =>
           currentFilmStatus === type ? null : (
-            <div key={type ?? 'null'} className={clsx(Styles.row)} onClick={changeList(type)}>
+            <div key={type ?? "null"} className={clsx(Styles.row)} onClick={changeList(type)}>
               <div className={clsx(Styles.listItemText, type === null && Styles.removeFromList)}>
                 {name}
               </div>

@@ -1,7 +1,7 @@
-import { FC } from 'react';
-import { IconProps } from './types';
+import { FC } from "react";
+import { IconProps } from "./types";
 
-const GearsIcon: FC<IconProps> = ({ size, color = 'inherit' }) => {
+const GearsIcon: FC<IconProps> = ({ size, color = "inherit" }) => {
   return (
     <svg
       version="1.1"

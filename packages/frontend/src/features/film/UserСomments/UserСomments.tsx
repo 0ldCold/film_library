@@ -1,10 +1,10 @@
-import { FC } from 'react';
-import Styles from './UserСomments.module.scss';
-import FeatherIcons from 'src/shared/icons/uikit/FeatherIcons';
-import GearsIcon from 'src/shared/icons/uikit/GearsIcon';
-import StarIcons from 'src/shared/icons/uikit/StarIcons';
-import CommentIcon from 'src/shared/icons/uikit/CommentIcon';
-import ReviewIcon from 'src/shared/icons/uikit/ReviewIcon';
+import { FC } from "react";
+import Styles from "./UserСomments.module.scss";
+import FeatherIcons from "src/shared/icons/uikit/FeatherIcons";
+import GearsIcon from "src/shared/icons/uikit/GearsIcon";
+import StarIcons from "src/shared/icons/uikit/StarIcons";
+import CommentIcon from "src/shared/icons/uikit/CommentIcon";
+import ReviewIcon from "src/shared/icons/uikit/ReviewIcon";
 
 const UserСomments: FC = () => {
   return (

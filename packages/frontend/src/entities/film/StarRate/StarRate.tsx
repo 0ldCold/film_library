@@ -1,7 +1,7 @@
-import { FC } from 'react';
-import { getStarsFormRate } from './helper';
-import Star from '../Star/Star';
-import Styles from './StarRate.module.scss';
+import { FC } from "react";
+import { getStarsFormRate } from "./helper";
+import Star from "../Star/Star";
+import Styles from "./StarRate.module.scss";
 
 interface StarRateProps {
   rate: number;

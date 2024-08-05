@@ -1,5 +1,5 @@
-import { FC, ReactNode } from 'react';
-import Style from './SectionWrap.module.scss';
+import { FC, ReactNode } from "react";
+import Style from "./SectionWrap.module.scss";
 
 interface SectionWrapProps {
   children?: ReactNode;

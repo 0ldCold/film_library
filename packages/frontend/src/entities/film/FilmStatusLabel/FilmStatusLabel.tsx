@@ -1,8 +1,8 @@
-import { FilmStatus } from 'src/entities/film/FilmStatusLabel/types';
-import { FC } from 'react';
-import { useTranslation } from 'react-i18next';
-import Styles from './FilmStatusLabel.module.scss';
-import { clsx } from 'clsx';
+import { FilmStatus } from "src/entities/film/FilmStatusLabel/types";
+import { FC } from "react";
+import { useTranslation } from "react-i18next";
+import Styles from "./FilmStatusLabel.module.scss";
+import { clsx } from "clsx";
 
 interface FilmStatusLabelProps {
   status: FilmStatus;
