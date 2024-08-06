@@ -5,7 +5,7 @@ import { getMovie } from 'src/shared/api/films/endpoints';
 
 export const useGetMovie = (movieId: number, enabled = true) => {
   return useQuery({
-    queryKey: [QueryKeys.MOVIE_ITEM],
+    queryKey: [QueryKeys.MOVIE_ITEM, movieId],
     queryFn: () => getResponseData(getMovie(movieId)),
     enabled,
   });
