@@ -2,3 +2,17 @@
   font-family: $font-main;
   font-weight: 400;
 }
+
+.dark {
+  main {
+    background-color: black !important;
+    color: white;
+  }
+}
+
+.light {
+  main {
+    background-color: white !important;
+    color: black;
+  }
+}

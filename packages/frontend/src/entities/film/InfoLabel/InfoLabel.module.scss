@@ -4,11 +4,16 @@
   font-size: 13px;
   line-height: 15px;
 }
-.label {
-  color: #7b8084;
-}
+
 .value {
   display: inline;
-  color: #123;
   height: max-content;
+}
+
+.lightLabel {
+  color: #7b8084;
+}
+
+.lightValue {
+  color: #123;
 }

@@ -4,15 +4,14 @@
   flex-direction: column;
   gap: 17px;
 }
+
 .header {
-  background: #e8ebef;
   display: flex;
   gap: 10px;
   align-content: center;
   padding-right: 10px;
 
   h4 {
-    color: #123;
     white-space: nowrap;
     text-transform: uppercase;
     font-family: $font-alt;
@@ -24,9 +23,26 @@
     padding: 0;
   }
 }
+
+.darkHeader {
+  border: solid 1px white;
+}
+
+.lightHeader {
+  background-color: #e8ebef;
+  color: #123;
+}
+
 .grayLabel {
   width: 5px;
   height: 100%;
   min-height: 30px;
-  background: #d8dde4;
+}
+
+.lightGrayLabel {
+  background-color: #d8dde4;
+}
+
+.darkGrayLabel {
+  background-color: white;
 }

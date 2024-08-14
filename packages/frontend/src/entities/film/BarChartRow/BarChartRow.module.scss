@@ -14,6 +14,7 @@ $barHeight: 16px;
   line-height: 16px;
   padding-right: 3px;
 }
+
 .label {
   height: $barHeight;
 
@@ -22,8 +23,11 @@ $barHeight: 16px;
   align-items: center;
 
   font-family: $font-main;
-  color: #444;
   font-size: 12px;
   font-weight: bold;
   line-height: 16px;
+}
+
+.lightLabel {
+  color: #444;
 }

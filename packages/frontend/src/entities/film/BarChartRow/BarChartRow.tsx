@@ -2,12 +2,15 @@ import { FC } from 'react';
 import Styles from './BarChartRow.module.scss';
 import { BarChartRowData } from './types';
 import { getColorByWidth } from './helper';
+import { clsx } from 'clsx';
+import { useAppSelector } from 'src/shared/store/hooks';
 
 export interface BarChartRowProps {
   data: BarChartRowData;
   widthPercent: number;
 }
 const BarChartRow: FC<BarChartRowProps> = ({ data, widthPercent }) => {
+  const theme = useAppSelector((state) => state.theme.theme);
   return (
     <>
       <div
@@ -20,7 +23,7 @@ const BarChartRow: FC<BarChartRowProps> = ({ data, widthPercent }) => {
         {widthPercent > 11 && <span>{data.value}</span>}
       </div>
 
-      <div className={Styles.label}>
+      <div className={clsx(Styles.label, theme === 'light' && Styles.lightLabel)}>
         <span>{data.label}</span>
       </div>
     </>

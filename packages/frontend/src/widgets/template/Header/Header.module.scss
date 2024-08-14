@@ -1,7 +1,10 @@
 .wrapper {
   background: #343434;
   padding: 13px;
+  display: flex;
+  justify-content: space-between;
 }
+
 .logoText {
   font-size: 33px;
   text-align: left;
