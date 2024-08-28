@@ -6,6 +6,7 @@ import { helveticaNeue, openSans } from '@styles/fonts';
 import { clsx } from 'clsx';
 import Styles from './MainTemplate.module.scss';
 import { useAppSelector } from 'src/shared/store/hooks';
+import Typography from 'src/shared/uiKit/Typography/Typography';
 
 interface MainTemplateProps {
   children?: ReactNode;
@@ -13,20 +14,21 @@ interface MainTemplateProps {
 const MainTemplate: FC<MainTemplateProps> = ({ children }) => {
   const theme = useAppSelector((state) => state.theme.theme);
   return (
-    <div
+    <Typography
       className={clsx(
-        theme === 'light' ? Styles.light : Styles.dark,
         openSans.variable,
         helveticaNeue.variable,
         Styles.font,
+        theme === 'dark' && Styles.dark,
       )}
+      isWithoutDarkTheme={theme === 'light'}
     >
       <Header />
       <main>
         <SectionWrap>{children}</SectionWrap>
       </main>
       <Footer />
-    </div>
+    </Typography>
   );
 };
 export default MainTemplate;

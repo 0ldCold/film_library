@@ -4,6 +4,7 @@
 }
 
 .name {
+  color: #176093;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -16,8 +17,4 @@
   margin-top: 5px;
   max-width: 97px;
   line-height: 1.65;
-}
-
-.lightName {
-  color: #176093;
 }

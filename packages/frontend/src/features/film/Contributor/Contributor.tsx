@@ -2,10 +2,10 @@ import { FC } from 'react';
 import Styles from './Contributor.module.scss';
 import Image from 'next/image';
 import Avatar404 from 'src/entities/film/Author/404Avatar.png';
-import { FilmDescriptionData } from '../../../widgets/film/DescriptionModule/types';
+import { FilmDescriptionData } from 'src/widgets/film/DescriptionModule/types';
 import { useTranslation } from 'react-i18next';
 import { useAppSelector } from 'src/shared/store/hooks';
-import { clsx } from 'clsx';
+import Typography from 'src/shared/uiKit/Typography/Typography';
 
 interface ContributorProps {
   data: FilmDescriptionData['contributor'];
@@ -16,9 +16,10 @@ const Contributor: FC<ContributorProps> = ({ data }) => {
   const { t } = useTranslation();
   return (
     <div className={Styles.contributor}>
-      <div
-        className={clsx(Styles.type, theme === 'light' && Styles.lightType)}
-      >{`${t(`film.contributor.${data.type}`)}: `}</div>
+      <Typography
+        className={Styles.type}
+        isWithoutDarkTheme={theme === 'light'}
+      >{`${t(`film.contributor.${data.type}`)}: `}</Typography>
       {data.type !== 'externalSource' && (
         <Image
           className={Styles.img}

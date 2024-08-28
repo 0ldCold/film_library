@@ -5,6 +5,7 @@
 
 .name {
   cursor: pointer;
+  color: #176093;
   font-family: $font-main;
   font-weight: bold;
   white-space: normal;
@@ -12,8 +13,4 @@
   margin-top: 5px;
   max-width: 97px;
   line-height: 1.65;
-}
-
-.lightName {
-  color: #176093;
 }

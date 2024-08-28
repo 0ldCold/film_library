@@ -17,6 +17,7 @@ $barHeight: 16px;
 
 .label {
   height: $barHeight;
+  color: #444;
 
   display: flex;
   justify-content: flex-end;
@@ -26,8 +27,4 @@ $barHeight: 16px;
   font-size: 12px;
   font-weight: bold;
   line-height: 16px;
-}
-
-.lightLabel {
-  color: #444;
 }

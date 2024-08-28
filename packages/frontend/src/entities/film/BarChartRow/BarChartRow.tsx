@@ -2,8 +2,8 @@ import { FC } from 'react';
 import Styles from './BarChartRow.module.scss';
 import { BarChartRowData } from './types';
 import { getColorByWidth } from './helper';
-import { clsx } from 'clsx';
 import { useAppSelector } from 'src/shared/store/hooks';
+import Typography from 'src/shared/uiKit/Typography/Typography';
 
 export interface BarChartRowProps {
   data: BarChartRowData;
@@ -23,9 +23,9 @@ const BarChartRow: FC<BarChartRowProps> = ({ data, widthPercent }) => {
         {widthPercent > 11 && <span>{data.value}</span>}
       </div>
 
-      <div className={clsx(Styles.label, theme === 'light' && Styles.lightLabel)}>
+      <Typography className={Styles.label} isWithoutDarkTheme={theme === 'light'}>
         <span>{data.label}</span>
-      </div>
+      </Typography>
     </>
   );
 };

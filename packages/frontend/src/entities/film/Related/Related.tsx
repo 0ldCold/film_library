@@ -5,6 +5,7 @@ import poster404 from './404poster.png';
 import { transformReleaseDate } from './helper';
 import { useAppSelector } from 'src/shared/store/hooks';
 import { clsx } from 'clsx';
+import Typography from 'src/shared/uiKit/Typography/Typography';
 
 interface RelatedProps {
   name: string;
@@ -30,48 +31,42 @@ const Related: FC<RelatedProps> = ({
     <div className={Styles.wrapper}>
       <Image src={poster ?? poster404.src} alt="Постер" width={48} height={75} />
       <div className={Styles.container}>
-        <div className={clsx(Styles.name, theme === 'light' && Styles.lightName)}>{name}</div>
+        <Typography className={Styles.name} isWithoutDarkTheme={theme === 'light'}>
+          {name}
+        </Typography>
         <div className={Styles.row}>
           {info && (
-            <div
-              className={clsx(
-                Styles.signs,
-                theme === 'light' ? Styles.lightSigns : Styles.darkSigns,
-              )}
+            <Typography
+              className={clsx(Styles.signs, theme === 'dark' && Styles.darkSigns)}
+              isWithoutDarkTheme={theme === 'light'}
             >
               {info}
-            </div>
+            </Typography>
           )}
 
           {releaseDate && (
-            <div
-              className={clsx(
-                Styles.signs,
-                theme === 'light' ? Styles.lightSigns : Styles.darkSigns,
-              )}
+            <Typography
+              className={clsx(Styles.signs, theme === 'dark' && Styles.darkSigns)}
+              isWithoutDarkTheme={theme === 'light'}
             >
               {transformReleaseDate(releaseDate)}
-            </div>
+            </Typography>
           )}
           {(publisher ?? studio) && (
-            <div
-              className={clsx(
-                Styles.publisher,
-                theme === 'light' ? Styles.lightPublisher : Styles.darkLabel,
-              )}
+            <Typography
+              className={clsx(Styles.publisher, theme === 'dark' && Styles.darkLabel)}
+              isWithoutDarkTheme={theme === 'light'}
             >
               {publisher ?? studio}
-            </div>
+            </Typography>
           )}
           {story && (
-            <div
-              className={clsx(
-                Styles.story,
-                theme === 'light' ? Styles.lightStory : Styles.darkLabel,
-              )}
+            <Typography
+              className={clsx(Styles.story, theme === 'dark' && Styles.darkLabel)}
+              isWithoutDarkTheme={theme === 'light'}
             >
               {story}
-            </div>
+            </Typography>
           )}
         </div>
       </div>

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Avatar404 from './404Avatar.png';
 import Styles from './Author.module.scss';
 import { useAppSelector } from 'src/shared/store/hooks';
-import { clsx } from 'clsx';
+import Typography from 'src/shared/uiKit/Typography/Typography';
 
 interface AuthorProps {
   name: string;
@@ -17,16 +17,19 @@ const Author: FC<AuthorProps> = ({ name, avatar, roles }) => {
     <div className={Styles.wrapper}>
       <Image src={avatar ?? Avatar404.src} alt="Автор" width={48} height={75} />
       <div className={Styles.container}>
-        <span className={clsx(Styles.name, theme === 'light' && Styles.lightName)}>{name}</span>
+        <Typography className={Styles.name} isWithoutDarkTheme={theme === 'light'}>
+          <span>{name}</span>
+        </Typography>
         <div className={Styles.row}>
-          <div className={clsx(Styles.label, theme === 'light' && Styles.lightLabel)}>
-            {roles.length == 1 ? 'Роль: ' : 'Роли: '}
-          </div>
+          <Typography className={Styles.label} isWithoutDarkTheme={theme === 'light'}>
+            <div>{roles.length == 1 ? 'Роль: ' : 'Роли: '}</div>
+          </Typography>
+
           <div className={Styles.rolesContainer}>
             {roles.map((item) => (
-              <div key={item} className={clsx(Styles.role, theme === 'light' && Styles.lightRole)}>
-                {item}
-              </div>
+              <Typography key={item} className={Styles.role} isWithoutDarkTheme={theme === 'light'}>
+                <div>{item}</div>
+              </Typography>
             ))}
           </div>
         </div>

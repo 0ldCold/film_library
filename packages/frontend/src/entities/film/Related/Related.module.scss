@@ -19,22 +19,16 @@
   cursor: pointer;
   font-family: $font-main;
   font-weight: bold;
-}
-
-.lightName {
   color: #176093;
 }
 
 .signs {
+  color: #112233;
+  border-bottom: 1px dashed #2b8acc;
   display: flex;
   font-family: $font-alt;
   font-size: 12px;
   align-items: center;
-}
-
-.lightSigns {
-  color: #112233;
-  border-bottom: 1px dashed #2b8acc;
 }
 
 .darkSigns {
@@ -46,9 +40,6 @@
   font-size: 12px;
   line-height: 1.4;
   padding: 0 3px;
-}
-
-.lightPublisher {
   background: #e8ebef;
   border: 1px solid #e3e7ed;
 }
@@ -58,9 +49,6 @@
   font-size: 12px;
   line-height: 1.4;
   padding: 0 3px;
-}
-
-.lightStory {
   color: #fff;
   background: #678;
   border: 1px solid #637384;
@@ -68,4 +56,5 @@
 
 .darkLabel {
   border: 1px solid white;
+  background: black;
 }
