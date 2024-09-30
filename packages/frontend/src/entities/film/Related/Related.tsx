@@ -31,40 +31,26 @@ const Related: FC<RelatedProps> = ({
     <div className={Styles.wrapper}>
       <Image src={poster ?? poster404.src} alt="Постер" width={48} height={75} />
       <div className={Styles.container}>
-        <Typography className={Styles.name} isWithoutDarkTheme={theme === 'light'}>
-          {name}
-        </Typography>
+        <Typography className={Styles.name}>{name}</Typography>
         <div className={Styles.row}>
           {info && (
-            <Typography
-              className={clsx(Styles.signs, theme === 'dark' && Styles.darkSigns)}
-              isWithoutDarkTheme={theme === 'light'}
-            >
+            <Typography className={clsx(Styles.signs, theme === 'dark' && Styles.darkSigns)}>
               {info}
             </Typography>
           )}
 
           {releaseDate && (
-            <Typography
-              className={clsx(Styles.signs, theme === 'dark' && Styles.darkSigns)}
-              isWithoutDarkTheme={theme === 'light'}
-            >
+            <Typography className={clsx(Styles.signs, theme === 'dark' && Styles.darkSigns)}>
               {transformReleaseDate(releaseDate)}
             </Typography>
           )}
           {(publisher ?? studio) && (
-            <Typography
-              className={clsx(Styles.publisher, theme === 'dark' && Styles.darkLabel)}
-              isWithoutDarkTheme={theme === 'light'}
-            >
+            <Typography className={clsx(Styles.publisher, theme === 'dark' && Styles.darkLabel)}>
               {publisher ?? studio}
             </Typography>
           )}
           {story && (
-            <Typography
-              className={clsx(Styles.story, theme === 'dark' && Styles.darkLabel)}
-              isWithoutDarkTheme={theme === 'light'}
-            >
+            <Typography className={clsx(Styles.story, theme === 'dark' && Styles.darkLabel)}>
               {story}
             </Typography>
           )}

@@ -13,10 +13,7 @@ const ModuleCard: FC<ModuleCardProps> = ({ title, children }) => {
   const theme = useAppSelector((state) => state.theme.theme);
   return (
     <div className={Styles.wrapper}>
-      <Typography
-        className={clsx(Styles.header, theme === 'dark' && Styles.darkHeader)}
-        isWithoutDarkTheme={theme === 'light'}
-      >
+      <Typography className={clsx(Styles.header, theme === 'dark' && Styles.darkHeader)}>
         <div className={clsx(Styles.grayLabel, theme === 'dark' && Styles.darkLabel)} />
         <h4>{title}</h4>
       </Typography>

@@ -21,7 +21,6 @@ const MainTemplate: FC<MainTemplateProps> = ({ children }) => {
         Styles.font,
         theme === 'dark' && Styles.dark,
       )}
-      isWithoutDarkTheme={theme === 'light'}
     >
       <Header />
       <main>
