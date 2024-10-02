@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 import Avatar404 from './404Avatar.png';
 import Styles from './Author.module.scss';
+import Typography from 'src/shared/uiKit/Typography/Typography';
 
 interface AuthorProps {
   name: string;
@@ -14,14 +15,19 @@ const Author: FC<AuthorProps> = ({ name, avatar, roles }) => {
     <div className={Styles.wrapper}>
       <Image src={avatar ?? Avatar404.src} alt="Автор" width={48} height={75} />
       <div className={Styles.container}>
-        <span className={Styles.name}>{name}</span>
+        <Typography className={Styles.name}>
+          <span>{name}</span>
+        </Typography>
         <div className={Styles.row}>
-          <div className={Styles.label}>{roles.length == 1 ? 'Роль: ' : 'Роли: '}</div>
+          <Typography className={Styles.label}>
+            {roles.length == 1 ? 'Роль: ' : 'Роли: '}
+          </Typography>
+
           <div className={Styles.rolesContainer}>
             {roles.map((item) => (
-              <div key={item} className={Styles.role}>
-                {item}
-              </div>
+              <Typography key={item} className={Styles.role}>
+                <div>{item}</div>
+              </Typography>
             ))}
           </div>
         </div>

@@ -3,12 +3,16 @@
   font-weight: 400;
   font-size: 13px;
   line-height: 15px;
+  display: flex;
+  gap: 5px;
 }
+
 .label {
   color: #7b8084;
 }
+
 .value {
-  display: inline;
   color: #123;
+  display: inline;
   height: max-content;
 }

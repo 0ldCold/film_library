@@ -14,15 +14,16 @@ $barHeight: 16px;
   line-height: 16px;
   padding-right: 3px;
 }
+
 .label {
   height: $barHeight;
+  color: #444;
 
   display: flex;
   justify-content: flex-end;
   align-items: center;
 
   font-family: $font-main;
-  color: #444;
   font-size: 12px;
   font-weight: bold;
   line-height: 16px;

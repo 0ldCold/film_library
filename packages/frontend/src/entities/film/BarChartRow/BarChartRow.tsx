@@ -2,11 +2,13 @@ import { FC } from 'react';
 import Styles from './BarChartRow.module.scss';
 import { BarChartRowData } from './types';
 import { getColorByWidth } from './helper';
+import Typography from 'src/shared/uiKit/Typography/Typography';
 
 export interface BarChartRowProps {
   data: BarChartRowData;
   widthPercent: number;
 }
+
 const BarChartRow: FC<BarChartRowProps> = ({ data, widthPercent }) => {
   return (
     <>
@@ -20,9 +22,9 @@ const BarChartRow: FC<BarChartRowProps> = ({ data, widthPercent }) => {
         {widthPercent > 11 && <span>{data.value}</span>}
       </div>
 
-      <div className={Styles.label}>
+      <Typography className={Styles.label}>
         <span>{data.label}</span>
-      </div>
+      </Typography>
     </>
   );
 };

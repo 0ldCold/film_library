@@ -5,19 +5,29 @@ import SectionWrap from 'src/entities/template/SectionWrap/SectionWrap';
 import { helveticaNeue, openSans } from '@styles/fonts';
 import { clsx } from 'clsx';
 import Styles from './MainTemplate.module.scss';
+import { useAppSelector } from 'src/shared/store/hooks';
+import Typography from 'src/shared/uiKit/Typography/Typography';
 
 interface MainTemplateProps {
   children?: ReactNode;
 }
 const MainTemplate: FC<MainTemplateProps> = ({ children }) => {
+  const theme = useAppSelector((state) => state.theme.theme);
   return (
-    <div className={clsx(openSans.variable, helveticaNeue.variable, Styles.font)}>
+    <Typography
+      className={clsx(
+        openSans.variable,
+        helveticaNeue.variable,
+        Styles.font,
+        theme === 'dark' && Styles.dark,
+      )}
+    >
       <Header />
       <main>
         <SectionWrap>{children}</SectionWrap>
       </main>
       <Footer />
-    </div>
+    </Typography>
   );
 };
 export default MainTemplate;

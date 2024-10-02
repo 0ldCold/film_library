@@ -4,12 +4,12 @@
 }
 
 .name {
+  color: #176093;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
   cursor: pointer;
-  color: #176093;
   font-family: $font-main;
   font-weight: bold;
   white-space: normal;
