@@ -45,12 +45,18 @@ const Related: FC<RelatedProps> = ({
             </Typography>
           )}
           {(publisher ?? studio) && (
-            <Typography className={clsx(Styles.publisher, theme === 'dark' && Styles.darkLabel)}>
+            <Typography
+              className={clsx(Styles.publisher, theme === 'dark' && Styles.darkLabel)}
+              isWithoutDarkTheme={true}
+            >
               {publisher ?? studio}
             </Typography>
           )}
           {story && (
-            <Typography className={clsx(Styles.story, theme === 'dark' && Styles.darkLabel)}>
+            <Typography
+              className={clsx(Styles.story, theme === 'dark' && Styles.darkLabel)}
+              isWithoutDarkTheme={true}
+            >
               {story}
             </Typography>
           )}

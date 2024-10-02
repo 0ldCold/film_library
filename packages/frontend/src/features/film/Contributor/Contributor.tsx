@@ -14,7 +14,10 @@ const Contributor: FC<ContributorProps> = ({ data }) => {
   const { t } = useTranslation();
   return (
     <div className={Styles.contributor}>
-      <Typography className={Styles.type}>{`${t(`film.contributor.${data.type}`)}: `}</Typography>
+      <Typography
+        className={Styles.type}
+        isWithoutDarkTheme={true}
+      >{`${t(`film.contributor.${data.type}`)}: `}</Typography>
       {data.type !== 'externalSource' && (
         <Image
           className={Styles.img}
